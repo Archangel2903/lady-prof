@@ -1,8 +1,6 @@
 import '../scss/main.scss';
 import 'intersection-observer';
 import $ from 'jquery';
-import 'jquery-ui'
-import 'jquery-ui/ui/effect'
 import 'bootstrap';
 import 'popper.js';
 import Swiper from 'swiper/dist/js/swiper.min';
@@ -87,7 +85,7 @@ $(function () {
                 input.remove();
 
                 noUiSlider.create(elem, {
-                    start: [minValue, maxValue/2],
+                    start: [minValue, maxValue / 2],
                     step: 1,
                     behavior: 'tap-drag',
                     connect: true,
@@ -118,4 +116,68 @@ $(function () {
             imgObserve.observe(image);
         });
     }
+});
+
+
+
+
+$(function () {
+    let select = $(".select-styler");
+    if (select.length) {
+        select.select2({
+            minimumResultsForSearch: Infinity
+        })
+    }
+    select.on("change", function () {
+        let region = $("#region");
+        let regionValue = region.val();
+        let country = $("#country");
+        let countryValue = country.val();
+        let partnerBlock = $(".wrap-partner");
+        if ($(this).attr("id") === "region") {
+            partnerBlock.each(function (a, b) {
+                console.log(regionValue);
+                if (regionValue === "show-all") {
+                    $(b).css("display", "block")
+                } else {
+                    if ($(b).data("region") !== regionValue) {
+                        $(b).css("display", "none")
+                    } else {
+                        $(b).css("display", "block")
+                    }
+                }
+            })
+        } else {
+            if ($(this).attr("id") === "country") {
+                console.log(countryValue);
+                partnerBlock.each(function (a, b) {
+                    if (countryValue === "show-all") {
+                        if (regionValue === "show-all") {
+                            $(b).css("display", "block")
+                        } else {
+                            if ($(b).data("region") !== regionValue) {
+                                $(b).css("display", "none")
+                            } else {
+                                $(b).css("display", "block")
+                            }
+                        }
+                    } else {
+                        if ($(b).data("country") !== countryValue) {
+                            $(b).css("display", "none")
+                        } else {
+                            if (regionValue === "show-all") {
+                                $(b).css("display", "block")
+                            } else {
+                                if ($(b).data("region") !== regionValue) {
+                                    $(b).css("display", "none")
+                                } else {
+                                    $(b).css("display", "block")
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+        }
+    })
 });
