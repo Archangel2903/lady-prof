@@ -20,6 +20,15 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    /* Borgir button */
+    $('.header-menu__borgir').on('click', function () {
+        $(this).next().addClass('show');
+    });
+
+    $('.header-menu__borgir-close').on('click', function () {
+        $(this).parent().removeClass('show');
+    });
+
     // Swiper slider
     if ($('.swiper-container').length) {
         let slider;

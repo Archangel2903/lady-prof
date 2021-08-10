@@ -1,2 +1,61 @@
 $fonts-path: '../fonts/';
 
+@font-face {
+  font-family:'Arsenica';
+  src: url('#{$fonts-path}Arsenica Antiqua Trial Regular.eot');
+  src: url('#{$fonts-path}Arsenica Antiqua Trial Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Arsenica Antiqua Trial Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Arsenica Antiqua Trial Regular.woff') format('woff'),
+  url('#{$fonts-path}Arsenica Antiqua Trial Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Arsenica Antiqua Trial Regular.svg#Arsenica Antiqua Trial Regular') format('svg');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2212;
+}
+
+@font-face {
+  font-family:'HamiltoneG';
+  src: url('#{$fonts-path}mr_HamiltoneG.eot');
+  src: url('#{$fonts-path}mr_HamiltoneG.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}mr_HamiltoneG.woff2') format('woff2'),
+  url('#{$fonts-path}mr_HamiltoneG.woff') format('woff'),
+  url('#{$fonts-path}mr_HamiltoneG.ttf') format('truetype'),
+  url('#{$fonts-path}mr_HamiltoneG.svg#mr_HamiltoneG') format('svg');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0451;
+}
+
+@font-face {
+  font-family:'TT Norms';
+  src: url('#{$fonts-path}TT Norms Medium.eot');
+  src: url('#{$fonts-path}TT Norms Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}TT Norms Medium.woff2') format('woff2'),
+  url('#{$fonts-path}TT Norms Medium.woff') format('woff'),
+  url('#{$fonts-path}TT Norms Medium.ttf') format('truetype'),
+  url('#{$fonts-path}TT Norms Medium.svg#TT Norms Medium') format('svg');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0491;
+}
+
+@font-face {
+  font-family:'TT Norms';
+  src: url('#{$fonts-path}TT Norms Regular.eot');
+  src: url('#{$fonts-path}TT Norms Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}TT Norms Regular.woff2') format('woff2'),
+  url('#{$fonts-path}TT Norms Regular.woff') format('woff'),
+  url('#{$fonts-path}TT Norms Regular.ttf') format('truetype'),
+  url('#{$fonts-path}TT Norms Regular.svg#TT Norms Regular') format('svg');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0491;
+}

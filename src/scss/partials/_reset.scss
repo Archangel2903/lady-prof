@@ -6,6 +6,7 @@
 ***********************************************************/
 * {
   box-sizing: border-box;
+  outline: none !important;
 
   &:before, &:after {
     box-sizing: border-box;
@@ -17,6 +18,7 @@ html, body {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+  color: $text-color;
   font-family: $font-family-base;
   font-size: $font-size-default;
 }
@@ -35,7 +37,8 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include transition($transition-base);
   &:hover {
-    //text-decoration: underline;
+    color: $main-first-color;
+    text-decoration: none !important;
   }
   &:active,
   &:focus,
@@ -80,7 +83,7 @@ form {
 }
 
 button, input, textarea {
-  border: 1px solid #333;
+  border: 1px solid #333333;
   border-radius: 0;
   box-sizing: border-box;
   color: black;
@@ -305,18 +308,18 @@ iframe {
 
 ::selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $text-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $text-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $text-color;
-  background: $main-first-color;
+  color: $main-first-color;
+  background: $text-color;
 }
