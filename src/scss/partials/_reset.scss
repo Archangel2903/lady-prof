@@ -40,6 +40,12 @@ a {
     color: $main-first-color;
     text-decoration: none !important;
   }
+  &:visited {
+    color: inherit;
+    &:hover {
+      color: $main-first-color;
+    }
+  }
   &:active,
   &:focus,
   &:hover,
@@ -309,17 +315,17 @@ iframe {
 ::selection {
   text-shadow: none;
   color: $main-first-color;
-  background: $text-color;
+  background: none;
 }
 
 ::-moz-selection {
   text-shadow: none;
   color: $main-first-color;
-  background: $text-color;
+  background: none;
 }
 
 ::-ms-selection {
   text-shadow: none;
   color: $main-first-color;
-  background: $text-color;
+  background: none;
 }

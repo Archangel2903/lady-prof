@@ -16,18 +16,17 @@ $fonts-path: '../fonts/';
 }
 
 @font-face {
-  font-family:'HamiltoneG';
-  src: url('#{$fonts-path}mr_HamiltoneG.eot');
-  src: url('#{$fonts-path}mr_HamiltoneG.eot?#iefix') format('embedded-opentype'),
-  url('#{$fonts-path}mr_HamiltoneG.woff2') format('woff2'),
-  url('#{$fonts-path}mr_HamiltoneG.woff') format('woff'),
-  url('#{$fonts-path}mr_HamiltoneG.ttf') format('truetype'),
-  url('#{$fonts-path}mr_HamiltoneG.svg#mr_HamiltoneG') format('svg');
-  font-display: swap;
+  font-family:'Caveat';
+  src: url('#{$fonts-path}Caveat Regular.eot');
+  src: url('#{$fonts-path}Caveat Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}Caveat Regular.woff2') format('woff2'),
+  url('#{$fonts-path}Caveat Regular.woff') format('woff'),
+  url('#{$fonts-path}Caveat Regular.ttf') format('truetype'),
+  url('#{$fonts-path}Caveat Regular.svg#Caveat Regular') format('svg');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-0451;
+  unicode-range: U+000D-FB04;
 }
 
 @font-face {

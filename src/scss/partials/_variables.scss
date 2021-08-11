@@ -10,8 +10,8 @@ $input-placeholder-color: #aaa;
 
 // fonts
 $font-family-base: 'TT Norms', sans-serif;
-$font-family-custom: 'Arsenica', sans-serif;
-$font-family-unique: 'HamiltoneG', serif;
+$font-family-custom: 'Arsenica', serif;
+$font-family-unique: 'Caveat', serif;
 
 // font-weight
 $font-weight-medium: 500;
@@ -28,6 +28,8 @@ $transition-base: all .3s ease 0s;
 $enable-shadows: true;
 $body-color: $text-color;
 $grid-gutter-width: 20px;
+
+$primary: $main-first-color;
 
 $grid-breakpoints: (
         xs: 0,

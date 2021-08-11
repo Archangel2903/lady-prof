@@ -130,6 +130,7 @@ $(function () {
 
 
 
+/*
 $(function () {
     let select = $(".select-styler");
     if (select.length) {
@@ -189,4 +190,4 @@ $(function () {
             }
         }
     })
-});
+});*/
