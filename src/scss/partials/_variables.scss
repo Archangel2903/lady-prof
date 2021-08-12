@@ -11,7 +11,7 @@ $input-placeholder-color: #aaa;
 // fonts
 $font-family-base: 'TT Norms', sans-serif;
 $font-family-custom: 'Arsenica', serif;
-$font-family-unique: 'Caveat', serif;
+$font-family-unique: 'MADE TheArtist Script', sans-serif;
 
 // font-weight
 $font-weight-medium: 500;
@@ -30,6 +30,9 @@ $body-color: $text-color;
 $grid-gutter-width: 20px;
 
 $primary: $main-first-color;
+$success: #4DB467;
+$danger: #F7555E;
+$warning: #F68432;
 
 $grid-breakpoints: (
         xs: 0,

@@ -24,6 +24,11 @@
   }
 }
 
+body.fixed {
+  padding-right: 17px;
+  overflow: hidden;
+}
+
 .main-wrapper {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -43,9 +48,9 @@
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-
   min-width: 320px;
   width: 100%;
+  max-width: 1920px;
   min-height: 100%;
   overflow: hidden;
   padding: 0;
@@ -91,14 +96,67 @@
 }
 
 .styling-title {
+  display: inline-block;
+  margin-left: -80px;
   color: #d7cabf;
   font-family: $font-family-unique;
   font-size: 70px;
   line-height: 130px;
+  transform: rotate(-6.52deg);
+  user-select: none;
 }
 
 .title {
+  margin: 0 0 35px;
   font-family: $font-family-custom;
-  font-size: 2.5rem;
-  font-weight: $font-weight-normal;
+  font-size: 80px;
+  line-height: 96px;
+}
+
+.title-section {
+  margin: 0;
+  font-family: $font-family-custom;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.swiper-pagination {
+  &-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 20px;
+    margin: 0 8px !important;
+    background: white;
+    opacity: 1;
+    transition: $transition-base;
+
+    &-active {
+      width: 13px;
+      background: $primary;
+    }
+  }
+}
+
+.btn {
+  &-link {
+    position: relative;
+    padding-left: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: #333333;
+      transition: $transition-base;
+    }
+
+    &:hover {
+      &::before {
+        background: $primary;
+      }
+    }
+  }
 }

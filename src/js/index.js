@@ -21,38 +21,41 @@ $(window).on('load', function () {
 
 $(function () {
     /* Borgir button */
-    $('.header-menu__borgir').on('click', function () {
-        $(this).next().addClass('show');
+    $('.header-menu__borgir').on('click', function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('active');
+        $(this).next().toggleClass('show');
+        $('body').toggleClass('fixed');
     });
 
-    $('.header-menu__borgir-close').on('click', function () {
-        $(this).parent().removeClass('show');
+    $(document).on('click', function (e) {
+        e.stopPropagation();
+        $('.header-menu__borgir').removeClass('active');
+        $('.header-menu__nav-hidden-wrap').removeClass('show');
+        $('body').removeClass('fixed');
+        e.preventDefault();
+    });
+
+    $('.header-menu__nav-hidden').on('click', function (e) {
+        e.stopPropagation();
     });
 
     // Swiper slider
-    if ($('.swiper-container').length) {
+    if ($('.slider-banner').length) {
         let slider;
         let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
 
         if (slide > 1) {
-            slider = new Swiper('.swiper-container', {
+            slider = new Swiper('.slider-banner', {
                 observer: true,
                 observeParents: true,
                 loop: true,
-                autoplay: true,
-                spaceBetween: 25,
-                slidesPerView: 1,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
+                // loopedSlides: 1,
+                slidesPerView: 'auto',
                 pagination: {
                     el: '.swiper-pagination',
                     clickable: true
                 },
-                /*scrollbar: {
-                    el: '.swiper-scrollbar',
-                },*/
                 dynamicBullets: true,
             });
         }
@@ -126,68 +129,3 @@ $(function () {
         });
     }
 });
-
-
-
-
-/*
-$(function () {
-    let select = $(".select-styler");
-    if (select.length) {
-        select.select2({
-            minimumResultsForSearch: Infinity
-        })
-    }
-    select.on("change", function () {
-        let region = $("#region");
-        let regionValue = region.val();
-        let country = $("#country");
-        let countryValue = country.val();
-        let partnerBlock = $(".wrap-partner");
-        if ($(this).attr("id") === "region") {
-            partnerBlock.each(function (a, b) {
-                console.log(regionValue);
-                if (regionValue === "show-all") {
-                    $(b).css("display", "block")
-                } else {
-                    if ($(b).data("region") !== regionValue) {
-                        $(b).css("display", "none")
-                    } else {
-                        $(b).css("display", "block")
-                    }
-                }
-            })
-        } else {
-            if ($(this).attr("id") === "country") {
-                console.log(countryValue);
-                partnerBlock.each(function (a, b) {
-                    if (countryValue === "show-all") {
-                        if (regionValue === "show-all") {
-                            $(b).css("display", "block")
-                        } else {
-                            if ($(b).data("region") !== regionValue) {
-                                $(b).css("display", "none")
-                            } else {
-                                $(b).css("display", "block")
-                            }
-                        }
-                    } else {
-                        if ($(b).data("country") !== countryValue) {
-                            $(b).css("display", "none")
-                        } else {
-                            if (regionValue === "show-all") {
-                                $(b).css("display", "block")
-                            } else {
-                                if ($(b).data("region") !== regionValue) {
-                                    $(b).css("display", "none")
-                                } else {
-                                    $(b).css("display", "block")
-                                }
-                            }
-                        }
-                    }
-                })
-            }
-        }
-    })
-});*/
