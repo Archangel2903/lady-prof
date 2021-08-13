@@ -138,6 +138,37 @@ body.fixed {
 }
 
 .btn {
+  padding: 11px 25px;
+  border: 1px solid;
+  border-radius: 50px;
+  font-size: 1rem;
+  line-height: 19px;
+  text-transform: uppercase;
+  transition: $transition-base;
+
+  &-primary {
+    border-color: $primary;
+    box-shadow: none;
+    color: white !important;
+
+    &:focus, &:hover {
+      color: $primary !important;
+      background: white;
+      box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
+    }
+
+    &:not(:disabled) {
+      &:not(.disabled) {
+        &:active {
+          &:focus {
+            color: white !important;
+            box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
+          }
+        }
+      }
+    }
+  }
+
   &-link {
     position: relative;
     padding-left: 50px;
@@ -156,6 +187,62 @@ body.fixed {
     &:hover {
       &::before {
         background: $primary;
+      }
+    }
+  }
+}
+
+.badge {
+  padding: 8px 9px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 0 10px;
+  //font-size: 1rem;
+
+  .rating-stars {
+    display: block;
+    width: 100%;
+    max-width: 115px;
+    margin: 0 auto;
+  }
+
+  .star {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .empty-stars {
+    .star {
+      svg {
+        fill: #FCEDC4;
+      }
+    }
+  }
+
+  .filled-stars {
+    .star {
+      svg {
+        fill: #F6BF32;
       }
     }
   }

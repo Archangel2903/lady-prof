@@ -186,6 +186,7 @@ input {
 }
 
 button {
+  overflow: hidden;
   transition: $transition-base;
 }
 

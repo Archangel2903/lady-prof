@@ -103,6 +103,8 @@
 }
 
 /* SECTION BANNER */
+.section-banner {}
+
 .slider-banner {
   width: 100%;
   height: 600px;
@@ -124,7 +126,7 @@
 
 /* SECTION MAIN CATEGORY */
 .section-main-category {
-
+  padding: 180px 0;
 }
 
 .main-category-container {
@@ -159,5 +161,120 @@
     width: 100%;
     max-width: 338px;
     padding: 30px 20px;
+    border: none;
+    border-radius: 24px;
+    transition: $transition-base;
+
+    &-label {
+      position: absolute;
+      top: 20px;
+      left: 6%;
+    }
+
+    &-button-favorite {
+      position: absolute;
+      top: 30px;
+      right: 8.9%;
+      width: 57px;
+      height: 57px;
+      padding: 15px;
+      border: none;
+      border-radius: 100%;
+      box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
+      background: #ffc7e9;
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-base;
+
+      &.active {
+        background: $primary;
+      }
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    &-img {
+      display: block;
+      max-width: 245px;
+      height: 328px;
+      margin: 0 auto;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    &-rating {
+      display: none;
+    }
+
+    &-price {
+      margin: 0 0 20px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    &-info {
+      margin: 0 0 20px;
+      color: #a8a8a8;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      &-body {
+        padding: 0;
+      }
+
+      &-title {
+        display: block;
+        margin: 0 0 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      &-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 0;
+        border: none;
+        margin-top: -10%;
+        background: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-base;
+      }
+    }
+
+    &:hover {
+      padding-bottom: 70px;
+      box-shadow: 48px 48px 48px rgba(49, 49, 49, 0.1);
+
+      .main-category__card {
+        &-button-favorite {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .card {
+        &-footer {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 }
