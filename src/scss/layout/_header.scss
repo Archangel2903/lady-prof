@@ -124,6 +124,7 @@ header.header {
 
   &__nav {
     &-link {
+      text-transform: uppercase;
       &:not(:last-child) {
         margin-right: 30px;
       }
@@ -205,7 +206,7 @@ header.header {
 
   &__input {
     width: 227px;
-    padding: 10px 20px 10px 10px !important;
+    padding: 10px 50px 10px 10px !important;
     border: none;
     border-radius: 100px;
     background: #fafafa;
@@ -228,8 +229,8 @@ header.header {
     transform: translateY(-50%);
 
     svg {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       fill: #333333;
     }
   }
@@ -244,6 +245,7 @@ header.header {
   align-content: center;
 
   &__link {
+    text-transform: uppercase;
     &:not(:last-child) {
       margin-right: 30px;
     }

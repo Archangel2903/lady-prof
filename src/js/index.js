@@ -103,8 +103,15 @@ $(function () {
     let productSelect = $('.card-select');
 
     if (productSelect) {
-        productSelect.select2({
-            minimumResultsForSearch: -1,
+        productSelect.each(function(i, e) {
+            $(this).select2({
+                minimumResultsForSearch: -1,
+                dropdownParent: $(this).nextAll('.dropdown-select'),
+            });
+        })
+
+        $('.main-category__card').on('mouseleave', function() {
+            $(this).find('.card-select').select2('close');
         });
     }
 

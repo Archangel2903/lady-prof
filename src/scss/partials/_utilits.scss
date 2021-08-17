@@ -54,6 +54,7 @@ body.fixed {
   min-height: 100%;
   overflow: hidden;
   padding: 0;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -145,7 +146,7 @@ body.fixed {
 }
 
 .btn {
-  padding: 11px 25px;
+  padding: 10px 25px;
   border: 1px solid;
   border-radius: 50px;
   font-size: 1rem;
@@ -179,6 +180,7 @@ body.fixed {
   &-link {
     position: relative;
     padding-left: 50px;
+    color: $text-color;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -198,6 +200,10 @@ body.fixed {
       &::before {
         background: $primary;
       }
+    }
+
+    &:focus {
+      text-decoration: none;
     }
   }
 }
@@ -253,6 +259,102 @@ body.fixed {
     .star {
       svg {
         fill: #F6BF32;
+      }
+    }
+  }
+}
+
+.select2 {
+  &-container {
+    .select2 {
+      &-selection--single {
+        width: 100%;
+        max-width: 134px;
+        height: 41px;
+
+        .select2-selection {
+          &__rendered {
+            padding: 0 50px 0 30px;
+          }
+
+          &__arrow {
+            b {
+
+            }
+          }
+        }
+      }
+    }
+
+    &--default {
+      .select2 {
+        &-selection--single {
+          border: 1px solid $primary;
+          border-radius: 34px;
+          transition: $transition-base;
+
+          .select2-selection {
+            &__rendered {
+              font-family: $font-family-base;
+              font-weight: 500;
+              line-height: 2.5;
+              text-transform: uppercase;
+            }
+
+            &__arrow {
+              right: 30px;
+              height: 100%;
+
+              b {
+
+              }
+            }
+          }
+        }
+
+        &-container--open {
+          &.select2-container {
+            &--below {
+              .select2-selection {
+                &--single {
+                  border-radius: 14px 14px 0 0;
+                }
+              }
+            }
+
+            &--above {
+              .select2-selection {
+                &--single {
+                  border-radius: 0 0 14px 14px;
+                }
+              }
+            }
+          }
+        }
+
+        &-results {
+          &__options {
+
+          }
+
+          &__option {
+            &--selected {
+              background: $main-second-color;
+            }
+
+            &--highlighted {
+              &.select2-results__option--selectable {
+                background: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--open {
+      .select2-dropdown {
+        border-color: $primary;
       }
     }
   }
