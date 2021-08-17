@@ -154,6 +154,10 @@ body.fixed {
   text-transform: uppercase;
   transition: $transition-base;
 
+  &-lg {
+    padding: 20px 32px;
+  }
+
   &-primary {
     border-color: $primary;
     box-shadow: none;
