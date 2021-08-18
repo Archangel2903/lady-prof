@@ -18,6 +18,13 @@ header.header {
   align-items: center;
   align-content: center;
   padding: 35px 0;
+
+  .logo {
+    img {
+      width: 211px;
+      height: 63px;
+    }
+  }
 }
 
 .header-menu {

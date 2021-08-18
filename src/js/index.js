@@ -51,6 +51,7 @@ $(function () {
             slider = new Swiper('.slider-banner', {
                 observer: true,
                 observeParents: true,
+                autoplay: true,
                 loop: true,
                 // loopedSlides: 1,
                 slidesPerView: 'auto',
@@ -62,6 +63,26 @@ $(function () {
             });
         }
     }
+
+    let sliderReviews = $('.slider-reviews');
+    if (sliderReviews.length) {
+        let slider, slide = document.querySelectorAll('.slider-reviews .swiper-slide').length;
+
+        if (slide > 2) {
+            slider = new Swiper('.slider-reviews', {
+                observer: true,
+                observeParents: true,
+                // autoHeight: true,
+                slidesPerView: 2,
+                spaceBetween: 40,
+                navigation: {
+                    nextEl: sliderReviews.next().find('.swiper-button-next'),
+                    prevEl: sliderReviews.next().find('.swiper-button-prev')
+                },
+            });
+        }
+    }
+
 
     // Button wishlist
     let wishBtn = $('.main-category__card-button-favorite');
@@ -112,6 +133,16 @@ $(function () {
 
         $('.main-category__card').on('mouseleave', function() {
             $(this).find('.card-select').select2('close');
+        });
+    }
+
+    // FAQ
+    let faq = $('.faq');
+
+    if (faq.length) {
+        $('.faq__item-head').on('click', function() {
+            $(this).parent().toggleClass('active');
+            $(this).next().slideToggle(400);
         });
     }
 
