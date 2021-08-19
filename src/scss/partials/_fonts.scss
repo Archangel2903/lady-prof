@@ -58,3 +58,17 @@ $fonts-path: '../fonts/';
   font-stretch: normal;
   unicode-range: U+0020-0491;
 }
+
+@font-face {
+  font-family:'TT Norms';
+  src: url('#{$fonts-path}TT Norms Light.eot');
+  src: url('#{$fonts-path}TT Norms Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fonts-path}TT Norms Light.woff2') format('woff2'),
+  url('#{$fonts-path}TT Norms Light.woff') format('woff'),
+  url('#{$fonts-path}TT Norms Light.ttf') format('truetype'),
+  url('#{$fonts-path}TT Norms Light.svg#TT Norms Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+000D-FB06;
+}

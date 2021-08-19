@@ -11,11 +11,12 @@ footer.footer {
 .subscribe {
   display: flex;
   flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding: 30px 50px;
+  padding: 10px;
   border-radius: 25px;
   margin-top: -80px;
   background: white;
@@ -24,10 +25,13 @@ footer.footer {
   &__info {
     flex: 0 1 55%;
     max-width: 580px;
-    margin-right: 60px;
+    //margin-right: 60px;
+    margin: 0 0 40px;
+    text-align: center;
 
     &-title {
       margin: 0 0 18px;
+      margin: 0 0 10px;
       font-size: 20px;
       letter-spacing: 2px;
       line-height: 27px;
@@ -35,20 +39,19 @@ footer.footer {
     }
     &-text {
       margin: 0;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
-      line-height: 27px;
-      letter-spacing: 2px;
     }
   }
 
   &__form {
-    flex: 0 1 40%;
+    width: 100%;
+    //flex: 0 1 40%;
   }
 
   &__input {
     width: 100%;
-    max-width: 426px;
+    //max-width: 426px;
     padding: 12px 80px 12px 17px;
     border: 1px solid #878787;
     border-radius: 30px;

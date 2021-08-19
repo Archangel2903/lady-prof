@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.d8e72df10b7223afbeb8.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.d67fdbca9eee462d62f9.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -21,6 +21,11 @@
 
                     <div class="header-menu__nav-hidden-wrap">
                         <nav class="header-menu__nav-hidden">
+                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Каталог</a>
+                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Оплата и доставка</a>
+                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Обзоры</a>
+                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Акции</a>
+
                             <a href="#1" class="header-menu__nav-hidden-link">Блог</a>
                             <a href="#2" class="header-menu__nav-hidden-link">Семинары</a>
                             <a href="#3" class="header-menu__nav-hidden-link">Контакты</a>
@@ -46,9 +51,10 @@
 
                 <div class="header-tools">
                     <form action="" method="" class="header-search">
+                        <button type="button" class="header-search__trigger"></button>
                         <label class="header-search__input-wrap">
                             <input type="search" class="header-search__input" placeholder="Search">
-                            <button class="header-search__button">
+                            <button type="submit" class="header-search__button">
                                 <svg>
                                     <use xlink:href="img/spritemap.svg#sprite-search"></use>
                                 </svg>
@@ -57,7 +63,9 @@
                     </form>
 
                     <div class="header-client">
-                        <a href="#sign-in" class="header-client__link">Войти в кабинет</a>
+                        <a href="#sign-in" class="header-client__link minimizer">Войти в кабинет
+                            <svg><use xlink:href="img/spritemap.svg#sprite-profile"></use></svg>
+                        </a>
 
                         <div class="header-client-language">
                             <a href="#lang" class="header-client-language__link">RU
@@ -70,7 +78,8 @@
                             </div>
                         </div>
 
-                        <a href="#sign-in" class="header-client__link">Корзина (<span class="cart-count">0</span>)</a>
+                        <a href="#cart" class="header-client__link minimizer position-relative">Корзина
+                            <svg><use xlink:href="img/spritemap.svg#sprite-cart"></use></svg>(<span class="cart-count">99</span>)</a>
                     </div>
                 </div>
             </div>
@@ -1321,7 +1330,7 @@
 
             <div class="footer-content-wrap">
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-xxxl-3 mb-4 mb-xxxl-0">
                         <div class="footer-content">
                             <a href="/" class="logo">
                                 <picture>
@@ -1330,7 +1339,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xxxl-3 col-md-4">
                         <div class="footer-content">
                             <div class="footer-list">
                                 <p class="footer-list__title">Каталог</p>
@@ -1344,7 +1353,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xxxl-3 col-md-4">
                         <div class="footer-content">
                             <div class="footer-list">
                                 <p class="footer-list__title">Магазин</p>
@@ -1359,7 +1368,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xxxl-3 col-md-4">
                         <div class="footer-content">
                             <div class="footer-list">
                                 <p class="footer-list__title">Контакты</p>
@@ -1416,5 +1425,5 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.d8e72df10b7223afbeb8.min.js"></script></body>
+<script type="text/javascript" src="bundle.d67fdbca9eee462d62f9.min.js"></script></body>
 </html>

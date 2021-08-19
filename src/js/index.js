@@ -8,7 +8,6 @@ import noUiSlider from 'nouislider';
 import 'bootstrap-star-rating';
 import 'select2';
 
-
 $(window).on('load', function () {
     let b = $('body');
 
@@ -35,11 +34,20 @@ $(function () {
         $('.header-menu__borgir').removeClass('active');
         $('.header-menu__nav-hidden-wrap').removeClass('show');
         $('body').removeClass('fixed');
-        e.preventDefault();
     });
 
     $('.header-menu__nav-hidden').on('click', function (e) {
         e.stopPropagation();
+    });
+
+    // Header search field toggle
+    $('.header-search__trigger').on('click', function() {
+        $(this).parent().toggleClass('show');
+        $(this).toggleClass('active');
+
+        /*if (!$('.header-search').hasClass('show')) {
+            $('.header-search').find('.header-search__input').val('');
+        }*/
     });
 
     // Swiper slider
