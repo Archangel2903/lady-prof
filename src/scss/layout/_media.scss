@@ -132,6 +132,18 @@
     }
   }
 
+  .section-main-faq {
+    .title {
+      margin: 0 0 100px;
+    }
+  }
+
+  .faq {
+    &__item-question {
+      font-size: 22px;
+    }
+  }
+
   /* FOOTER */
   .footer-content-wrap {
     padding: 50px 0 75px;
@@ -213,6 +225,16 @@
       }
     }
   }
+
+  .header-client-language {
+    &__link {
+      font-size: 16px;
+
+      svg {
+        display: inline-block;
+      }
+    }
+  }
   /* HEADER END */
 
   .section-home {
@@ -222,6 +244,26 @@
   .category-nav-home__item {
     width: 15%;
     margin: 0;
+  }
+
+  .section-main-faq {
+    padding: 200px 0 195px;
+  }
+
+  .faq {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      &-head {
+        padding: 15px 30px;
+      }
+
+      &-content {
+        padding: 30px;
+      }
+    }
   }
 }
 
@@ -293,6 +335,20 @@
       }
     }
   }
+
+  .section-stock {
+    &__decor {
+      display: block;
+
+      &_sm {
+        display: block;
+      }
+
+      &_lg {
+        display: block;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -313,6 +369,18 @@
 
   .category-nav-home {
     justify-content: space-between;
+  }
+
+  .section-stock {
+    padding: 130px 0 285px;
+  }
+
+  .section-main-blog {
+    padding: 195px 0 230px;
+  }
+
+  .main-blog {
+    padding: 120px 60px 0;
   }
 
   /* FOOTER */
@@ -370,6 +438,10 @@
 
     &__slider {
       overflow: visible;
+
+      .swiper-pagination {
+        display: none;
+      }
     }
   }
 
@@ -393,6 +465,10 @@
     }
   }
   /* HEADER END */
+
+  .main-stock-container {
+    padding-left: 133px;
+  }
 }
 
 // max-width
