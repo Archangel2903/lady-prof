@@ -11,20 +11,11 @@
 
 /* SECTION HOME */
 .section-home {
-  padding: 90px 0 175px;
+  padding: 20px 0;
   background: $main-second-color;
 
   .section-bg {
-    z-index: 0;
-
-    &__img {
-      position: absolute;
-      top: 7%;
-      right: 8%;
-      width: auto;
-      height: auto;
-      object-fit: fill;
-    }
+    display: none;
   }
 }
 
@@ -36,8 +27,7 @@
   &__title {
     margin: 0;
     font-family: $font-family-custom;
-    font-size: 120px;
-    line-height: 144px;
+    font-size: 60px;
     letter-spacing: 1px;
   }
 
@@ -47,7 +37,7 @@
 
   &__text {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 36px;
     text-transform: uppercase;
     white-space: pre-line;
@@ -58,7 +48,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   max-width: 1193px;
@@ -72,10 +62,11 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    width: 172px;
+    width: 145px;
     height: 172px;
     padding: 0 0 30px;
     border-radius: 15px;
+    margin: 0 0 75px;
     background: #ffffff;
 
     &:hover {
@@ -108,10 +99,10 @@
 
 .slider-banner {
   width: 100%;
-  height: 600px;
+  max-height: 600px;
+  //height: 600px;
 
   .swiper-slide {
-
     a {
       display: block;
     }
@@ -123,26 +114,33 @@
       height: 100%;
     }
   }
+
+  &__slide {
+    display: none;
+
+    &-mob {
+      img {
+        max-height: 600px;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 /* SECTION MAIN CATEGORY */
 .section-main-category {
-  padding: 185px 0 0;
-}
-
-.main-category-container {
-
+  padding: 50px 0 0;
 }
 
 .main-category {
   &__head {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin: 0 0 65px;
+    margin: 0 0 30px;
   }
 
   &__title {
@@ -156,7 +154,27 @@
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    padding: 0 0 180px;
+    margin: 0 0 60px;
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: visible;
+
+    .swiper {
+      &-wrapper {
+        justify-content: space-between;
+      }
+
+      &-pagination {
+        top: 100%;
+        bottom: auto;
+
+        &-bullet {
+          border: 1px solid $primary;
+        }
+      }
+    }
   }
 
   &__card {
@@ -165,13 +183,13 @@
     padding: 30px 20px;
     border: none;
     border-radius: 24px;
+    margin: 0 auto;
     transition: $transition-base;
 
     &-wrap {
       position: relative;
       width: 100%;
-      max-width: 338px;
-      height: 540px;
+      //max-width: 338px;
     }
 
     &-label {
@@ -184,15 +202,13 @@
       position: absolute;
       top: 30px;
       right: 8.9%;
-      width: 57px;
-      height: 57px;
-      padding: 15px;
+      width: 45px;
+      height: 45px;
+      padding: 12px;
       border: none;
       border-radius: 100%;
       box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
       background: #ffc7e9;
-      opacity: 0;
-      visibility: hidden;
       transition: $transition-base;
 
       &.active {
@@ -200,15 +216,15 @@
       }
 
       svg {
-        width: 26px;
-        height: 26px;
+        width: 20px;
+        height: 20px;
       }
     }
 
     &-img {
       display: block;
       max-width: 245px;
-      height: 328px;
+      height: 250px;
       margin: 0 auto 15px;
       object-fit: contain;
       object-position: center;
@@ -274,6 +290,9 @@
         letter-spacing: 2px;
         text-align: center;
         text-transform: uppercase;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
       }
 
       &-footer {
@@ -285,10 +304,7 @@
         align-content: center;
         padding: 0;
         border: none;
-        margin-top: -10%;
         background: none;
-        opacity: 0;
-        visibility: hidden;
         transition: $transition-base;
       }
 
@@ -367,24 +383,8 @@
     }
 
     &:hover {
-      //padding-bottom: 70px;
       box-shadow: 48px 48px 48px rgba(49, 49, 49, 0.1);
       z-index: 1;
-
-      .main-category__card {
-        &-button-favorite {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-
-      .card {
-        &-footer {
-          margin: 0;
-          opacity: 1;
-          visibility: visible;
-        }
-      }
     }
   }
 }

@@ -8,6 +8,16 @@ import noUiSlider from 'nouislider';
 import 'bootstrap-star-rating';
 import 'select2';
 
+const mqlMax = {
+    xxxl: matchMedia('(max-width: 1769px)'),
+    xxl: matchMedia('(max-width: 1365px)'),
+    xl: matchMedia('(max-width: 1199px)'),
+    lg: matchMedia('(max-width: 991px)'),
+    md: matchMedia('(max-width: 767px)'),
+    sm: matchMedia('(max-width: 575px)'),
+    xs: matchMedia('(max-width: 394px)'),
+}
+
 $(window).on('load', function () {
     let b = $('body');
 
@@ -91,6 +101,77 @@ $(function () {
         }
     }
 
+    let mainProdSlider = $('.main-category__slider');
+    if (mainProdSlider.length) {
+        let slider, slide = document.querySelectorAll('.main-category__slider .swiper-slide').length;
+
+        mqlMax.xxxl.addListener(function () {
+            if (mqlMax.xxxl.matches) {
+                slider = new Swiper('.main-category__slider', {
+                    observeParents: true,
+                    observer: true,
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        1365: {
+                            slidesPerView: 3,
+                            spaceBetween: 35,
+                        },
+                        1199: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        991: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        767: {
+                            slidesPerView: 1,
+                        }
+                    }
+                });
+            }
+            else {
+                slider.forEach(function (e, i) {
+                    e.destroy();
+                });
+            }
+        });
+
+        if (mqlMax.xxxl.matches) {
+            slider = new Swiper('.main-category__slider', {
+                observeParents: true,
+                observer: true,
+                slidesPerView: 4,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    1365: {
+                        slidesPerView: 3,
+                        spaceBetween: 35,
+                    },
+                    1199: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    }
+                }
+            });
+        }
+    }
 
     // Button wishlist
     let wishBtn = $('.main-category__card-button-favorite');

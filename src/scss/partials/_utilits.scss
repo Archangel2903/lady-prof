@@ -98,10 +98,10 @@ body.fixed {
 
 .styling-title {
   display: inline-block;
-  margin-left: -80px;
+  margin: 0;
   color: #d7cabf;
   font-family: $font-family-unique;
-  font-size: 70px;
+  font-size: 60px;
   line-height: 130px;
   transform: rotate(-8deg);
   user-select: none;
@@ -110,14 +110,13 @@ body.fixed {
 .title {
   margin: 0 0 35px;
   font-family: $font-family-custom;
-  font-size: 80px;
-  line-height: 96px;
+  font-size: 40px;
 }
 
 .title-section {
   margin: 0;
   font-family: $font-family-custom;
-  font-size: 56px;
+  font-size: 46px;
   line-height: 67px;
 }
 
@@ -146,7 +145,7 @@ body.fixed {
 }
 
 .btn {
-  padding: 10px 25px;
+  padding: 10px 15px;
   border: 1px solid;
   border-radius: 50px;
   font-size: 1rem;
@@ -295,7 +294,6 @@ body.fixed {
         &-selection--single {
           border: 1px solid $primary;
           border-radius: 34px;
-          transition: $transition-base;
 
           .select2-selection {
             &__rendered {
@@ -342,6 +340,8 @@ body.fixed {
           }
 
           &__option {
+            text-align: center;
+
             &--selected {
               background: $main-second-color;
             }
@@ -361,5 +361,10 @@ body.fixed {
         border-color: $primary;
       }
     }
+  }
+
+  &-dropdown {
+    border-radius: 14px;
+    overflow: hidden;
   }
 }
