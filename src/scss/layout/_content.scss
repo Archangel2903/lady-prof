@@ -449,21 +449,8 @@
       margin: 0 0 120px;
     }
 
-    &:hover {
-      .main-blog__box-pic {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-
     &-pic {
-      position: absolute;
-      top: 50%;
-      right: 17%;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-50%);
-      transition: $transition-base;
+      display: none;
     }
 
     &-content {
@@ -473,8 +460,8 @@
     &-title {
       margin: 0 0 18px;
       font-family: $font-family-custom;
-      font-size: 42px;
-      line-height: 63px;
+      font-size: 36px;
+      line-height: 1.5;
       letter-spacing: 1px;
     }
 
@@ -494,22 +481,10 @@
 /* SECTION COURSES */
 .section-main-courses {
   padding: 100px 0 0;
-  margin: 0 0 220px;
   background: $main-second-color;
 
   &__decor {
-    position: absolute;
-    top: -32%;
-    right: 5%;
-
-    &_lg {
-      top: 0;
-      right: 16%;
-    }
-  }
-
-  .title {
-    margin: 0 0 115px;
+    display: none;
   }
 }
 
@@ -520,12 +495,11 @@
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
-  margin-bottom: -170px;
 
   &__box {
     padding: 20px 20px 30px;
     border-radius: 19px;
-    margin: 0 10px;
+    margin: 0 10px 20px;
     background: white;
     text-align: center;
     transition: $transition-base;
@@ -689,23 +663,19 @@
 
 /* SECTION REVIEWS */
 .section-reviews {
-  padding: 115px 0 180px;
+  padding: 100px 0;
   background: $main-second-color;
 
   &__decor {
-    position: absolute;
-    top: -51px;
-    right: 20%;
+    display: none;
 
     &_sm {
-      position: absolute;
-      inset: 14px 0 0 -11px;
+      display: none;
     }
   }
 
   .title {
     position: relative;
-    margin: 0 0 80px;
   }
 }
 
@@ -718,25 +688,21 @@
 .slider-reviews {
   max-width: 1210px;
   height: 100%;
-  margin-left: 70px;
-
-  .swiper-slide {
-    max-width: 585px;
-  }
 
   &-nav {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 100%;
+    top: 105%;
+    right: auto;
+    left: 0;
+    width: 100%;
+    height: 50px;
   }
 }
 
 .swiper-button {
   &-prev {
     position: absolute;
-    inset: 0 0 auto auto;
+    inset: 0 auto auto 0;
     width: 50px;
     height: 50px;
     margin: 0;
@@ -749,7 +715,7 @@
       left: 50%;
       width: 8px;
       height: 8px;
-      transform: translate(-50%, -50%) rotate(180deg);
+      transform: translate(-50%, -50%) rotate(90deg);
     }
   }
 
@@ -768,7 +734,7 @@
       left: 50%;
       width: 8px;
       height: 8px;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) rotate(-90deg);
     }
   }
 }
@@ -834,7 +800,8 @@
     &__pic {
       display: block;
       width: 800px;
-      height: 800px;
+      max-width: 100%;
+      max-height: 800px;
       padding: 51px;
       border-radius: 20px;
       margin: 0 0 0 auto;
@@ -849,7 +816,7 @@
   }
 
   &-partners {
-    margin: 205px auto 140px;
+    margin: 100px 0;
 
     .seo-partners-wrap {
       display: flex;

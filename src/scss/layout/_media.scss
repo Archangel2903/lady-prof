@@ -132,6 +132,21 @@
     }
   }
 
+  .main-blog {
+    &__box-title {
+      font-size: 42px;
+      line-height: 63px;
+    }
+  }
+
+  .main-courses {
+    margin-bottom: -170px;
+
+    &__box {
+      margin: 0 10px;
+    }
+  }
+
   .section-main-faq {
     .title {
       margin: 0 0 100px;
@@ -141,6 +156,46 @@
   .faq {
     &__item-question {
       font-size: 22px;
+    }
+  }
+
+  .section-reviews {
+    padding: 115px 0 180px;
+
+    .title {
+      margin: 0 0 80px;
+    }
+  }
+
+  .slider-reviews {
+    margin: 0 100px 0 0;
+
+    &-nav {
+      inset: 0 0 auto auto;
+      width: 50px;
+      height: 100%;
+    }
+  }
+
+  .swiper-button {
+    &-prev {
+      inset: 0 0 auto auto;
+
+      svg {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+    &-next {
+      svg {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+    }
+  }
+
+  .main-seo {
+    &-partners {
+      margin: 205px auto 140px;
     }
   }
 
@@ -349,6 +404,16 @@
       }
     }
   }
+
+  .section-main-courses {
+    margin: 0 0 220px;
+  }
+
+  .slider-reviews {
+    .swiper-slide {
+      max-width: 585px;
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -381,6 +446,39 @@
 
   .main-blog {
     padding: 120px 60px 0;
+  }
+
+  .section-main-courses {
+    &__decor {
+      position: absolute;
+      top: -32%;
+      right: 5%;
+      display: block;
+
+      &_lg {
+        top: 0;
+        right: 16%;
+      }
+    }
+
+    .title {
+      margin: 0 0 115px;
+    }
+  }
+
+  .section-reviews {
+    &__decor {
+      position: absolute;
+      top: -51px;
+      right: 20%;
+      display: block;
+
+      &_sm {
+        position: absolute;
+        inset: 14px 0 0 -11px;
+        display: block;
+      }
+    }
   }
 
   /* FOOTER */
@@ -468,6 +566,32 @@
 
   .main-stock-container {
     padding-left: 133px;
+  }
+
+  .main-blog {
+    &__box {
+      &:hover {
+        .main-blog__box-pic {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &-pic {
+        position: absolute;
+        top: 50%;
+        right: 17%;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50%);
+        transition: $transition-base;
+      }
+    }
+  }
+
+  .slider-reviews {
+    margin: 0 0 0 70px;
   }
 }
 

@@ -90,13 +90,18 @@ $(function () {
             slider = new Swiper('.slider-reviews', {
                 observer: true,
                 observeParents: true,
-                // autoHeight: true,
+                autoHeight: true,
                 slidesPerView: 2,
                 spaceBetween: 40,
                 navigation: {
                     nextEl: sliderReviews.next().find('.swiper-button-next'),
                     prevEl: sliderReviews.next().find('.swiper-button-prev')
                 },
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 1,
+                    }
+                }
             });
         }
     }
