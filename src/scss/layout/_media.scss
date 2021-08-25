@@ -40,6 +40,11 @@
 }
 
 @include media-breakpoint-up(md) {
+  .main-title {
+    font-size: 120px;
+    line-height: 144px;
+  }
+
   .styling-title {
     font-size: 70px;
   }
@@ -94,11 +99,6 @@
   /* HEADER END */
 
   .home-content {
-    &__title {
-      font-size: 120px;
-      line-height: 144px;
-    }
-
     &__text {
       font-size: 20px;
     }
@@ -193,9 +193,13 @@
     }
   }
 
-  .main-seo {
-    &-partners {
-      margin: 205px auto 140px;
+  .main-seo-instagram {
+    .title {
+      margin: 0 0 70px;
+    }
+
+    &__pic {
+      padding: 51px;
     }
   }
 
@@ -246,7 +250,7 @@
     &__nav {
       &-hidden {
         padding: 150px 0 40px 70px;
-        overflow-y: scroll;
+        overflow-y: auto;
 
         &-link {
           font-size: 35px;
@@ -320,11 +324,31 @@
       }
     }
   }
+
+  .section-instagram {
+    padding: 133px 0 155px;
+
+    .main-seo-instagram {
+      &__pic {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .section-course {
+    padding: 130px 0 170px;
+  }
 }
 
 @include media-breakpoint-up(xl) {
   .btn {
     padding: 10px 25px;
+
+    &-lg {
+      padding: 20px 32px;
+    }
   }
 
   .section-home {
@@ -414,6 +438,24 @@
       max-width: 585px;
     }
   }
+
+  .main-seo {
+    &-partners {
+      margin: 205px auto 140px;
+    }
+  }
+
+  .section-seo {
+    padding: 180px 0 220px;
+  }
+
+  .section-seminars {
+    padding: 125px 0 400px;
+
+    &__decor {
+
+    }
+  }
 }
 
 @include media-breakpoint-up(xxl) {
@@ -478,6 +520,12 @@
         inset: 14px 0 0 -11px;
         display: block;
       }
+    }
+  }
+
+  .main-seo-partners {
+    &__pic {
+      margin: 0;
     }
   }
 

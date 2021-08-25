@@ -178,6 +178,28 @@ $(function () {
         }
     }
 
+    let stagesSlider = $('.stages-slider');
+    if (stagesSlider.length) {
+        let slider, slide = document.querySelectorAll('.stages-slider .swiper-slide').length;
+
+        if (slide > 3) {
+            slider = new Swiper('.stages-slider', {
+                observer: true,
+                observeParents: true,
+                centeredSlides: false,
+                loop: true,
+                // loopAdditionalSlides: slide,
+                slidesPerView: 4,
+                spaceBetween: 30,
+                navigation: {
+                    prevEl: stagesSlider.find('.swiper-button-prev'),
+                    nextEl: stagesSlider.find('.swiper-button-next'),
+                },
+                // breakpoints: {}
+            });
+        }
+    }
+
     // Button wishlist
     let wishBtn = $('.main-category__card-button-favorite');
     if (wishBtn.length) {

@@ -107,6 +107,13 @@ body.fixed {
   user-select: none;
 }
 
+.main-title {
+  margin: 0 0 35px;
+  font-family: $font-family-custom;
+  font-size: 60px;
+  letter-spacing: 1px;
+}
+
 .title {
   margin: 0 0 35px;
   font-family: $font-family-custom;
@@ -154,7 +161,7 @@ body.fixed {
   transition: $transition-base;
 
   &-lg {
-    padding: 20px 32px;
+    padding: 10px 15px;
   }
 
   &-primary {
@@ -366,5 +373,37 @@ body.fixed {
   &-dropdown {
     border-radius: 14px;
     overflow: hidden;
+  }
+}
+
+.section-breadcrumbs {
+  padding: 63px 0 0;
+}
+
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+  background: none;
+
+  &-item {
+    a {
+      color: #878787;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &.active {
+      color: #878787;
+    }
+
+    &+ .breadcrumb-item {
+      padding-left: 15px;
+
+      &::before {
+        padding-right: 15px;
+      }
+    }
   }
 }
