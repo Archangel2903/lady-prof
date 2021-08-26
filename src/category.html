@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Категория</title>
+    <title>Каталог | категория</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
@@ -94,7 +94,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                        <li class="breadcrumb-item"><a href="#">Каталог</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Ногти</li>
                     </ol>
                 </nav>
             </div>
@@ -103,12 +104,296 @@
         <section class="section section-catalog">
             <div class="container">
                 <div class="catalog">
-                    <div class="catalog-sidebar">
+                    <div class="catalog__header">
+                        <h1 class="catalog__title">Ногти</h1>
 
+                        <form action="" method="" class="catalog-search">
+                            <label class="position-relative d-block m-0">
+                                <input type="search" class="catalog-search__input" placeholder="Я ищу...">
+                                <button type="button" class="catalog-search__submit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-search"></use>
+                                    </svg>
+                                </button>
+                            </label>
+                        </form>
                     </div>
+
+                    <form method="" action="" class="catalog-sidebar">
+                        <div class="catalog-sidebar__box">
+                            <div class="catalog-sidebar__box-head">
+                                <span class="catalog-sidebar__box-name">Бренд</span>
+
+                                <button type="button" class="catalog-sidebar__box-trigger">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-chevrone"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="catalog-sidebar__box-body">
+                                <div class="catalog-sidebar__box-content">
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">Molekula (245)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">KODI (542)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">PAESE (265)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">LOVELY (53)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">IdealNail (65)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">Global (36)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="checkbox">
+                                                <span class="checkbox-style"></span>
+                                                <span class="checkbox-text">F.O.X (674)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-sidebar__box">
+                            <div class="catalog-sidebar__box-head">
+                                <span class="catalog-sidebar__box-name">Группа товара</span>
+
+                                <button type="button" class="catalog-sidebar__box-trigger">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-chevrone"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="catalog-sidebar__box-body">
+                                <div class="catalog-sidebar__box-content">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-sidebar__box">
+                            <div class="catalog-sidebar__box-head">
+                                <span class="catalog-sidebar__box-name">Назначение</span>
+
+                                <button type="button" class="catalog-sidebar__box-trigger">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-chevrone"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="catalog-sidebar__box-body">
+                                <div class="catalog-sidebar__box-content">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog-sidebar__box">
+                            <div class="catalog-sidebar__box-head">
+                                <span class="catalog-sidebar__box-name">Цена (грн)</span>
+                            </div>
+
+                            <div class="catalog-sidebar__box-content">
+                                <div class="slider-handles"><input type="range" min="100" max="5000"></div>
+                            </div>
+                        </div>
+                    </form>
 
                     <div class="catalog-content">
 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-main-faq">
+            <picture class="section-main-faq__decor">
+                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor01.png') %>" alt="" title="">
+            </picture>
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto offset-xl-1 pl-xl-5">
+                        <p class="title">Вопросы ответы</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 px-xl-5">
+                        <div class="faq">
+                            <div class="faq__item">
+                                <div class="faq__item-head">
+                                    <span class="faq__item-question">Вопрос 1</span>
+                                    <span class="faq__item-head-trigger"></span>
+                                </div>
+                                <div class="faq__item-body">
+                                    <div class="faq__item-content">
+                                        <p class="faq__item-answer">Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить
+                                            значение форм
+                                            развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации
+                                            соответствующий</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq__item">
+                                <div class="faq__item-head">
+                                    <span class="faq__item-question">Вопрос 2</span>
+                                    <span class="faq__item-head-trigger"></span>
+                                </div>
+                                <div class="faq__item-body">
+                                    <div class="faq__item-content">
+                                        <p class="faq__item-answer">Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить
+                                            значение форм
+                                            развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации
+                                            соответствующий</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq__item">
+                                <div class="faq__item-head">
+                                    <span class="faq__item-question">Вопрос 3</span>
+                                    <span class="faq__item-head-trigger"></span>
+                                </div>
+                                <div class="faq__item-body">
+                                    <div class="faq__item-content">
+                                        <p class="faq__item-answer">Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить
+                                            значение форм
+                                            развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации
+                                            соответствующий</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq__item">
+                                <div class="faq__item-head">
+                                    <span class="faq__item-question">Вопрос 4</span>
+                                    <span class="faq__item-head-trigger"></span>
+                                </div>
+                                <div class="faq__item-body">
+                                    <div class="faq__item-content">
+                                        <p class="faq__item-answer">Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить
+                                            значение форм
+                                            развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации
+                                            соответствующий</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq__item">
+                                <div class="faq__item-head">
+                                    <span class="faq__item-question">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi debitis dolorem doloremque dolores eveniet ex id possimus quasi quia sunt!</span>
+                                    <span class="faq__item-head-trigger"></span>
+                                </div>
+                                <div class="faq__item-body">
+                                    <div class="faq__item-content">
+                                        <p class="faq__item-answer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto culpa debitis deserunt,
+                                            dignissimos explicabo, fugiat illo maxime minus nam obcaecati odio officiis suscipit. Earum, expedita saepe. At consequatur
+                                            dicta dolor, eum facilis natus perspiciatis reiciendis repellendus suscipit? Asperiores atque autem beatae cupiditate deleniti
+                                            dolor doloribus enim eos explicabo fugit, illum inventore magni minima minus molestias mollitia neque officia officiis optio
+                                            provident, quam repellendus sapiente, similique suscipit tempora veritatis voluptas voluptatem. Aperiam deserunt eaque harum
+                                            impedit laudantium nobis nostrum pariatur possimus? Autem blanditiis dignissimos eius harum porro repellendus tempore unde
+                                            voluptates voluptatum. A blanditiis quia quod rerum velit? Accusantium aspernatur, at ex facere iure minus modi nam nulla
+                                            numquam odio officia quidem, quis rem ullam voluptas? Accusamus animi assumenda doloremque expedita illum itaque laudantium
+                                            maxime minima omnis perferendis rem reprehenderit rerum, sequi sunt suscipit vero voluptatibus! Consequatur enim ipsum
+                                            perferendis placeat, repellendus similique sint. Ad aliquid amet autem consequuntur cumque, dignissimos doloremque doloribus
+                                            eaque est ex exercitationem facere hic inventore iusto magnam modi nam nemo possimus, quos reprehenderit sunt vitae voluptate
+                                            voluptatum. Culpa cupiditate, deleniti, dolore eligendi excepturi harum iusto minima, molestiae obcaecati quidem quo quod quos
+                                            velit. Cum debitis distinctio dolor doloremque et facilis fugit nesciunt nisi odit reprehenderit. Ab, ad consequatur culpa cum
+                                            cumque delectus deleniti dicta dolor dolores dolorum ducimus eaque esse, est exercitationem explicabo fugiat illum ipsam iste
+                                            iure iusto laudantium minima, natus nemo nobis nostrum odit porro possimus quasi quos recusandae reiciendis repellat
+                                            repellendus sapiente unde vero voluptates voluptatum. Iste labore nulla pariatur perspiciatis quidem!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-seo">
+            <div class="main-seo container">
+                <div class="main-seo-block row">
+                    <div class="col-12">
+                        <div class="seo-block">
+                            <p class="h1">SEO текст</p>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Задача организации, в
+                                особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития.</p>
+
+                            <h2>Идейные соображения высшего порядка</h2>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития.</p>
+
+                            <ul>
+                                <li>плановых заданий способствует подготовки и реализации модели</li>
+                                <li>другой стороны постоянный</li>
+                                <li>количественный рост и сфера нашей активности</li>
+                                <li>позволяет оценить значение форм развития</li>
+                            </ul>
+
+                            <h2>Задача организации, в особенности же реализация намеченных:</h2>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. </p>
+                        </div>
                     </div>
                 </div>
             </div>

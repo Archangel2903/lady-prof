@@ -154,6 +154,9 @@ input {
       cursor: pointer;
     }
   }
+  &[type="checkbox"], &[type="radio"] {
+    display: none;
+  }
   &[type="button"], &[type="submit"], &[type="reset"], &[type="image"] {
     -webkit-appearance: button;
     -moz-appearance: button;
