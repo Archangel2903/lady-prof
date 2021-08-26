@@ -150,6 +150,1453 @@
                 </a>
             </nav>
         </section>
+
+        <section class="section section-banner">
+            <div class="container-fluid px-0">
+                <div class="slider-banner swiper-container">
+                    <div class="swiper-wrapper">
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob01.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide02.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob02.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob01.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide02.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob02.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob01.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+
+                        <a href="#page" class="swiper-slide">
+                            <picture class="slider-banner__slide">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-slide02.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <picture class="slider-banner__slide-mob">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/banner-mob02.png') %>" alt="image" title="image">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-catalog-category">
+            <div class="container">
+                <div class="catalog-category">
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Макияж</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Волосы</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Лицо</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Руки</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Ногти</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="catalog-category__box">
+                        <p class="catalog-category__box-title">Ноги</p>
+                        <div class="main-category__slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img03.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-category__card-wrap swiper-slide">
+                                    <div class="main-category__card card">
+                                        <span class="main-category__card-label badge bg-warning">Хит</span>
+                                        <button class="main-category__card-button-favorite">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                            </svg>
+                                        </button>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img04.png') %>"
+                                                 class="main-category__card-img card-img" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="card-body">
+                                            <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                            <a href="#product-page" class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio,
+                                                voluptatem!</a>
+
+                                            <p class="main-category__card-price">115 ₴</p>
+
+                                            <div class="main-category__card-info">
+                                                <span class="main-category__card-manufacturer">PNB</span>
+
+                                                <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer">
+                                            <div class="card-select-wrap">
+                                                <select class="card-select">
+                                                    <option value="01">8 ml</option>
+                                                    <option value="02">12 ml</option>
+                                                    <option value="03">999 ml</option>
+                                                </select>
+                                                <span class="dropdown-select"></span>
+                                            </div>
+                                            <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-seo">
+            <div class="main-seo container">
+                <div class="main-seo-block row">
+                    <div class="col-12">
+                        <div class="seo-block">
+                            <p class="h1">SEO текст</p>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Задача организации, в
+                                особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития.</p>
+
+                            <h2>Идейные соображения высшего порядка</h2>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития.</p>
+
+                            <ul>
+                                <li>плановых заданий способствует подготовки и реализации модели</li>
+                                <li>другой стороны постоянный</li>
+                                <li>количественный рост и сфера нашей активности</li>
+                                <li>позволяет оценить значение форм развития</li>
+                            </ul>
+
+                            <h2>Задача организации, в особенности же реализация намеченных:</h2>
+
+                            <p>Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития. С другой
+                                стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- CONTENT END -->
 

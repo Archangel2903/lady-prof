@@ -5,13 +5,11 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
-  margin-top: 80px;
   background: $main-second-color;
 }
 
 .subscribe {
   display: flex;
-  flex-direction: row;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -31,7 +29,6 @@ footer.footer {
     text-align: center;
 
     &-title {
-      margin: 0 0 18px;
       margin: 0 0 10px;
       font-size: 20px;
       letter-spacing: 2px;

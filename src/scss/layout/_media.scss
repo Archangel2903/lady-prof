@@ -32,8 +32,18 @@
   }
   /* HEADER END */
 
-  .category-nav-home__item {
-    width: 30%;
+  .category-nav-home {
+    &__item {
+      width: 30%;
+    }
+  }
+
+  .category-nav {
+    justify-content: space-around;
+
+    &__item {
+      width: 33.333333%;
+    }
   }
 
   /* FOOTER */
@@ -147,6 +157,20 @@
     }
   }
 
+  .section-courses {
+    .main-courses {
+      &__box {
+        flex-direction: row;
+
+        &-description {
+          width: calc(100% - 300px);
+          padding-left: 20px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
   .section-main-faq {
     .title {
       margin: 0 0 100px;
@@ -200,6 +224,22 @@
 
     &__pic {
       padding: 51px;
+    }
+  }
+
+  .stages {
+    &-slide {
+      max-width: 444px;
+    }
+  }
+
+  .category-nav {
+    &__item {
+      flex-direction: row;
+    }
+
+    &__pic {
+      margin: 0 30px 0 0;
     }
   }
 
@@ -339,6 +379,25 @@
 
   .section-course {
     padding: 130px 0 170px;
+
+    .main-courses {
+      &__box {
+        &-description {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+
+  .stages-slider {
+    .swiper-button {
+      &-prev {
+        inset: auto 30% calc(100% + 20px) auto;
+      }
+      &-next {
+        inset: auto 0 calc(100% + 20px) auto;
+      }
+    }
   }
 }
 
@@ -433,6 +492,10 @@
     margin: 0 0 220px;
   }
 
+  .section-courses {
+    margin-top: -245px;
+  }
+
   .slider-reviews {
     .swiper-slide {
       max-width: 585px;
@@ -454,6 +517,21 @@
 
     &__decor {
 
+    }
+  }
+
+  .section-about-course {
+    padding: 140px 0 285px;
+  }
+
+  .about-course {
+    margin-bottom: 190px;
+  }
+
+  .category-nav {
+    &__item {
+      width: auto;
+      margin: 0 auto;
     }
   }
 }
@@ -529,6 +607,12 @@
     }
   }
 
+  .stages {
+    &-slide {
+      height: 550px;
+    }
+  }
+
   /* FOOTER */
   .subscribe {
     flex-direction: row;
@@ -565,7 +649,7 @@
 
       .card {
         &-footer {
-          margin-top: -10%;
+          margin-top: -15%;
           opacity: 0;
           visibility: hidden;
         }
@@ -663,7 +747,13 @@
 }
 
 @include media-breakpoint-down(xs) {
+
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 395px) {
+  .category-nav {
+    &__item {
+      width: 50%;
+    }
+  }
 }

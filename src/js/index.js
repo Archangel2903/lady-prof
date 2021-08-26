@@ -195,7 +195,17 @@ $(function () {
                     prevEl: stagesSlider.find('.swiper-button-prev'),
                     nextEl: stagesSlider.find('.swiper-button-next'),
                 },
-                // breakpoints: {}
+                breakpoints: {
+                    1769: {
+                        slidesPerView: 3,
+                    },
+                    1199: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    }
+                }
             });
         }
     }
@@ -258,7 +268,7 @@ $(function () {
     if (faq.length) {
         $('.faq__item-head').on('click', function() {
             $(this).parent().toggleClass('active');
-            $(this).next().slideToggle(400);
+            $(this).next().stop().slideToggle(400);
         });
     }
 
