@@ -97,7 +97,7 @@ body.fixed {
 }
 
 .styling-title {
-  display: inline-block;
+  display: none;
   margin: 0;
   color: #d7cabf;
   font-family: $font-family-unique;
@@ -408,6 +408,53 @@ body.fixed {
   }
 }
 
+.slider-handles {
+  height: 2px;
+  border: none;
+  margin: 0 8px 50px;
+  background: #f5ede6;
+  box-shadow: none;
+
+  .noUi {
+    &-connects {
+
+    }
+
+    &-connect {
+      background: $primary;
+    }
+
+    &-origin {
+
+    }
+
+    &-handle {
+      top: 50%;
+      right: -50%;
+      width: 16px;
+      height: 16px;
+      border: 2px solid $primary;
+      border-radius: 100%;
+      background: white;
+      transform: translate(-50%, -45%);
+
+      &::before, &::after {
+        display: none;
+      }
+    }
+
+    &-pips {
+      &-horizontal {
+        height: 0;
+      }
+    }
+
+    &-value {
+      display: none;
+    }
+  }
+}
+
 input {
   &[type="checkbox"], &[type="radio"] {
     &+ .checkbox {
@@ -435,8 +482,8 @@ input {
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             border-radius: 2px;
             background: $primary;
             transition: $transition-base;
@@ -453,6 +500,7 @@ input {
     &:checked + .checkbox {
       .checkbox-style {
         border-color: $primary;
+        background: $main-third-color;
 
         &::before {
           transform: translate(-50%, -50%) scale(1);

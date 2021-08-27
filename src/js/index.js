@@ -272,6 +272,28 @@ $(function () {
         });
     }
 
+    // sidebar triggers
+    let sidebarBox = document.querySelectorAll('.catalog-sidebar__box'),
+        trigger = $('.catalog-sidebar__box-trigger');
+
+    sidebarBox.forEach(function (e) {
+        let thisBody = e.querySelector('.catalog-sidebar__box-body');
+
+        if (e.classList.contains('active')) {
+            $(thisBody).slideDown(0);
+        }
+        else {
+            $(thisBody).slideUp(0);
+        }
+    });
+
+    if (sidebarBox.length && trigger.length) {
+        trigger.on('click', function () {
+            $(this).closest('.catalog-sidebar__box').toggleClass('active');
+            $(this).parent().next('.catalog-sidebar__box-body').slideToggle(300);
+        });
+    }
+
     // Range slide
     if ($('input[type="range"]')) {
         let sliderRange = document.querySelectorAll('.slider-range');
@@ -279,7 +301,7 @@ $(function () {
 
         if (sliderRange.length) {
             sliderRange.forEach(function (elem) {
-                let input = elem.childNodes[0];
+                let input = elem.children[0];
                 let startValue = input.hasAttribute('value') ? Number(input.getAttribute('value')) : 1;
                 let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
                 let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
@@ -301,9 +323,12 @@ $(function () {
 
         if (sliderHandles.length) {
             sliderHandles.forEach(function (elem) {
-                let input = elem.childNodes[0];
+                let input = elem.children[0];
                 let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
                 let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
+                let minInput = elem.nextElementSibling.children[0].children[1];
+                let maxInput = elem.nextElementSibling.children[1].children[1];
+                let inputs = elem.nextElementSibling.querySelectorAll('.price-slider__value');
 
                 input.remove();
 
@@ -315,7 +340,29 @@ $(function () {
                     range: {
                         'min': minValue,
                         'max': maxValue
+                    },
+                    pips: {
+                        mode: 'range',
+                        density: 2,
                     }
+                });
+
+                elem.noUiSlider.on('update', function (values, handle) {
+                    inputs[handle].value = values[handle].slice(0, -3);
+                });
+
+                inputs.forEach(function (input, handle) {
+                    input.addEventListener('change', function () {
+                        elem.noUiSlider.setHandle(handle, this.value);
+                    });
+                })
+
+                minInput.addEventListener('change', function () {
+                    elem.noUiSlider.set([this.value, null]);
+                });
+
+                maxInput.addEventListener('change', function () {
+                    elem.noUiSlider.set([null, this.value]);
                 });
             });
         }

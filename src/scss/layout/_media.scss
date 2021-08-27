@@ -402,6 +402,10 @@
 }
 
 @include media-breakpoint-up(xl) {
+  .styling-title {
+    display: inline-block;
+  }
+
   .btn {
     padding: 10px 25px;
 
@@ -424,6 +428,10 @@
         object-fit: fill;
       }
     }
+  }
+
+  .home-content {
+    text-align: left;
   }
 
   .category-nav-home__item {

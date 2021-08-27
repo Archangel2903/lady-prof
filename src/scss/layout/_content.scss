@@ -23,6 +23,7 @@
   position: relative;
   max-width: 1330px;
   margin: 0 auto;
+  text-align: center;
 
   .title {
     margin: 0 0 25px;
@@ -1185,12 +1186,19 @@
 }
 
 .catalog {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
   &__header {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
     margin: 0 0 46px;
   }
 
@@ -1240,8 +1248,26 @@
   &-sidebar {
     width: 100%;
     max-width: 340px;
+    margin-right: 20px;
 
     &__box {
+      padding: 30px 0;
+      border-top: 1px solid #F5EDE6;
+
+      &.active {
+        .catalog-sidebar__box {
+          &-trigger {
+            svg {
+              transform: rotate3d(1, 0, 0, 180deg);
+            }
+          }
+
+          /*&-body {
+            display: block;
+          }*/
+        }
+      }
+
       &-head {
         display: flex;
         flex-flow: row wrap;
@@ -1251,7 +1277,7 @@
       }
 
       &-name {
-
+        font-weight: 500;
       }
 
       &-trigger {
@@ -1263,10 +1289,12 @@
         svg {
           width: 9px;
           height: 9px;
+          transition: $transition-base;
         }
       }
 
       &-body {
+        //display: none;
         margin-top: 30px;
 
         .catalog-sidebar__box-content {
@@ -1275,10 +1303,12 @@
       }
 
       &-content {
-        margin-top: 20px;
+        margin-top: 30px;
       }
 
       .form-group {
+        margin: 0;
+
         &:not(:last-child) {
           margin-bottom: 20px;
         }
@@ -1287,10 +1317,60 @@
           margin: 0;
         }
       }
+
+      .price-slider {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+
+        &__cell {
+          margin: 0 20px 0 0;
+        }
+
+        &__value {
+          width: 60px;
+          padding: 15px 5px;
+          border: 1px solid #D7CABF;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 500;
+          text-align: center;
+
+          &-name {
+            margin-right: 10px;
+            color: #9c9d9d;
+            font-size: 14px;
+          }
+
+          &_min {
+
+          }
+
+          &_max {
+
+          }
+        }
+      }
     }
   }
 
   &-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: calc(100% - 360px);
 
+    .main-category {
+      &__card {
+        &-wrap {
+          margin: 0 14px 20px 0;
+        }
+      }
+    }
   }
 }
