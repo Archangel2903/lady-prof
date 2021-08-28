@@ -1250,6 +1250,30 @@
     max-width: 340px;
     margin-right: 20px;
 
+    &__clear {
+      border-color: $primary;
+      color: $text-color;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      svg {
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-left: 15px;
+        vertical-align: baseline;
+        transition: $transition-base;
+      }
+
+      &:hover {
+        color: white;
+
+        svg {
+          fill: white;
+        }
+      }
+    }
+
     &__box {
       padding: 30px 0;
       border-top: 1px solid #F5EDE6;
@@ -1294,10 +1318,10 @@
       }
 
       &-body {
-        //display: none;
         margin-top: 30px;
 
         .catalog-sidebar__box-content {
+          max-height: 250px;
           margin: 0;
         }
       }
@@ -1365,10 +1389,96 @@
     align-content: flex-start;
     width: calc(100% - 360px);
 
+    &__section {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      width: 100%;
+      margin: 0 0 40px;
+
+      &-title {
+        width: 100%;
+        padding: 10px 0;
+        margin: 0 0 40px;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #F5EDE6;
+        font-family: $font-family-custom;
+        font-size: 42px;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+
+    &__sorting {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+      padding: 20px 0;
+      border-top: 1px solid #F5EDE6;
+      border-bottom: 1px solid #F5EDE6;
+      margin: 0 0 40px;
+      font-weight: 500;
+
+      &> * {
+        margin-right: 50px;
+      }
+
+      &-variant {
+
+
+        a {
+          margin-right: 20px;
+
+          &.active {
+            color: $primary;
+          }
+        }
+      }
+
+      &-price {
+        a {
+          position: relative;
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          border: 1px solid $primary;
+          border-radius: 100%;
+          opacity: 0.4;
+
+          &:first-child {
+            svg {
+              transform: translate(-50%, -50%) rotate(180deg);
+            }
+          }
+
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            fill: $primary;
+            transform: translate(-50%, -50%);
+          }
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
     .main-category {
       &__card {
         &-wrap {
-          margin: 0 14px 20px 0;
+          margin: 0 14px 40px 0;
         }
       }
     }

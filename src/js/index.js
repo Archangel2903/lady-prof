@@ -7,6 +7,8 @@ import Swiper from 'swiper/dist/js/swiper.min';
 import noUiSlider from 'nouislider';
 import 'bootstrap-star-rating';
 import 'select2';
+import 'jquery-mousewheel';
+import 'malihu-custom-scrollbar-plugin';
 
 const mqlMax = {
     xxxl: matchMedia('(max-width: 1769px)'),
@@ -28,9 +30,31 @@ $(window).on('load', function () {
     }
 
     b.removeClass('loaded');
+
+    $('.catalog-sidebar__box-body .catalog-sidebar__box-content').mCustomScrollbar({
+        axis: 'y',
+        setHeight: 250,
+        // theme: 'dark',
+    });
 });
 
 $(function () {
+    // nav links
+    let hiddenMenu = document.querySelector('.header-menu__nav-hidden');
+    let links = document.querySelectorAll('.header-menu__nav-link');
+    let linksLen = links.length;
+
+    if (linksLen) {
+        for (let i = linksLen; i > 0; i--) {
+            let elem = links[i - 1];
+            let link = document.createElement('a');
+            link.setAttribute('href', elem.getAttribute('href'));
+            link.classList.add('header-menu__nav-hidden-link', 'd-xxxl-none');
+            link.innerText = elem.innerText;
+            hiddenMenu.prepend(link);
+        }
+    }
+
     // Borgir button
     $('.header-menu__borgir').on('click', function (e) {
         e.stopPropagation();
@@ -272,23 +296,60 @@ $(function () {
         });
     }
 
-    // sidebar triggers
-    let sidebarBox = document.querySelectorAll('.catalog-sidebar__box'),
-        trigger = $('.catalog-sidebar__box-trigger');
+    // reset sidebar filter
+    let filter = document.getElementById('sidebar_filter'),
+        filterReset = document.getElementById('sidebar_filter_reset'),
+        inputs = document.querySelectorAll('input[type="checkbox"]'),
+        arr = [];
 
-    sidebarBox.forEach(function (e) {
-        let thisBody = e.querySelector('.catalog-sidebar__box-body');
+    if (inputs.length) {
+        filter.addEventListener('input', function (e) {
+            arr = [];
 
-        if (e.classList.contains('active')) {
-            $(thisBody).slideDown(0);
+            inputs.forEach(function (input) {
+                if (input.checked) {
+                    arr.push(input);
+                }
+            });
+
+            if (arr.length > 0) {
+                filterReset.classList.remove('d-none');
+                filterReset.classList.add('d-block');
+            }
+            else {
+                filterReset.classList.remove('d-block');
+                filterReset.classList.add('d-none');
+            }
+        });
+        filterReset.addEventListener('click', function () {
+            this.classList.remove('d-block');
+            this.classList.add('d-none');
+
+            let priceSlider = filter.querySelectorAll('.slider-handles');
+            if (priceSlider.length) {
+                priceSlider.forEach(function (elem) {
+                    elem.noUiSlider.reset();
+                });
+            }
+        });
+    }
+
+    // sidebar box
+    let sidebarBox = $('.catalog-sidebar__box'),
+        triggerBox = $('.catalog-sidebar__box-trigger');
+
+    sidebarBox.each(function (i, e) {
+        let boxBody = $(e).find('.catalog-sidebar__box-body');
+
+        if ($(e).hasClass('active')) {
+            boxBody.slideDown(0);
         }
         else {
-            $(thisBody).slideUp(0);
+            boxBody.slideUp(0);
         }
     });
-
-    if (sidebarBox.length && trigger.length) {
-        trigger.on('click', function () {
+    if (sidebarBox.length && triggerBox.length) {
+        triggerBox.on('click', function () {
             $(this).closest('.catalog-sidebar__box').toggleClass('active');
             $(this).parent().next('.catalog-sidebar__box-body').slideToggle(300);
         });
@@ -296,30 +357,7 @@ $(function () {
 
     // Range slide
     if ($('input[type="range"]')) {
-        let sliderRange = document.querySelectorAll('.slider-range');
         let sliderHandles = document.querySelectorAll('.slider-handles');
-
-        if (sliderRange.length) {
-            sliderRange.forEach(function (elem) {
-                let input = elem.children[0];
-                let startValue = input.hasAttribute('value') ? Number(input.getAttribute('value')) : 1;
-                let minValue = input.hasAttribute('min') ? Number(input.getAttribute('min')) : 1;
-                let maxValue = input.hasAttribute('max') ? Number(input.getAttribute('max')) : 100;
-
-                input.remove();
-
-                noUiSlider.create(elem, {
-                    start: [startValue],
-                    step: 1,
-                    behavior: 'tap',
-                    connect: [true, false],
-                    range: {
-                        'min': [minValue],
-                        'max': [maxValue]
-                    }
-                });
-            });
-        }
 
         if (sliderHandles.length) {
             sliderHandles.forEach(function (elem) {
@@ -329,7 +367,6 @@ $(function () {
                 let minInput = elem.nextElementSibling.children[0].children[1];
                 let maxInput = elem.nextElementSibling.children[1].children[1];
                 let inputs = elem.nextElementSibling.querySelectorAll('.price-slider__value');
-
                 input.remove();
 
                 noUiSlider.create(elem, {
@@ -367,6 +404,32 @@ $(function () {
             });
         }
     }
+
+    // sorting buttons
+    let sortingVariant = document.querySelectorAll('.catalog-content__sorting-variant a'),
+        sortingPrice = document.querySelectorAll('.catalog-content__sorting-price a');
+
+    sortingVariant.forEach(function (e) {
+        e.addEventListener('click', function (event) {
+            event.preventDefault();
+            sortingVariant.forEach(function (e) {
+                e.classList.remove('active');
+            });
+
+            this.classList.add('active');
+        });
+    });
+
+    sortingPrice.forEach(function (e) {
+        e.addEventListener('click', function (event) {
+            event.preventDefault();
+            sortingPrice.forEach(function (e) {
+                e.classList.remove('active');
+            });
+
+            this.classList.add('active');
+        });
+    });
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
