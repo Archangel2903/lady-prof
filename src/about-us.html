@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Каталог</title>
+    <title>О магазине</title>
 </head>
 <body class="loaded">
 <!-- BODY -->
@@ -94,14 +94,93 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-breadcrumbs">
+        <section class="section section-home section-home-about-us">
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/girl-home04.png') %>" class="section-bg__img" alt="image" title="image">
+                </picture>
+            </div>
+
             <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
-                    </ol>
-                </nav>
+                <div class="home-content">
+                    <span class="styling-title">О нaс</span>
+                    <p class="main-title">О магазине</p>
+                    <p class="subtitle-text">Здравствуй, дорогой  посетитель.
+                        Меня зовут Юлия, я со организатор нашей компании</p>
+                </div>
+            </div>
+        </section>
+        <section class="section section-about-us">
+            <div class="about-us container">
+                <div class="row align-items-center align-content-center">
+                    <div class="offset-xl-1 col-xl-6 px-xxl-5">
+                        <p class="about-us__title subtitle-text">Мы – команда, которая кайфует от своей деятельности!
+                            Нам нравится тестировать и отбирать самые лучшие товары для вас</p>
+
+                        <p class="about-us__text">Свою идею начали воплощать в жизнь  в 2012 году с небольшого офиса. А первый магазин открыли в 2014 году. В самый разгара кризиса. Но нас это не пугало, ведь у нас была миссия-сделать профессиональные бренды косметики  доступными для мастеров и всех желающих.</p>
+                    </div>
+
+                    <div class="col-xl-5">
+                        <picture>
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/about-us-img01.png') %>" alt="image" title="image">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-about-us-style">
+            <picture class="section-about-us-style__decor section-about-us-style__decor_first">
+                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor05.png') %>" alt="image" title="image">
+            </picture>
+
+            <picture class="section-about-us-style__decor section-about-us-style__decor_second">
+                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor06.png') %>" alt="image" title="image">
+            </picture>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <picture class="section-about-us-style__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/about-us-img02.png') %>" alt="image" title="image">
+                        </picture>
+                    </div>
+
+                    <div class="col-xl-6">
+                        <p class="about-us__title subtitle-text">Мы понимаем, как  загружены мастера работой и как мало времени остается на себя</p>
+
+                        <p class="about-us__text">Поэтому  стараемся  вам сократить затраты времени на поиск материалов и косметики.
+                            Мы не стремимся иметь в ассортименте все бренды мира. Это усложняет выбор и отнимает время.
+                            Мы постоянно обучаемся, посещаем выставки  ,тестируем и оставляем в ассортименте только те бренды, которые нам понравились и действительно соответствуют обещаниям производителя.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-seo">
+            <div class="main-seo container">
+                <div class="main-seo-instagram">
+                    <picture class="main-seo-instagram__decor main-seo-instagram__decor_first">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor02.png') %>" alt="image" title="image">
+                    </picture>
+                    <picture class="main-seo-instagram__decor main-seo-instagram__decor_second">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor02.png') %>" alt="image" title="image">
+                    </picture>
+                    <picture class="main-seo-instagram__decor main-seo-instagram__decor_third">
+                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/decor03.png') %>" alt="image" title="image">
+                    </picture>
+
+                    <div class="row">
+                        <div class="align-self-center col-xxl-5 offset-xxl-1 col-lg-8 px-xxl-5 mb-3 mb-lg-0">
+                            <p class="title">Добро пожаловать в мир Lady Prof.</p>
+                            <p class="m-0 text-lg-right"><a href="#" class="btn-link" target="_blank">Instagram</a></p>
+                        </div>
+
+                        <div class="col-xxl-6 col-lg-4">
+                            <picture class="main-seo-instagram__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/inst-collage.png') %>" alt="image" title="image">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

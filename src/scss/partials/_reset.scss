@@ -318,6 +318,31 @@ dd {
   margin: 0 0 0 40px;
 }
 
+/*ul, ol {
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 27px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background: $primary;
+    }
+  }
+}*/
+
 nav ol, nav ul, ol, ul {
   list-style: none;
 }

@@ -6,6 +6,10 @@
 }
 
 @include media-breakpoint-up(sm) {
+  .main-title {
+    font-size: 60px;
+  }
+
   .header-content {
     .logo {
       picture {
@@ -399,6 +403,18 @@
       }
     }
   }
+
+  .section-home-loyalty {
+    padding: 145px 0 285px;
+  }
+
+  .section-home-about-us {
+    padding: 160px 0 280px;
+  }
+
+  .section-about-us {
+    padding: 185px 0 145px;
+  }
 }
 
 @include media-breakpoint-up(xl) {
@@ -540,6 +556,12 @@
     &__item {
       width: auto;
       margin: 0 auto;
+    }
+  }
+
+  .section-home-about-us {
+    .subtitle-text {
+      margin: 0;
     }
   }
 }
