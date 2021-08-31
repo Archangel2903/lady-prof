@@ -94,14 +94,78 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-breadcrumbs">
+        <section class="section section-blog-article-head">
             <div class="container">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+                        <li class="breadcrumb-item active" aria-current="page">Блог</li>
                     </ol>
                 </nav>
+            </div>
+        </section>
+
+        <section class="section section-blog-article">
+            <div class="container">
+                <div class="blog-article">
+                    <div class="blog-article__head">
+                        <picture class="blog-article__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-article-head.png') %>" alt="image" title="image">
+                        </picture>
+
+                        <div class="blog-article__info">
+                            <div class="blog-article__info-text">
+                                <p class="blog-article__info-date">26.07.2021</p>
+                                <p class="blog-article__info-title">Очень длинный Заголовок статьи</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-xl-9 px-xl-5">
+                            <p class="blog-article__quote">Идейные соображения высшего порядка, а также реализация намеченных плановых заданий обеспечивает широкому кругу
+                                (специалистов) участие в формировании позиций</p>
+
+                            <div class="row justify-content-center">
+                                <div class="col-xl-10 px-xl-5">
+                                    <p class="blog-article__text">Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации
+                                        модели развития. С другой стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Задача
+                                        организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации модели развития.</p>
+
+                                    <p class="blog-article__text-title">Идейные соображения высшего порядка</p>
+
+                                    <p class="blog-article__text">Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации
+                                        модели развития. С другой стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития.</p>
+
+                                    <div class="d-flex flex-row flex-nowrap justify-content-between ">
+                                        <div class="d-flex flex-column">
+                                            <p class="blog-article__text-title">Задача организации, в особенности же реализация намеченных:</p>
+
+                                            <ul class="style-list">
+                                                <li>плановых заданий способствует подготовки и реализации модели</li>
+                                                <li>другой стороны постоянный</li>
+                                                <li>количественный рост и сфера нашей активности</li>
+                                                <li>позволяет оценить значение форм развития</li>
+                                            </ul>
+
+                                            <p class="blog-article__text">Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации
+                                                модели развития. С другой стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития.</p>
+                                        </div>
+
+                                        <picture>
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/blog-article.png') %>" alt="image" title="image">
+                                        </picture>
+                                    </div>
+
+                                    <p class="blog-article__text-title">Идейные соображения высшего порядка</p>
+
+                                    <p class="blog-article__text">Задача организации, в особенности же реализация намеченных плановых заданий способствует подготовки и реализации
+                                        модели развития. С другой стороны постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
