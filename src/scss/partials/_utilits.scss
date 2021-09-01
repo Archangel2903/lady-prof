@@ -544,3 +544,70 @@ input {
     }
   }
 }
+
+ul.style-list, ol.style-list {
+  padding: 0;
+  margin: 0 0 20px;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 27px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background: $primary;
+    }
+  }
+}
+
+.modal {
+  &#cart {
+    .modal {
+      &-dialog {
+        max-width: 695px;
+      }
+
+      &-content {
+        border: none;
+      }
+
+      &-header {
+        padding: 20px 20px 30px;
+        border: none;
+
+        .close {
+          margin: -1rem -1rem -1rem 0;
+
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+
+      &-title {
+        width: 100%;
+        font-family: $font-family-custom;
+        font-size: 56px;
+        line-height: 67px;
+        letter-spacing: 1px;
+      }
+
+      &-body {
+        padding: 0 20px;
+      }
+    }
+  }
+}
