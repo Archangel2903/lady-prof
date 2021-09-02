@@ -34,18 +34,19 @@ $(window).on('load', function () {
     $('.catalog-sidebar__box-body .catalog-sidebar__box-content').mCustomScrollbar({
         axis: 'y',
         setHeight: 250,
-        // theme: 'dark',
     });
+    $('.product-cart__list').mCustomScrollbar({
+        axis: 'y',
+    })
 });
 
 $(function () {
     // nav links
     let hiddenMenu = document.querySelector('.header-menu__nav-hidden');
     let links = document.querySelectorAll('.header-menu__nav-link');
-    let linksLen = links.length;
 
-    if (linksLen) {
-        for (let i = linksLen; i > 0; i--) {
+    if (links.length) {
+        for (let i = links.length; i > 0; i--) {
             let elem = links[i - 1];
             let link = document.createElement('a');
             link.setAttribute('href', elem.getAttribute('href'));
@@ -78,10 +79,6 @@ $(function () {
     $('.header-search__trigger').on('click', function() {
         $(this).parent().toggleClass('show');
         $(this).toggleClass('active');
-
-        /*if (!$('.header-search').hasClass('show')) {
-            $('.header-search').find('.header-search__input').val('');
-        }*/
     });
 
     // Swiper slider
@@ -142,7 +139,7 @@ $(function () {
                     slidesPerView: 4,
                     spaceBetween: 20,
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: mainProdSlider.find('.swiper-pagination'),
                         clickable: true
                     },
                     breakpoints: {
@@ -231,6 +228,31 @@ $(function () {
                     }
                 }
             });
+        }
+    }
+
+    let productSetSlider = $('.product-cart__set-slider');
+    if (productSetSlider.length) {
+        let slider,
+            slide = document.querySelectorAll('.product-cart__set-slider .swiper-slide').length;
+
+        if (slide) {
+            slider = new Swiper('.product-cart__set-slider', {
+                observer: true,
+                observeParents: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 120,
+                navigation: {
+                    prevEl: productSetSlider.find('.swiper-button-prev'),
+                    nextEl: productSetSlider.find('.swiper-button-next'),
+                },
+                pagination: {
+                    el: productSetSlider.find('.swiper-pagination'),
+                    clickable: true,
+                }
+            })
         }
     }
 
@@ -415,11 +437,9 @@ $(function () {
             sortingVariant.forEach(function (e) {
                 e.classList.remove('active');
             });
-
             this.classList.add('active');
         });
     });
-
     sortingPrice.forEach(function (e) {
         e.addEventListener('click', function (event) {
             event.preventDefault();
@@ -430,6 +450,43 @@ $(function () {
             this.classList.add('active');
         });
     });
+
+    // product cart
+    (function prodCounter() {
+        let cart = $('#cart'),
+            minusCounter = $('.product-cart__item-counter_minus'),
+            plusCounter = $('.product-cart__item-counter_plus'),
+            deleteProduct = $('.product-cart__item-delete');
+
+        minusCounter.on('click', function () {
+            let counter = $(this).next('.product-cart__item-counter');
+            let counterVal = Number(counter.val());
+
+            if (counterVal <= 1) {
+                return false;
+            }
+            else {
+                counter.val(counterVal - 1);
+            }
+        });
+        plusCounter.on('click', function () {
+            let counter = $(this).prev('.product-cart__item-counter');
+            let counterVal = Number(counter.val());
+            if (counterVal >= 999) {
+                alert('Свяжитесь с менеджером');
+                return false;
+            }
+            else {
+                counter.val(counterVal + 1);
+            }
+        });
+
+        cart.on('click', function (e) {
+            if ($(e)[0].target.classList.contains('product-cart__item-delete')) {
+                $(e)[0].target.parentElement.remove();
+            }
+        });
+    })();
 
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');

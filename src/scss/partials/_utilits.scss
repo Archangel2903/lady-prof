@@ -216,6 +216,12 @@ body.fixed {
       text-decoration: none;
     }
   }
+
+  &-outline {
+    &-primary {
+
+    }
+  }
 }
 
 .badge {
@@ -577,14 +583,16 @@ ul.style-list, ol.style-list {
     .modal {
       &-dialog {
         max-width: 695px;
+
       }
 
       &-content {
         border: none;
+        border-radius: 24px;
       }
 
       &-header {
-        padding: 20px 20px 30px;
+        padding: 20px;
         border: none;
 
         .close {
@@ -600,13 +608,14 @@ ul.style-list, ol.style-list {
       &-title {
         width: 100%;
         font-family: $font-family-custom;
-        font-size: 56px;
-        line-height: 67px;
+        font-size: 50px;
+        line-height: 1;
         letter-spacing: 1px;
       }
 
       &-body {
-        padding: 0 20px;
+        padding: 0 20px 20px;
+        //overflow: hidden;
       }
     }
   }
