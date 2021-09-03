@@ -9,6 +9,7 @@ import 'bootstrap-star-rating';
 import 'select2';
 import 'jquery-mousewheel';
 import 'malihu-custom-scrollbar-plugin';
+import 'leaflet';
 
 const mqlMax = {
     xxxl: matchMedia('(max-width: 1769px)'),
@@ -37,7 +38,29 @@ $(window).on('load', function () {
     });
     $('.product-cart__list').mCustomScrollbar({
         axis: 'y',
-    })
+    });
+
+    if ($('#map').length) {
+        /*delete L.Icon.Default.prototype._getIconUrl;
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: '../img/map-point.svg',
+            iconUrl: 'img/map-point.svg',
+            iconSize: 36,
+            iconAnchor: [18, 48],
+            shadowUrl: null,
+        });*/
+        const map = L.map('map');
+        const mapCenter = [50.46251377176145, 30.525405151883337];
+        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+            maxZoom: 20,
+            subdomains:['mt0','mt1','mt2','mt3']
+        });
+        // const markerMap = L.marker(mapCenter).addTo(map).bindPopup('АБУ - Вул. Набережно-хрещатицька 11, м. Київ, 03800');
+        baseMap.addTo(map);
+        if (map) {
+            map.setView(mapCenter, 14).scrollWheelZoom.disable();
+        }
+    }
 });
 
 $(function () {

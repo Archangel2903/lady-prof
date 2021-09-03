@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Каталог</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.112dd973b8e43106db02.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.e34f48c25c17d06fa4bb.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -94,14 +94,128 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-breadcrumbs">
+        <section class="section section-map">
+            <div id="map"></div>
+        </section>
+        <section class="section section-contacts">
             <div class="container">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Каталог</li>
-                    </ol>
-                </nav>
+                <div class="row justify-content-center">
+                    <div class="col-xxl-10 px-xxl-5">
+                        <div class="contacts">
+                            <div class="contacts__info">
+                                <div class="contacts__info-box">
+                                    <p class="contacts__info-title">Контактная информация</p>
+                                    <div class="contacts__info-list">
+                                        <a href="tel:+380509648508" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-call"></use></svg></span>
+                                            +38 (050) 964 85 08
+                                        </a>
+
+                                        <a href="tel:+380505874271" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-call"></use></svg></span>
+                                            +38 (050) 587 42 71
+                                        </a>
+
+                                        <a href="mailto:ladyprof@ukr.net" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-mail"></use></svg></span>
+                                            ladyprof@ukr.net
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="contacts__info-box">
+                                    <p class="contacts__info-title">Социальны сети</p>
+                                    <div class="contacts__info-list">
+                                        <a href="tel:+380509648508" class="contacts__info-link" target="_blank">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-inst"></use></svg></span>
+                                            Instagram
+                                        </a>
+
+                                        <a href="tel:+380505874271" class="contacts__info-link" target="_blank">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-fb"></use></svg></span>
+                                            Facebook
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <p class="contacts__schedule">График работы
+                                    <span class="contacts__schedule-item">
+                                        <span class="contacts__schedule-days">ПН - СБ</span>
+                                        <span class="contacts__schedule-time">08:00 - 21:00</span>
+                                    </span>
+                                    <span class="contacts__schedule-item">
+                                        <span class="contacts__schedule-days">ВС</span>
+                                        <span class="contacts__schedule-time">09:00 - 18:00</span>
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="ask-question">
+                                <form action="" method="" class="ask-question__form">
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">Имя Фамилия</span>
+                                            <input type="text" class="form-control w-100">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">E-mail</span>
+                                            <input type="text" class="form-control w-100">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">Комментарий</span>
+                                            <textarea class="form-control w-100"></textarea>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="ask-question__form-submit d-inline-flex justify-content-between btn btn-lg btn-primary btn-block text-uppercase text-left">
+                                        Задать вопрос <svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-address">
+            <picture class="section-address__decor">
+                <img src="img/default.svg" data-src="img/decor09.png" alt="image" title="image">
+            </picture>
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-10 px-xxl-5">
+                        <div class="address">
+                            <p class="address__title">Адреса магазинов</p>
+
+                            <div class="address__content">
+                                <div class="address__box">
+                                    <p class="address__list-name">Г. Херсон</p>
+                                    <ul class="address__list">
+                                        <li>ул. Илюши Кулика, 116</li>
+                                        <li>ул. 49-ой Гвардейской Дивизии, 26а</li>
+                                        <li>ул. Потьомкинская, 42 а</li>
+                                        <li>ул. 49-ой Гвардейской Дивизии, 26а</li>
+                                        <li>ул. Илюши Кулика, 116</li>
+                                    </ul>
+                                </div>
+
+                                <div class="address__box">
+                                    <p class="address__list-name">Г. Одесса</p>
+                                    <ul class="address__list">
+                                        <li>ул. Дерибасовская, 23</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -232,5 +346,5 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.112dd973b8e43106db02.min.js"></script></body>
+<script type="text/javascript" src="bundle.e34f48c25c17d06fa4bb.min.js"></script></body>
 </html>

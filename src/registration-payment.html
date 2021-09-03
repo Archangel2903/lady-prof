@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
+    <title>Главная</title>
+</head>
+<body class="loaded">
+<!-- BODY -->
+<div class="main-wrapper">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-menu">
+                    <button class="header-menu__borgir">
+                        <span class="header-menu__borgir-line"></span>
+                    </button>
+
+                    <div class="header-menu__nav-hidden-wrap">
+                        <nav class="header-menu__nav-hidden">
+                            <a href="#1" class="header-menu__nav-hidden-link">Блог</a>
+                            <a href="seminars.html" class="header-menu__nav-hidden-link">Семинары</a>
+                            <a href="#3" class="header-menu__nav-hidden-link">Контакты</a>
+                            <a href="#4" class="header-menu__nav-hidden-link">О нас</a>
+                            <a href="#5" class="header-menu__nav-hidden-link">Гарантия и обмен</a>
+                            <a href="#6" class="header-menu__nav-hidden-link">Программа лояльности</a>
+                        </nav>
+                    </div>
+
+                    <nav class="header-menu__nav">
+                        <a href="catalog.html" class="header-menu__nav-link">Каталог</a>
+                        <a href="#2" class="header-menu__nav-link">Оплата и доставка</a>
+                        <a href="#3" class="header-menu__nav-link">Обзоры</a>
+                        <a href="#4" class="header-menu__nav-link">Акции</a>
+                    </nav>
+                </div>
+
+                <a href="/" class="logo">
+                    <picture>
+                        <img src="<%= require('./img/logo.png') %>" alt="lady prof logo" title="lady prof">
+                    </picture>
+                </a>
+
+                <div class="header-tools">
+                    <form action="" method="" class="header-search">
+                        <button type="button" class="header-search__trigger"></button>
+                        <label class="header-search__input-wrap">
+                            <input type="search" class="header-search__input" placeholder="Search">
+                            <button type="submit" class="header-search__button">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-search"></use>
+                                </svg>
+                            </button>
+                        </label>
+                    </form>
+
+                    <div class="header-client">
+                        <a href="#sign-in" class="header-client__link minimizer">Войти в кабинет
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-profile"></use>
+                            </svg>
+                        </a>
+
+                        <div class="header-client-language">
+                            <a href="#lang" class="header-client-language__link">RU
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-chevrone"></use>
+                                </svg>
+                            </a>
+                            <div class="header-client-language__dropdown">
+                                <a href="#lang" class="header-client-language__link">UA</a>
+                            </div>
+                        </div>
+
+                        <a href="#cart" class="header-client__link minimizer position-relative" data-toggle="modal" data-target="#cart">Корзина
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-cart"></use>
+                            </svg>
+                            (<span class="cart-count">99</span>)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- CONTENT -->
+    <main class="content">
+        <section class="section section-registration-payment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-7">
+                        <div class="registration-payment">
+                            <div class="registration-payment-steps">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="registration-payment-steps__item">
+                                            <span class="registration-payment-steps__item-number">1</span>
+                                            <span class="registration-payment-steps__item-text">Личные данные</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="registration-payment-steps__item">
+                                            <span class="registration-payment-steps__item-number">2</span>
+                                            <span class="registration-payment-steps__item-text">Информация о доставке и оплате</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form action="" class="registration-payment__form">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <label class="m-0">
+                                            <input type="radio" name="user">
+                                            <span class="radio">
+                                                <span class="radio-style"></span>
+                                                <span class="radio-text">Новый покупатель</span>
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label class="m-0">
+                                            <input type="radio" name="user">
+                                            <span class="radio">
+                                                <span class="radio-style"></span>
+                                                <span class="radio-text">Постоянный клиент</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="registration-payment__step registration-payment__step_first">
+                                    <fieldset class="registration-payment__user registration-payment__user_new">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <fieldset class="registration-payment__user registration-payment__user_old">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label>
+                                                    <span></span>
+                                                    <input type="text">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="registration-payment__auth">
+                                        <p class="registration-payment__auth-text">Войти с помощью</p>
+
+                                        <div class="registration-payment__auth-buttons">
+                                            <a href="#" class="registration-payment__auth-btn">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                                                </svg>
+                                                facebook</a>
+                                            <a href="#" class="registration-payment__auth-btn">
+                                                <svg>
+                                                    <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                                                </svg>
+                                                google</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="registration-payment__step registration-payment__step_second">
+                                    <fieldset class="registration-payment__info">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="registration-payment__info-title">способ доставки</p>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <p class="registration-payment__info-title">способ Оплаты</p>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>
+                                                        <span></span>
+                                                        <input type="text">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-5">
+                        <div class="order">
+                            <div class="order__cart">
+                                <p class="order__cart-title">Ваш заказ</p>
+                            </div>
+
+                            <div class="order__promo">
+                                <label>
+                                    <input type="text">
+                                    <button class="btn btn-outline-primary">Ввести</button>
+                                </label>
+                            </div>
+
+                            <div class="order__description">
+                                <p class="order__description-delivery">Доставка <span>65 ₴</span></p>
+                                <p class="order__description-delivery-info">При заказе товаров больше, чем на 500 грн доставка бесплатная</p>
+                                <p class="order__description-promo">Скидка по промокоду <span>0 ₴</span></p>
+                                <p class="order__description-loyalty">Скидка по Программе лояльности / мастера <span>0 ₴</span></p>
+                                <p class="order__description-total">К оплате <span>385 ₴</span></p>
+
+                                <button class="btn btn-primary">Далее</button>
+                                <p class="order__description-agreement">Нажимая на кнопку «Далее», я принимаю условия <a href="agreement.html">Пользовательского соглашения</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="subscribe">
+                        <div class="subscribe__info">
+                            <p class="subscribe__info-title">У нас для тебя кое-что есть!</p>
+                            <p class="subscribe__info-text">Подпишись на рассылку и получи гайд по самыми трендовыми дизайнами для ногтей в этом сезоне.</p>
+                        </div>
+
+                        <form action="" class="subscribe__form">
+                            <div class="form-group m-0">
+                                <label class="subscribe__input-wrap">
+                                    <input type="email" placeholder="Ваш email" class="subscribe__input">
+                                    <button type="button" class="subscribe__input-btn">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-arrow-btn"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content-wrap">
+                <div class="row">
+                    <div class="col-xxxl-3 mb-md-4 mb-xxxl-0">
+                        <div class="footer-content text-center">
+                            <a href="/" class="logo">
+                                <picture>
+                                    <img src="<%= require('./img/logo.png') %>" alt="lady prof logo" title="lady prof">
+                                </picture>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xxxl-3 col-md-4">
+                        <div class="footer-content">
+                            <div class="footer-list">
+                                <p class="footer-list__title">Каталог</p>
+                                <ul>
+                                    <li><a href="#">Макияж</a></li>
+                                    <li><a href="#">Волосы</a></li>
+                                    <li><a href="#">Ногти</a></li>
+                                    <li><a href="#">Лицо</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxxl-3 col-md-4">
+                        <div class="footer-content">
+                            <div class="footer-list">
+                                <p class="footer-list__title">Магазин</p>
+                                <ul>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Отзывы</a></li>
+                                    <li><a href="#">Блог</a></li>
+                                    <li><a href="#">Гарантия и обмен</a></li>
+                                    <li><a href="#">Доставка и оплата</a></li>
+                                    <li><a href="#">Условия использования</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxxl-3 col-md-4">
+                        <div class="footer-content">
+                            <div class="footer-list">
+                                <p class="footer-list__title">Контакты</p>
+                                <ul>
+                                    <li><a href="tel:+380509648508">+38 050 964 85 08</a></li>
+                                    <li>г. Херсон</li>
+                                    <li>пн. - сб. 8.00-21.00, вс. 9-18</li>
+                                    <li><a href="mailto:info@ladyprof.ua">info@ladyprof.ua</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="pay-system">
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/visa.svg') %>" alt="image" title="image">
+                                </picture>
+
+                                <picture>
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mastercard.svg') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="social">
+                            <a href="#" target="_blank" rel="nofollow">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-youtube"></use>
+                                </svg>
+                            </a>
+
+                            <a href="#" target="_blank" rel="nofollow">
+                                <svg>
+                                    <use xlink:href="./img/spritemap.svg#sprite-insta"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-8">
+                        <p class="copyright">Copyright © 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+</div>
+
+<!-- product-cart -->
+<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="cartModalLabel">Ваша корзина</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body product-cart">
+                <div class="product-cart__list">
+                    <div class="product-cart__item">
+                        <div class="product-cart__item-view">
+                            <picture class="product-cart__item-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <a href="#product" class="product-cart__item-name">Protec Top</a>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__item-price-wrap">
+                            <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                            <span class="product-cart__item-price">115 ₴</span>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="product-cart__item">
+                        <div class="product-cart__item-view">
+                            <picture class="product-cart__item-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <a href="#product" class="product-cart__item-name">Protec Top</a>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__item-price-wrap">
+                            <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                            <span class="product-cart__item-price">115 ₴</span>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                            </svg>
+                        </button>
+
+                        <p class="product-cart__item-offer">Купите 2 шт. и получите 3 в подарок</p>
+                    </div>
+
+                    <div class="product-cart__item product-cart__items">
+                        <div class="product-cart__items-view">
+                            <div class="product-cart__item-view">
+                                <picture class="product-cart__item-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                </picture>
+
+                                <a href="#product" class="product-cart__item-name">Protec Top</a>
+                            </div>
+
+                            <div class="product-cart__item-view">
+                                <picture class="product-cart__item-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                </picture>
+
+                                <a href="#product" class="product-cart__item-name">Protec Top</a>
+                            </div>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__items-price">
+                            <div class="product-cart__item-price-wrap">
+                                <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                                <span class="product-cart__item-price">115 ₴</span>
+                            </div>
+
+                            <div class="product-cart__item-price-wrap">
+                                <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                                <span class="product-cart__item-price">115 ₴</span>
+                            </div>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-cart__pay">
+                    <p class="product-cart__summary">К оплате <span>385 ₴</span></p>
+
+                    <p class="product-cart__pay-info">Подарк за заказ свыше 1000 грн</p>
+
+                    <a href="#payment" class="btn btn-primary">Перейти к оформлению</a>
+                </div>
+
+                <div class="product-cart__set">
+                    <div class="product-cart__set-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-cart__set-box">
+                                    <div class="product-cart__set-item">
+                                        <picture class="product-cart__set-item-pic">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="product-cart__set-item-info">
+                                            <a href="#" class="product-cart__set-item-name">Protec Top</a>
+                                            <p class="product-cart__set-item-price">115 ₴ <span
+                                                    class="product-cart__set-item-price product-cart__set-item-price_old">70 ₴</span></p>
+                                        </div>
+                                    </div>
+
+                                    <span class="product-cart__set-item-separate">+</span>
+
+                                    <div class="product-cart__set-item">
+                                        <picture class="product-cart__set-item-pic">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="product-cart__set-item-info">
+                                            <a href="#" class="product-cart__set-item-name">Масло для кутикулы</a>
+                                            <p class="product-cart__set-item-price">115 ₴ <span
+                                                    class="product-cart__set-item-price product-cart__set-item-price_old">70 ₴</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="product-cart__set-code">Код комплекта: 768 369 043</p>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-outline-primary">Добавить</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="swiper-button-prev">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-button-next">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-arrow"></use>
+                            </svg>
+                        </button>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="icon-load">
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
+</div>
+<!-- BODY END   -->
+</body>
+</html>

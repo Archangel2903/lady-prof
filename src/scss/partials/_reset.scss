@@ -205,9 +205,10 @@ button {
 
 textarea {
   padding: 0 5px;
+  transition: $transition-base;
 
   &:focus {
-    background: $main-second-color;
+    background: $main-second-color !important;
 
     &::-webkit-input-placeholder {
       color: transparent;

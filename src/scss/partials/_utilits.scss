@@ -462,7 +462,7 @@ body.fixed {
 }
 
 input {
-  &[type="checkbox"], &[type="radio"] {
+  &[type="checkbox"] {
     &+ .checkbox {
       display: inline-flex;
       flex-flow: row wrap;
@@ -505,7 +505,6 @@ input {
 
     &:checked + .checkbox {
       .checkbox-style {
-        //border-color: $primary;
         background: $main-third-color;
 
         &::before {
@@ -514,6 +513,72 @@ input {
       }
     }
   }
+
+  &[type="radio"] {
+    &+ .radio {
+      .radio {
+        &-style {
+          position: relative;
+          display: inline-flex;
+          width: 25px;
+          height: 25px;
+          border: 1px solid #FCDDEC;
+          border-radius: 100%;
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 11px;
+            height: 11px;
+            border-radius: 100%;
+            background: $primary;
+            transition: $transition-base;
+            transform: translate(-50%, -50%) scale(0);
+          }
+        }
+
+        &-text {}
+      }
+    }
+
+    &:checked + .radio {
+      .radio-style {
+        background: $main-third-color;
+
+        &::before {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}
+
+.input-name {
+  display: inline-block;
+  margin: 0 0 10px;
+
+  &.important {
+    &::before {
+      content: '* ';
+      color: $primary;
+    }
+  }
+}
+
+.form-group {
+  margin: 0 0 30px;
+}
+
+.form-control {
+  height: 50px;
+  padding: 17px 20px;
+  background: #FAFAFA;
+  border: none;
+  border-radius: 14px;
+  box-shadow: none !important;
 }
 
 .mCSB {
