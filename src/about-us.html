@@ -21,13 +21,8 @@
 
                     <div class="header-menu__nav-hidden-wrap">
                         <nav class="header-menu__nav-hidden">
-                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Каталог</a>
-                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Оплата и доставка</a>
-                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Обзоры</a>
-                            <a href="#1" class="header-menu__nav-hidden-link d-xxxl-none">Акции</a>
-
                             <a href="#1" class="header-menu__nav-hidden-link">Блог</a>
-                            <a href="#2" class="header-menu__nav-hidden-link">Семинары</a>
+                            <a href="seminars.html" class="header-menu__nav-hidden-link">Семинары</a>
                             <a href="#3" class="header-menu__nav-hidden-link">Контакты</a>
                             <a href="#4" class="header-menu__nav-hidden-link">О нас</a>
                             <a href="#5" class="header-menu__nav-hidden-link">Гарантия и обмен</a>
@@ -36,7 +31,7 @@
                     </div>
 
                     <nav class="header-menu__nav">
-                        <a href="#1" class="header-menu__nav-link">Каталог</a>
+                        <a href="catalog.html" class="header-menu__nav-link">Каталог</a>
                         <a href="#2" class="header-menu__nav-link">Оплата и доставка</a>
                         <a href="#3" class="header-menu__nav-link">Обзоры</a>
                         <a href="#4" class="header-menu__nav-link">Акции</a>
@@ -64,9 +59,7 @@
 
                     <div class="header-client">
                         <a href="#sign-in" class="header-client__link minimizer">Войти в кабинет
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-profile"></use>
-                            </svg>
+                            <svg><use xlink:href="img/spritemap.svg#sprite-profile"></use></svg>
                         </a>
 
                         <div class="header-client-language">
@@ -80,11 +73,8 @@
                             </div>
                         </div>
 
-                        <a href="#cart" class="header-client__link minimizer position-relative">Корзина
-                            <svg>
-                                <use xlink:href="img/spritemap.svg#sprite-cart"></use>
-                            </svg>
-                            (<span class="cart-count">99</span>)</a>
+                        <a href="#cart" class="header-client__link minimizer position-relative" data-toggle="modal" data-target="#cart">Корзина
+                            <svg><use xlink:href="img/spritemap.svg#sprite-cart"></use></svg>(<span class="cart-count">99</span>)</a>
                     </div>
                 </div>
             </div>
@@ -305,6 +295,171 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+</div>
+
+<!-- product-cart -->
+<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="cartModalLabel">Ваша корзина</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg>
+                </button>
+            </div>
+            <div class="modal-body product-cart">
+                <div class="product-cart__list">
+                    <div class="product-cart__item">
+                        <div class="product-cart__item-view">
+                            <picture class="product-cart__item-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <a href="#product" class="product-cart__item-name">Protec Top</a>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__item-price-wrap">
+                            <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                            <span class="product-cart__item-price">115 ₴</span>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg>
+                        </button>
+                    </div>
+
+                    <div class="product-cart__item">
+                        <div class="product-cart__item-view">
+                            <picture class="product-cart__item-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <a href="#product" class="product-cart__item-name">Protec Top</a>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__item-price-wrap">
+                            <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                            <span class="product-cart__item-price">115 ₴</span>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg>
+                        </button>
+
+                        <p class="product-cart__item-offer">Купите 2 шт. и получите 3 в подарок</p>
+                    </div>
+
+                    <div class="product-cart__item product-cart__items">
+                        <div class="product-cart__items-view">
+                            <div class="product-cart__item-view">
+                                <picture class="product-cart__item-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                </picture>
+
+                                <a href="#product" class="product-cart__item-name">Protec Top</a>
+                            </div>
+
+                            <div class="product-cart__item-view">
+                                <picture class="product-cart__item-pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                </picture>
+
+                                <a href="#product" class="product-cart__item-name">Protec Top</a>
+                            </div>
+                        </div>
+
+                        <label class="product-cart__item-counter-wrap m-0">
+                            <button class="product-cart__item-counter_minus">-</button>
+                            <input type="number" class="product-cart__item-counter" min="0" value="1">
+                            <button class="product-cart__item-counter_plus">+</button>
+                        </label>
+
+                        <div class="product-cart__items-price">
+                            <div class="product-cart__item-price-wrap">
+                                <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                                <span class="product-cart__item-price">115 ₴</span>
+                            </div>
+
+                            <div class="product-cart__item-price-wrap">
+                                <span class="product-cart__item-price product-cart__item-price_old">135 ₴</span>
+                                <span class="product-cart__item-price">115 ₴</span>
+                            </div>
+                        </div>
+
+                        <button class="product-cart__item-delete">
+                            <svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-cart__pay">
+                    <p class="product-cart__summary">К оплате <span>385 ₴</span></p>
+
+                    <p class="product-cart__pay-info">Подарк за заказ свыше 1000 грн</p>
+
+                    <a href="#payment" class="btn btn-primary">Перейти к оформлению</a>
+                </div>
+
+                <div class="product-cart__set">
+                    <div class="product-cart__set-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="product-cart__set-box">
+                                    <div class="product-cart__set-item">
+                                        <picture class="product-cart__set-item-pic">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="product-cart__set-item-info">
+                                            <a href="#" class="product-cart__set-item-name">Protec Top</a>
+                                            <p class="product-cart__set-item-price">115 ₴ <span class="product-cart__set-item-price product-cart__set-item-price_old">70 ₴</span></p>
+                                        </div>
+                                    </div>
+
+                                    <span class="product-cart__set-item-separate">+</span>
+
+                                    <div class="product-cart__set-item">
+                                        <picture class="product-cart__set-item-pic">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>" alt="image" title="image">
+                                        </picture>
+
+                                        <div class="product-cart__set-item-info">
+                                            <a href="#" class="product-cart__set-item-name">Масло для кутикулы</a>
+                                            <p class="product-cart__set-item-price">115 ₴ <span class="product-cart__set-item-price product-cart__set-item-price_old">70 ₴</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="product-cart__set-code">Код комплекта: 768 369 043</p>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="#" class="btn btn-outline-primary">Добавить</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="swiper-button-prev"><svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+                        <button class="swiper-button-next"><svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg></button>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="icon-load">
