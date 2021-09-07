@@ -42,6 +42,10 @@ $(window).on('load', function () {
     $('.product-cart__list').mCustomScrollbar({
         axis: 'y',
     });
+    $('.scroll-js').mCustomScrollbar({
+        axis: 'y',
+    });
+
 
     if ($('#map').length) {
         /*delete L.Icon.Default.prototype._getIconUrl;
@@ -547,20 +551,49 @@ $(function () {
     // product card thumbs gallery
     (function() {
         const thumbSliderWrap = $('.product-card__thumbs-wrap');
-        let thumbsGallery = $('.product-card__thumbs'),
-            thumbView = $('.product-card__thumb');
 
         if (thumbSliderWrap.length) {
-            let slider = new Swiper('.product-card__thumbs', {
-                observer: true,
-                observeParents: true,
-            });
+            thumbSliderWrap.each(function (i, e) {
+                let thumbs = $(e).find('.product-card__thumbs'),
+                    thumb = $(e).find('.product-card__thumb');
 
-            let slider2 = new Swiper('.product-card__thumb', {
-                observer: true,
-                observeParents: true,
+                let slider = new Swiper(thumbs, {
+                    observer: true,
+                    observeParents: true,
+                    direction: 'vertical',
+                    spaceBetween: 10,
+                    slidesPerView: 'auto',
+                    watchSlidesProgress: true,
+                });
+
+                let slider2 = new Swiper(thumb, {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: thumb.find('.swiper-button-prev'),
+                        nextEl: thumb.find('.swiper-button-next'),
+                    },
+                    thumbs: {
+                        swiper: slider,
+                    }
+                });
             });
         }
+    })();
+
+    // product card open reply reviews
+    (function() {
+        const openReply = $('.product-card__reviews-reply-open');
+
+        openReply.on('click', function() {
+            let answers = $(this).closest('.product-card__reviews-box').next().nextAll();
+
+            $(this).toggleClass('active');
+            answers.each(function(i, e) {
+                $(e).slideToggle(300);
+            });
+        });
     })();
 
     // Lazy load observer
