@@ -13,6 +13,8 @@ import 'leaflet';
 import 'jquery-ui';
 import 'jquery-ui/ui/effect';
 import 'jquery-ui/ui/widgets/tabs';
+import '../img/eye-open.svg';
+import '../img/eye-closed.svg';
 
 const mqlMax = {
     xxxl: matchMedia('(max-width: 1769px)'),
@@ -366,7 +368,7 @@ $(function () {
             inputs = document.querySelectorAll('input[type="checkbox"]'),
             arr = [];
 
-        if (inputs.length) {
+        if (filter) {
             filter.addEventListener('input', function (e) {
                 arr = [];
 
@@ -594,6 +596,27 @@ $(function () {
                 $(e).slideToggle(300);
             });
         });
+    })();
+
+    // pass visibility
+    (function() {
+        let passVisible = $('.pass-visible');
+
+        if (passVisible) {
+            passVisible.on('click', function() {
+                let ico = $(this).find('img');
+                let passInput = $(this).prev();
+
+                if (passInput.attr('type') === 'password') {
+                    ico.attr('src', './img/eye-open.svg');
+                    passInput.attr('type', 'text');
+                }
+                else {
+                    ico.attr('src', './img/eye-closed.svg');
+                    passInput.attr('type', 'password');
+                }
+            });
+        }
     })();
 
     // Lazy load observer
