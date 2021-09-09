@@ -619,6 +619,73 @@ $(function () {
         }
     })();
 
+    // modal switcher
+    (function() {
+        let modalSwitch = $('.modal-switcher__btn');
+        let closeModal = $('.modal .close');
+
+        modalSwitch.on('click', function (e) {
+            e.preventDefault();
+            let current = $(this).closest('.modal');
+            let targetUrl = $(this).attr('href');
+
+            current.modal('hide');
+            current.on('hidden.bs.modal', function() {
+                $(targetUrl).modal('show');
+                targetUrl = undefined;
+            });
+        });
+
+        closeModal.on('click', function() {
+            let currentModal = $(this).closest('.modal');
+            currentModal.modal('hide');
+        });
+    })();
+
+    // modal switch user class
+    (function() {
+        let radio = $('.user-class');
+
+        radio.on('click', function() {
+            let val = $(this).val();
+            let special = $('.client');
+            let forMaster = $('.for-master');
+            let notForMaster = $('.not-for-master');
+
+            switch (val) {
+                case 'client':
+                    special.each(function(i, e) {
+                        if ($(e).hasClass('for-master')) {
+                            $(e).css('display', 'none');
+                        }
+                        else {
+                            $(e).css('display', 'block');
+                        }
+                    });
+                    break;
+                case 'master':
+                    special.each(function(i, e) {
+                        if ($(e).hasClass('not-for-master')) {
+                            $(e).css('display', 'none');
+                        }
+                        else {
+                            $(e).css('display', 'block');
+                        }
+                    });
+                    break;
+            }
+        });
+    })();
+
+    (function() {
+        let inputFile = $('.master_certificate');
+
+        inputFile.on('change', function() {
+            console.log(this)
+            // console.log($(this));
+        });
+    })();
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
