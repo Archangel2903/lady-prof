@@ -10,6 +10,7 @@ import 'select2';
 import 'jquery-mousewheel';
 import 'malihu-custom-scrollbar-plugin';
 import 'leaflet';
+import IMask from 'imask';
 import 'jquery-ui';
 import 'jquery-ui/ui/effect';
 import 'jquery-ui/ui/widgets/tabs';
@@ -37,13 +38,15 @@ $(window).on('load', function () {
 
     b.removeClass('loaded');
 
+
     $('.catalog-sidebar__box-body .catalog-sidebar__box-content').mCustomScrollbar({
         axis: 'y',
-        setHeight: 250,
     });
+
     $('.product-cart__list').mCustomScrollbar({
         axis: 'y',
     });
+
     $('.scroll-js').mCustomScrollbar({
         axis: 'y',
     });
@@ -684,6 +687,39 @@ $(function () {
             console.log(this)
             // console.log($(this));
         });
+    })();
+
+    // modal file
+    (function() {
+        let fileInput = $('input[type="file"]');
+
+        fileInput.on('change', function() {
+            let files = this.files;
+
+            if (this.hasAttribute('multiple')) {
+                throw Error('input must be for single files');
+            }
+
+            if (files[0] && files.length && files[0].type.match(`image.*`)) {
+                let fileName = files[0].name.match(/^.+(?=\.\w+$)/);
+                let name = $(this).next('.input-file').find('.input-file__text');
+                name.html(fileName);
+            }
+        });
+    })();
+
+    (function() {
+        let phoneInputs = document.querySelectorAll('.mask-phone');
+
+        if (phoneInputs.length) {
+            phoneInputs.forEach(function(e, i) {
+                const phone = IMask(e, {
+                    mask: '+{38}(000)000-00-00',
+                    lazy: false,
+                    placeholderChar: '_',
+                });
+            });
+        }
     })();
 
     // Lazy load observer

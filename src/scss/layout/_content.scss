@@ -3484,7 +3484,32 @@
   align-items: stretch;
   align-content: stretch;
   width: 100%;
-  margin: 0 0 30px;
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    height: 100px;
+    max-height: 250px;
+  }
+
+  .rating-container {
+    .rating-stars {
+      width: 100%;
+      max-width: 396px;
+    }
+
+    .star {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 
   &__submit {
     svg {
