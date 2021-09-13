@@ -6,6 +6,18 @@
 }
 
 @include media-breakpoint-up(sm) {
+  .btn {
+    &-link {
+      font-size: 16px;
+    }
+  }
+
+  .modal {
+    &-content {
+      padding: 30px;
+    }
+  }
+
   .main-title {
     font-size: 60px;
   }
@@ -47,6 +59,38 @@
 
     &__item {
       width: 33.333333%;
+    }
+  }
+
+  .main-blog {
+    &__box-title {
+      line-height: 1.5;
+    }
+  }
+
+  .main-courses {
+    &__box {
+      &-wrap {
+        height: 450px;
+      }
+
+      &-name {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .modal-form {
+    .rating-container {
+      .rating-stars {
+        max-width: 396px;
+      }
+
+      .star {
+        &:not(:last-child) {
+          margin-right: 60px;
+        }
+      }
     }
   }
 
@@ -154,8 +198,6 @@
   }
 
   .main-courses {
-    margin-bottom: -170px;
-
     &__box {
       margin: 0 10px;
     }
@@ -189,10 +231,6 @@
 
   .section-reviews {
     padding: 115px 0 180px;
-
-    .title {
-      margin: 0 0 80px;
-    }
   }
 
   .slider-reviews {
@@ -227,7 +265,7 @@
     }
 
     &__pic {
-      padding: 51px;
+      padding: 20px;
     }
   }
 
@@ -369,6 +407,12 @@
     }
   }
 
+  .section-reviews {
+    .title {
+      margin: 0 0 80px;
+    }
+  }
+
   .section-instagram {
     padding: 133px 0 155px;
 
@@ -438,7 +482,7 @@
       &__img {
         position: absolute;
         top: 7%;
-        right: 8%;
+        right: -5%;
         width: auto;
         height: auto;
         object-fit: fill;
@@ -500,13 +544,19 @@
 
   .section-main-stock {
     &__decor {
+      position: absolute;
+      inset: 0 0 auto auto;
       display: block;
 
       &_sm {
+        position: absolute;
+        inset: auto auto 0 11%;
         display: block;
       }
 
       &_lg {
+        position: absolute;
+        inset: 17.5% 10% auto auto;
         display: block;
       }
     }
@@ -514,6 +564,16 @@
 
   .section-main-courses {
     margin: 0 0 220px;
+  }
+
+  .main-courses {
+    margin-bottom: -170px;
+
+    &__box {
+      &-wrap {
+        height: 420px;
+      }
+    }
   }
 
   .section-courses {
@@ -570,15 +630,6 @@
   .section-home {
     .section-bg {
       z-index: 0;
-
-      &__img {
-        position: absolute;
-        top: 7%;
-        right: 8%;
-        width: auto;
-        height: auto;
-        object-fit: fill;
-      }
     }
   }
 
@@ -588,6 +639,27 @@
 
   .section-main-stock {
     padding: 130px 0 285px;
+
+    &__decor {
+      inset: 11% 2% auto auto;
+
+      &_sm {
+        inset: auto auto 0 11%;
+      }
+
+      &_lg {
+        inset: 17.5% 12% auto auto;
+      }
+    }
+  }
+
+  .section-main-faq {
+    &__decor {
+      position: absolute;
+      top: 16%;
+      right: 10%;
+      display: block;
+    }
   }
 
   .section-main-blog {
@@ -610,17 +682,17 @@
         right: 16%;
       }
     }
+  }
 
-    .title {
-      margin: 0 0 115px;
-    }
+  .main-courses-header {
+    margin-bottom: 115px;
   }
 
   .section-reviews {
     &__decor {
       position: absolute;
       top: -51px;
-      right: 20%;
+      right: 5%;
       display: block;
 
       &_sm {
@@ -631,9 +703,39 @@
     }
   }
 
-  .main-seo-partners {
-    &__pic {
-      margin: 0;
+  .main-seo {
+    &-instagram {
+      &__decor {
+        position: absolute;
+        display: block;
+        z-index: -1;
+
+        &_first {
+          top: 18.75%;
+          left: 41.666666%;
+        }
+
+        &_second {
+          bottom: 9%;
+          left: 5%;
+          transform: rotate(230deg);
+        }
+
+        &_third {
+          top: 33%;
+          left: 1%;
+        }
+      }
+
+      &__pic {
+        padding: 51px;
+      }
+    }
+
+    &-partners {
+      &__pic {
+        margin: 0;
+      }
     }
   }
 
@@ -641,6 +743,10 @@
     &-slide {
       height: 550px;
     }
+  }
+
+  .main-seo-instagram {
+
   }
 
   /* FOOTER */
@@ -726,6 +832,30 @@
   }
   /* HEADER END */
 
+  .section-home {
+    .section-bg {
+      z-index: 0;
+
+      &__img {
+        right: 8%;
+      }
+    }
+  }
+
+  .section-main-stock {
+    &__decor {
+      inset: 11% 10% auto auto;
+
+      &_sm {
+        inset: auto auto 0 11%;
+      }
+
+      &_lg {
+        inset: 17.5% 20% auto auto;
+      }
+    }
+  }
+
   .main-stock-container {
     padding-left: 133px;
   }
@@ -749,6 +879,12 @@
         transform: translateY(-50%);
         transition: $transition-base;
       }
+    }
+  }
+
+  .section-reviews {
+    &__decor {
+      right: 20%;
     }
   }
 

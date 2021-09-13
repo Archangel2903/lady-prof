@@ -148,7 +148,7 @@
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-    margin: 0 0 60px;
+    margin: 0 0 80px;
   }
 
   &__slider {
@@ -385,23 +385,17 @@
 
 /* SECTION STOCK */
 .section-main-stock {
-  padding: 80px 0;
+  padding: 60px 0;
   background: $main-second-color;
 
   &__decor {
-    position: absolute;
-    inset: 11% 10% auto auto;
     display: none;
 
     &_sm {
-      position: absolute;
-      inset: auto auto 0 11%;
       display: none;
     }
 
     &_lg {
-      position: absolute;
-      inset: 17.5% 20% auto auto;
       display: none;
     }
   }
@@ -603,7 +597,7 @@
       margin: 0 0 18px;
       font-family: $font-family-custom;
       font-size: 36px;
-      line-height: 1.5;
+      line-height: 1.25;
       letter-spacing: 1px;
     }
 
@@ -628,6 +622,14 @@
   &__decor {
     display: none;
   }
+
+  .title {
+    margin: 0;
+  }
+}
+
+.main-courses-header {
+  margin-bottom: 35px;
 }
 
 .main-courses {
@@ -660,8 +662,12 @@
       position: relative;
       width: 100%;
       max-width: 340px;
-      height: 420px;
+      height: 470px;
       z-index: 1;
+
+      &:not(:last-child) {
+        margin: 0 0 20px;
+      }
     }
 
     &-pic {
@@ -682,7 +688,7 @@
 
     &-name {
       margin: 0;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       letter-spacing: 2px;
       line-height: 26px;
@@ -922,9 +928,7 @@
   padding: 100px 0 125px;
 
   &__decor {
-    position: absolute;
-    top: 16%;
-    right: 10%;
+    display: none;
   }
 
   .title {
@@ -1036,6 +1040,7 @@
 
   .title {
     position: relative;
+    margin: 0 0 40px;
   }
 }
 
@@ -1125,7 +1130,7 @@
 
 /* SECTION SEO */
 .section-seo {
-  padding: 80px 0 110px;
+  padding: 80px 0 140px;
 }
 
 .main-seo {
@@ -1133,24 +1138,7 @@
     position: relative;
 
     &__decor {
-      position: absolute;
-      z-index: -1;
-
-      &_first {
-        top: 18.75%;
-        left: 41.666666%;
-      }
-
-      &_second {
-        bottom: 9%;
-        left: 5%;
-        transform: rotate(230deg);
-      }
-
-      &_third {
-        top: 33%;
-        left: 1%;
-      }
+      display: none;
     }
 
     .title {
@@ -3496,12 +3484,12 @@
   .rating-container {
     .rating-stars {
       width: 100%;
-      max-width: 396px;
+      max-width: 230px;
     }
 
     .star {
       &:not(:last-child) {
-        margin-right: 60px;
+        margin-right: 20px;
       }
 
       svg {
