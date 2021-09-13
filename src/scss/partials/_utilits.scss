@@ -749,6 +749,8 @@ ul.style-list, ol.style-list {
     border-bottom: 1px solid #F5EDE6;
 
     .close {
+      width: 24px;
+      height: 24px;
       padding: 0;
       margin: 0;
 
@@ -782,7 +784,6 @@ ul.style-list, ol.style-list {
     .modal {
       &-dialog {
         max-width: 695px;
-
       }
 
       &-content {
@@ -805,15 +806,15 @@ ul.style-list, ol.style-list {
 
       &-title {
         width: 100%;
+        padding: 5px 0;
         font-family: $font-family-custom;
-        font-size: 50px;
+        font-size: 26px;
         line-height: 1;
         letter-spacing: 1px;
       }
 
       &-body {
         padding: 0 20px 20px;
-        //overflow: hidden;
       }
     }
   }

@@ -299,6 +299,15 @@
     }
   }
 
+  .modal#cart {
+    .modal {
+      &-title {
+        padding: 0;
+        font-size: 50px;
+      }
+    }
+  }
+
   /* FOOTER */
   .footer-content-wrap {
     padding: 50px 0 75px;
