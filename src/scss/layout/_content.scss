@@ -562,7 +562,7 @@
 
 /* SECTION BLOG */
 .section-main-blog {
-  padding: 100px 0;
+  padding: 60px 0;
 
   .title {
     margin: 0;
@@ -570,7 +570,7 @@
 }
 
 .main-blog {
-  padding: 60px 0;
+  padding: 60px 0 0;
 
   &__box {
     position: relative;
@@ -582,7 +582,7 @@
     align-content: flex-start;
 
     &:not(:last-child) {
-      margin: 0 0 120px;
+      margin: 0 0 80px;
     }
 
     &-pic {
@@ -616,7 +616,7 @@
 
 /* SECTION COURSES */
 .section-main-courses {
-  padding: 100px 0 0;
+  padding: 60px 0;
   background: $main-second-color;
 
   &__decor {
@@ -650,19 +650,13 @@
 
     &:hover {
       box-shadow: 48px 48px 48px rgba(49, 49, 49, 0.1);
-
-      .main-courses__box-link {
-        margin-top: 20px;
-        opacity: 1;
-        visibility: visible;
-      }
     }
 
     &-wrap {
       position: relative;
       width: 100%;
       max-width: 340px;
-      height: 470px;
+      //height: 470px;
       z-index: 1;
 
       &:not(:last-child) {
@@ -698,9 +692,7 @@
 
     &-link {
       display: inline-block;
-      margin-top: -50px;
-      opacity: 0;
-      visibility: hidden;
+      margin-top: 20px;
     }
   }
 }
@@ -921,7 +913,7 @@
 
 /* SECTION FAQ */
 .section-main-faq {
-  padding: 100px 0 125px;
+  padding: 80px 0;
 
   &__decor {
     display: none;
@@ -1063,12 +1055,13 @@
 .swiper-button {
   &-prev {
     position: absolute;
-    inset: 0 auto auto 0;
+    inset: 0 auto auto calc(50% - 50px);
     width: 50px;
     height: 50px;
     margin: 0;
     border-radius: 100%;
     background: white;
+    transform: translateX(-50%);
 
     svg {
       position: absolute;
@@ -1082,12 +1075,13 @@
 
   &-next {
     position: absolute;
-    inset: auto 0 0 auto;
+    inset: auto auto 0 calc(50% + 50px);
     width: 50px;
     height: 50px;
     margin: 0;
     border-radius: 100%;
     background: white;
+    transform: translateX(-50%);
 
     svg {
       position: absolute;

@@ -70,10 +70,6 @@
 
   .main-courses {
     &__box {
-      &-wrap {
-        height: 450px;
-      }
-
       &-name {
         font-size: 20px;
       }
@@ -190,11 +186,25 @@
     }
   }
 
+  .section-main-blog {
+    padding: 100px 0;
+  }
+
   .main-blog {
-    &__box-title {
-      font-size: 42px;
-      line-height: 63px;
+    &__box {
+      &:not(:last-child) {
+        margin: 0 0 120px;
+      }
+
+      &-title {
+        font-size: 42px;
+        line-height: 63px;
+      }
     }
+  }
+
+  .section-main-courses {
+    padding: 100px 0;
   }
 
   .main-courses {
@@ -218,6 +228,8 @@
   }
 
   .section-main-faq {
+    padding: 100px 0 125px;
+
     .title {
       margin: 0 0 100px;
     }
@@ -253,6 +265,8 @@
     }
 
     &-next {
+      inset: auto auto 0 0;
+
       svg {
         transform: translate(-50%, -50%) rotate(0deg);
       }
@@ -552,28 +566,27 @@
         position: absolute;
         inset: auto auto 0 11%;
         display: block;
+        width: 300px;
+        height: 300px;
       }
 
       &_lg {
         position: absolute;
         inset: 17.5% 10% auto auto;
         display: block;
+        width: 458px;
+        height: 458px;
       }
     }
   }
 
   .section-main-courses {
+    padding: 100px 0 0;
     margin: 0 0 220px;
   }
 
   .main-courses {
     margin-bottom: -170px;
-
-    &__box {
-      &-wrap {
-        height: 420px;
-      }
-    }
   }
 
   .section-courses {
@@ -887,6 +900,28 @@
         visibility: hidden;
         transform: translateY(-50%);
         transition: $transition-base;
+      }
+    }
+  }
+
+  .main-courses {
+    &__box {
+      &:hover {
+        .main-courses__box-link {
+          margin-top: 20px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &-wrap {
+        height: 420px;
+      }
+
+      &-link {
+        margin-top: -50px;
+        opacity: 0;
+        visibility: hidden;
       }
     }
   }
