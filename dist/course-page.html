@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>Курсы косметолога</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.5935beb1af95291cfe8f.min.css" rel="stylesheet"></head>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.eb20e44aa6e950c913a9.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -263,12 +263,12 @@
                         <picture class="section-reviews__decor_sm">
                             <img src="img/default.svg" data-src="img/quotes.svg" alt="image" title="image">
                         </picture>
-                        <p class="title">Отзывы о курсах </p>
+                        <p class="title">Отзывы о курсах</p>
                     </div>
 
                     <div class="col-xl-4 align-self-center pb-xl-5">
                         <a href="#" class="d-inline-block btn-link mb-lg-5">Посмотреть все отзывы</a>
-                        <button type="button" class="btn btn-lg btn-primary d-block mt-3 mx-auto mx-md-0 mt-lg-4">Оставить отзыв</button>
+                        <button type="button" class="btn btn-lg btn-primary d-block mt-3 mx-auto mx-md-0 mt-lg-4" data-toggle="modal" data-target="#new_review">Оставить отзыв</button>
                     </div>
                 </div>
 
@@ -676,13 +676,70 @@
     </div>
 </div>
 
+<!-- write review -->
+<div class="modal fade" id="new_review" tabindex="-1" aria-labelledby="new_review_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=new_review_label">Написать отзыв</h5>
+                <button type="button" class="close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form action="" method="" id="new_review_form" class="modal-form">
+                    <div class="form-group">
+                        <input type="number" class="star-rating" value="3">
+                    </div>
+
+                    <label class="form-group">
+                        <span class="input-name important">Имя и фамилия</span>
+                        <input type="text" class="form-control">
+                    </label>
+
+                    <label class="form-group">
+                        <span class="input-name important">E-mail</span>
+                        <input type="text" class="form-control">
+                    </label>
+
+                    <label class="form-group">
+                        <span class="input-name important">Комментарий</span>
+                        <textarea class="form-control" cols="30" rows="10"></textarea>
+                    </label>
+
+                    <label class="form-group">
+                        <input type="file" id="new_review_file">
+                        <span class="input-file">
+                            <span class="input-file__ico"><svg><use xlink:href="img/spritemap.svg#sprite-clip"></use></svg></span>
+                            <span class="input-file__text">Прикрепить фото или видео</span>
+                        </span>
+                    </label>
+
+                    <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">Отправить
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- sign-in -->
 <div class="modal fade" id="sign-in" tabindex="-1" aria-labelledby="sign-in_label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="sign-in_label">Вход</h5>
-                <button type="button" class="close"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></button>
+                <button type="button" class="close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
             </div>
 
             <div class="modal-body">
@@ -696,23 +753,35 @@
                         <span class="input-name important">Пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg" data-src="img/eye-closed.svg" alt="image" title="image"></picture></button>
+                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
+                                                                                     data-src="img/eye-closed.svg" alt="image"
+                                                                                     title="image"></picture></button>
                         </span>
                     </label>
 
                     <div class="form-group d-flex justify-content-between">
-                        <label class="m-0">
-                            <input type="checkbox">
-                            <span class="checkbox">
-                                <span class="checkbox-style"></span>
-                                <span class="checkbox-text">Запомнить меня</span>
-                            </span>
-                        </label>
+                        <div class="row w-100">
+                            <div class="col-sm-7 mb-3 mb-sm-0">
+                                <label class="m-0">
+                                    <input type="checkbox">
+                                    <span class="checkbox">
+                                        <span class="checkbox-style"></span>
+                                        <span class="checkbox-text">Запомнить меня</span>
+                                    </span>
+                                </label>
+                            </div>
 
-                        <a href="#refresh_pass" class="text-primary">Напомнить пароль</a>
+                            <div class="col-sm-5">
+                                <a href="#refresh_pass" class="text-primary">Напомнить пароль</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">Войти<svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg></button>
+                    <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">Войти
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
 
@@ -727,8 +796,16 @@
                     </p>
 
                     <div class="authorization__buttons">
-                        <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use></svg> Facebook</a>
-                        <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-google-btn"></use></svg> Google</a>
+                        <a href="#" class="authorization__link btn btn-light">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                            </svg>
+                            Facebook</a>
+                        <a href="#" class="authorization__link btn btn-light">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                            </svg>
+                            Google</a>
                     </div>
                 </div>
             </div>
@@ -741,13 +818,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="registration_label">Регистрация</h5>
-                <button type="button" class="close"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></button>
+                <button type="button" class="close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
             </div>
 
             <div class="modal-body">
                 <form action="" method="" id="registration_form" class="modal-form">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <label class="form-group">
                                 <input type="radio" name="user" class="user-class" value="client" checked>
                                 <span class="radio">
@@ -757,7 +838,7 @@
                             </label>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <label class="form-group">
                                 <input type="radio" name="user" class="user-class" value="master">
                                 <span class="radio">
@@ -774,15 +855,15 @@
                     </label>
 
                     <div class="form-row">
-                        <div class="col-md-6">
-                            <label class="form-group">
+                        <div class="col-sm-6">
+                            <label class="form-group w-100">
                                 <span class="input-name important">Номер телефона</span>
                                 <input type="text" class="form-control mask-phone" placeholder="+380(000) 00 00 000">
                             </label>
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-group">
+                        <div class="col-sm-6">
+                            <label class="form-group w-100">
                                 <span class="input-name important">E-mail</span>
                                 <input type="text" class="form-control">
                             </label>
@@ -793,9 +874,11 @@
                         <span class="input-name important">Придумайте пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg" data-src="img/eye-closed.svg" alt="image" title="image"></picture></button>
+                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
+                                                                                     data-src="img/eye-closed.svg" alt="image"
+                                                                                     title="image"></picture></button>
                         </span>
-                        <span class="d-block mt-2 text-mutted">Пароль должен быть не менее 6 символов</span>
+                        <span class="d-block mt-2 text-mutted text-center text-sm-left">Пароль должен быть не менее 6 символов</span>
                     </label>
 
                     <label class="form-group client for-master">
@@ -807,7 +890,10 @@
                     </label>
 
                     <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">
-                        Регистрация<svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg>
+                        Регистрация
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                        </svg>
                     </button>
 
                     <p class="modal-form__agreement">Нажимая на кнопку «Регистрация», я принимаю условия <a href="agreement.html">Пользовательского соглашения</a></p>
@@ -826,8 +912,16 @@
                         </p>
 
                         <div class="authorization__buttons">
-                            <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use></svg> Facebook</a>
-                            <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-google-btn"></use></svg> Google</a>
+                            <a href="#" class="authorization__link btn btn-light">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                                </svg>
+                                Facebook</a>
+                            <a href="#" class="authorization__link btn btn-light">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                                </svg>
+                                Google</a>
                         </div>
                     </div>
                 </div>
@@ -1058,5 +1152,5 @@
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.5935beb1af95291cfe8f.min.js"></script></body>
+<script type="text/javascript" src="bundle.eb20e44aa6e950c913a9.min.js"></script></body>
 </html>

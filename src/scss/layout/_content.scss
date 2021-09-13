@@ -796,11 +796,7 @@
   }
 
   &__decor {
-    position: absolute;
-    top: 50%;
-    left: -20%;
-    transform: translateY(-50%);
-    z-index: -1;
+    display: none;
   }
 
   &__video {

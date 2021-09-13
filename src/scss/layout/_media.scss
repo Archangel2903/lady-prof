@@ -610,6 +610,15 @@
 
   .about-course {
     margin-bottom: 190px;
+
+    &__decor {
+      position: absolute;
+      top: 50%;
+      left: -20%;
+      display: block;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
   }
 
   .category-nav {
