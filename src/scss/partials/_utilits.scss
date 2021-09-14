@@ -342,6 +342,8 @@ body.fixed {
 
 .select2 {
   &-container {
+    width: 100% !important;
+
     .select2 {
       &-selection--single {
         width: 100%;
@@ -350,7 +352,7 @@ body.fixed {
 
         .select2-selection {
           &__rendered {
-            padding: 0 50px 0 30px;
+            padding: 0 40px 0 20px;
           }
 
           &__arrow {
@@ -377,7 +379,7 @@ body.fixed {
             }
 
             &__arrow {
-              right: 30px;
+              right: 10px;
               height: 100%;
 
               b {
