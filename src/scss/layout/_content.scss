@@ -305,7 +305,7 @@
       &-select {
         &-wrap {
           width: 100%;
-          max-width: 120px;
+          max-width: 110px;
         }
       }
     }
@@ -1202,7 +1202,7 @@
 
 .catalog {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
@@ -1261,9 +1261,44 @@
   }
 
   &-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
     width: 100%;
     max-width: 340px;
-    margin-right: 20px;
+    height: 100%;
+    padding: 0 10px;
+    background: white;
+    box-shadow: 0 0 10px -3px #cccccc;
+    overflow: auto;
+    transition: $transition-base;
+    z-index: 101;
+
+    &.open {
+      left: 0%;
+      height: 100%;
+      padding: 0 10px;
+      box-shadow: 0 0 10px -3px #cccccc;
+    }
+
+    &__switch {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      background: white;
+      z-index: 102;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
 
     &__clear {
       border-color: $primary;
@@ -1420,7 +1455,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
-    width: calc(100% - 360px);
+    width: 100%;
 
     &__section {
       display: flex;
@@ -1429,7 +1464,6 @@
       align-items: flex-start;
       align-content: flex-start;
       width: 100%;
-      margin: 0 0 40px;
 
       &-title {
         width: 100%;
@@ -1447,7 +1481,7 @@
 
     &__sorting {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: flex-start;
       align-items: center;
       align-content: center;
@@ -1459,7 +1493,9 @@
       font-weight: 500;
 
       & > * {
-        margin-right: 50px;
+        &:not(:last-child) {
+          margin: 0 0 15px;
+        }
       }
 
       &-variant {

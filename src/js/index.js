@@ -402,6 +402,12 @@ $(function () {
                 }
             });
         }
+
+        let filterSwitch = document.getElementById('sidebar_switch');
+        let catalogHeader = document.querySelector('.catalog__header');
+        filterSwitch.addEventListener('click', function() {
+            filter.classList.toggle('open');
+        });
     })();
 
     // sidebar box

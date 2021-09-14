@@ -62,6 +62,39 @@
     }
   }
 
+  .catalog {
+    &__header {
+      flex-wrap: nowrap;
+    }
+
+    &-content {
+      &__sorting {
+        flex-direction: row;
+
+        & > * {
+          &:not(:last-child) {
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+
+      .main-category {
+        &__card {
+          &-wrap {
+            width: 48%;
+            margin: 0 10px 40px 0;
+          }
+
+          .card {
+            &-footer {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .main-blog {
     &__box-title {
       line-height: 1.5;
@@ -351,6 +384,36 @@
 
     &__pic {
       margin: 0 30px 0 0;
+    }
+  }
+
+  .catalog {
+    &-content {
+      &__section {
+        justify-content: center;
+      }
+
+      &__sorting {
+        & > * {
+          &:not(:last-child) {
+            margin: 0 50px 0 0;
+          }
+        }
+      }
+
+      .main-category {
+        &__card {
+          &-wrap {
+            margin: 0 10px 40px 0;
+          }
+
+          .card {
+            &-footer {
+              justify-content: space-between;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -741,6 +804,34 @@
     }
   }
 
+  .catalog {
+    flex-direction: row;
+
+    &-sidebar {
+      position: static;
+      left: 0;
+      padding: 0 !important;
+      margin-right: 20px;
+      box-shadow: none !important;
+
+      &__switch {
+        display: none;
+      }
+    }
+
+    &-content {
+      width: calc(100% - 360px);
+
+      &__section {
+        justify-content: flex-start;
+      }
+
+      .main-category__card-wrap {
+        margin: 0 14px 40px 0;
+      }
+    }
+  }
+
   .section-home-about-us {
     .subtitle-text {
       margin: 0;
@@ -864,6 +955,18 @@
   .stages {
     &-slide {
       height: 550px;
+    }
+  }
+
+  .catalog {
+    &-content {
+      .main-category {
+        &__card {
+          &-wrap {
+            max-width: 295px;
+          }
+        }
+      }
     }
   }
 
@@ -1034,6 +1137,22 @@
 
   .slider-reviews {
     margin: 0 0 0 70px;
+  }
+
+  .catalog {
+    &-content {
+      &__section {
+        margin: 0 0 40px;
+      }
+
+      .main-category {
+        &__card {
+          &-wrap {
+            max-width: 333px;
+          }
+        }
+      }
+    }
   }
 }
 
