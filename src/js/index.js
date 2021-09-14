@@ -366,48 +366,49 @@ $(function () {
 
     // reset sidebar filter
     (function() {
-        let filter = document.getElementById('sidebar_filter'),
+        let filter = document.querySelector('.catalog-sidebar'),
             filterReset = document.getElementById('sidebar_filter_reset'),
+            filterSwitch = document.getElementById('sidebar_switch'),
             inputs = document.querySelectorAll('input[type="checkbox"]'),
             arr = [];
 
         if (filter) {
-            filter.addEventListener('input', function (e) {
-                arr = [];
+            if (filterReset) {
+                filter.addEventListener('input', function() {
+                    arr = [];
 
-                inputs.forEach(function (input) {
-                    if (input.checked) {
-                        arr.push(input);
+                    inputs.forEach(function(input) {
+                        if (input.checked) {
+                            arr.push(input);
+                        }
+                    });
+
+                    if (arr.length > 0) {
+                        filterReset.classList.remove('d-none');
+                        filterReset.classList.add('d-block');
+                    }
+                    else {
+                        filterReset.classList.remove('d-block');
+                        filterReset.classList.add('d-none');
                     }
                 });
+                filterReset.addEventListener('click', function() {
+                    this.classList.remove('d-block');
+                    this.classList.add('d-none');
 
-                if (arr.length > 0) {
-                    filterReset.classList.remove('d-none');
-                    filterReset.classList.add('d-block');
-                }
-                else {
-                    filterReset.classList.remove('d-block');
-                    filterReset.classList.add('d-none');
-                }
-            });
-            filterReset.addEventListener('click', function () {
-                this.classList.remove('d-block');
-                this.classList.add('d-none');
+                    let priceSlider = filter.querySelectorAll('.slider-handles');
+                    if (priceSlider.length) {
+                        priceSlider.forEach(function (elem) {
+                            elem.noUiSlider.reset();
+                        });
+                    }
+                });
+            }
 
-                let priceSlider = filter.querySelectorAll('.slider-handles');
-                if (priceSlider.length) {
-                    priceSlider.forEach(function (elem) {
-                        elem.noUiSlider.reset();
-                    });
-                }
+            filterSwitch.addEventListener('click', function() {
+                filter.classList.toggle('open');
             });
         }
-
-        let filterSwitch = document.getElementById('sidebar_switch');
-        let catalogHeader = document.querySelector('.catalog__header');
-        filterSwitch.addEventListener('click', function() {
-            filter.classList.toggle('open');
-        });
     })();
 
     // sidebar box
