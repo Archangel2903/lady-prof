@@ -2405,7 +2405,7 @@
       justify-content: space-between;
       align-items: center;
       align-content: center;
-      padding: 25px;
+      padding: 0 15%;
 
       .product-cart__item-price-wrap {
         &:not(:last-child) {
@@ -2444,11 +2444,11 @@
 
   &__set {
     &-slider {
-      padding: 0 100px;
+      padding: 0 5%;
 
       .swiper {
         &-slide {
-          max-width: 455px;
+          width: 100%;
           padding: 20px;
           border-radius: 15px;
           box-shadow: 0 48px 48px rgba(49, 49, 49, 0.1);
@@ -2457,8 +2457,8 @@
 
         &-button {
           &-prev {
-            top: 50%;
-            left: 0;
+            display: none;
+            inset: 50% auto auto 0;
             transform: translateY(-50%);
             border: none;
             background: #f8f8f8;
@@ -2469,8 +2469,8 @@
           }
 
           &-next {
-            top: 50%;
-            right: 0;
+            display: none;
+            inset: 50% 0 auto auto;
             transform: translateY(-50%);
             border: none;
             background: #f8f8f8;
@@ -2490,7 +2490,7 @@
 
     &-box {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       justify-content: space-between;
       align-items: center;
       align-content: center;
@@ -2503,7 +2503,7 @@
       justify-content: flex-start;
       align-items: stretch;
       align-content: stretch;
-      width: 48%;
+      width: 100%;
 
       &-pic {
         img {
@@ -2518,7 +2518,7 @@
         justify-content: space-between;
         align-items: stretch;
         align-content: stretch;
-        padding: 15px 0;
+        padding: 15px 0 15px 15px;
       }
 
       &-name {
