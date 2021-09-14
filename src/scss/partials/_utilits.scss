@@ -134,6 +134,48 @@ body.fixed {
   text-transform: uppercase;
 }
 
+.swiper-button {
+  &-prev {
+    position: absolute;
+    inset: 0 auto auto calc(50% - 50px);
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 100%;
+    background: white;
+    transform: translateX(-50%);
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &-next {
+    position: absolute;
+    inset: auto auto 0 calc(50% + 50px);
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 100%;
+    background: white;
+    transform: translateX(-50%);
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+}
+
 .swiper-pagination {
   &-bullet {
     width: 6px;

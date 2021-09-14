@@ -303,76 +303,10 @@
       }
 
       &-select {
-        /*& + .select2 {
-          &-container {
-            .select2 {
-              &-selection--single {
-                width: 100%;
-                max-width: 134px;
-                height: 41px;
-
-                .select2-selection {
-                  &__rendered {
-                    padding: 0 50px 0 30px;
-                  }
-                  &__arrow {
-                    b {
-
-                    }
-                  }
-                }
-              }
-            }
-
-            &--default {
-              &.select2 {
-                &-container--open {
-                  &.select2-container {
-                    &--below {
-                      .select2-selection {
-                        &--single, &--multiple {
-                          border-radius: 34px 34px 0 0;
-                        }
-                      }
-                    }
-                    &--above {
-                      .select2-selection {
-                        &--single {
-                          border-radius: 0 0 34px 34px;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-
-              .select2 {
-                &-selection--single {
-                  border: 1px solid $primary;
-                  border-radius: 34px;
-                  transition: $transition-base;
-
-                  .select2-selection {
-                    &__rendered {
-                      font-family: $font-family-base;
-                      font-weight: 500;
-                      line-height: 2.5;
-                      text-transform: uppercase;
-                    }
-                    &__arrow {
-                      right: 30px;
-                      height: 100%;
-
-                      b {
-
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }*/
+        &-wrap {
+          width: 100%;
+          max-width: 130px;
+        }
       }
     }
 
@@ -813,11 +747,9 @@
 
     .swiper-button {
       &-prev {
-        top: auto;
-        right: auto;
-        bottom: 100%;
-        left: 0;
+        inset: auto auto 100% 0;
         background: #f8f8f8;
+        transform: translate(0, 0);
 
         svg {
           transform: translate(-50%, -50%) rotate(90deg);
@@ -825,10 +757,9 @@
       }
 
       &-next {
-        top: auto;
-        right: 0;
-        bottom: 100%;
+        inset: auto 0 100% auto;
         background: #f8f8f8;
+        transform: translate(0, 0);
 
         svg {
           transform: translate(-50%, -50%) rotate(-90deg);
@@ -1049,48 +980,6 @@
     left: 0;
     width: 100%;
     height: 50px;
-  }
-}
-
-.swiper-button {
-  &-prev {
-    position: absolute;
-    inset: 0 auto auto calc(50% - 50px);
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    border-radius: 100%;
-    background: white;
-    transform: translateX(-50%);
-
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 8px;
-      height: 8px;
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-  }
-
-  &-next {
-    position: absolute;
-    inset: auto auto 0 calc(50% + 50px);
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    border-radius: 100%;
-    background: white;
-    transform: translateX(-50%);
-
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 8px;
-      height: 8px;
-      transform: translate(-50%, -50%) rotate(-90deg);
-    }
   }
 }
 
