@@ -77,6 +77,35 @@
   }
 
   .product-cart {
+    &__items {
+      flex-direction: row;
+      width: auto;
+
+      &-view {
+        flex-direction: column;
+        max-width: 350px;
+
+        .product-cart__item {
+          &-view {
+            flex-direction: row;
+            width: 100%;
+          }
+
+          &-name {
+            overflow: auto;
+            text-align: left;
+            text-overflow: clip;
+            white-space: normal;
+          }
+        }
+      }
+
+      &-price {
+        flex-direction: column;
+        padding: 25px 0;
+      }
+    }
+
     &__set {
       &-slider {
         padding: 0 100px;
@@ -238,6 +267,8 @@
   }
 
   .section-courses {
+    padding: 0 0 40px;
+
     .main-courses {
       &__box {
         flex-direction: row;
