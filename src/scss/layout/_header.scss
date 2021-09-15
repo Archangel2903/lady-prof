@@ -85,9 +85,6 @@ header.header {
     }
 
     &.active {
-      position: fixed;
-      top: 20px;
-      left: 10px;
       z-index: 1001;
 
       .header-menu__borgir-line {
