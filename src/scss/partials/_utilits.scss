@@ -453,6 +453,8 @@ body.fixed {
   background: none;
 
   &-item {
+    display: none;
+
     a {
       color: #878787;
 
@@ -465,11 +467,16 @@ body.fixed {
       color: #878787;
     }
 
-    &+ .breadcrumb-item {
-      padding-left: 15px;
+    &:nth-last-child(2) {
+      display: block;
+    }
+
+    & + .breadcrumb-item {
+      padding-left: 2px;
 
       &::before {
-        padding-right: 15px;
+        padding-right: 2px;
+        color: #c2c2c2;
       }
     }
   }

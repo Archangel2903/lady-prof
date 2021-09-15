@@ -94,7 +94,6 @@
 .slider-banner {
   width: 100%;
   max-height: 600px;
-  //height: 600px;
 
   .swiper-slide {
     a {
@@ -369,13 +368,11 @@
       justify-content: flex-start;
       align-items: stretch;
       align-content: stretch;
-      //margin-left: 20px;
     }
 
     &-btn {
       max-width: max-content;
       margin: 0 10px 20px 0;
-      //margin-right: 20px;
     }
   }
 
@@ -662,7 +659,7 @@
   &__head {
     position: relative;
     max-width: 1564px;
-    margin: 0 auto 40px;
+    margin: 0 auto 60px;
     text-align: center;
   }
 
@@ -815,7 +812,6 @@
       position: relative;
       width: 100%;
       max-width: 340px;
-      //height: 470px;
       z-index: 1;
 
       &:not(:last-child) {
@@ -1055,7 +1051,6 @@
             width: 11px;
             height: 11px;
             border-radius: 100%;
-            //margin-right: 20px;
             background: $main-third-color;
             transform: translateY(-50%);
           }
@@ -1153,7 +1148,6 @@
 
     &-question {
       flex: 0 1 100%;
-      font-size: 22px;
       font-size: 18px;
       font-weight: 500;
       line-height: 26px;
@@ -1189,7 +1183,6 @@
 .reviews {
   position: relative;
   max-width: 1400px;
-  //margin-top: 80px;
 }
 
 .slider-reviews {
@@ -1211,7 +1204,6 @@
   padding: 30px;
   border-radius: 9px;
   background: white;
-  //box-shadow: 48px 48px 48px rgba(49, 49, 49, 0.1), 0 21px 35px rgba(0, 0, 0, 0.05);
 
   &__title {
     margin: 0 0 10px;
@@ -1508,10 +1500,10 @@
 
     &__switch {
       position: fixed;
-      bottom: 5px;
-      right: 5px;
-      width: 60px;
-      height: 60px;
+      bottom: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
       padding: 0;
       border: none;
       border-radius: 100%;
@@ -1520,8 +1512,8 @@
       z-index: 102;
 
       svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
       }
     }
 
@@ -1781,21 +1773,21 @@
 
 /* SECTION PRODUCT CARD */
 .section-product-card {
-  margin: 0 0 200px;
+  margin: 0 0 100px;
 
   .breadcrumb {
-    padding: 66px 0 10px;
+    padding: 20px 0;
   }
 }
 
 .product-card {
   &__head {
-    margin: 0 0 60px;
+    margin: 0 0 40px;
 
     &-title {
       margin: 0 0 10px;
-      font-size: 56px;
-      line-height: 66px;
+      font-size: 36px;
+      line-height: 1.25;
       letter-spacing: 1px;
     }
 
@@ -1820,19 +1812,16 @@
       .ui-tabs {
         &-nav {
           display: flex;
-          flex-flow: row wrap;
+          flex-flow: column wrap;
           justify-content: flex-start;
           align-items: center;
           align-content: center;
           padding: 0;
-          margin: 0 0 70px;
+          margin: 0 0 30px;
 
           li {
-            margin: 0;
+            margin: 0 0 10px 0;
             float: none;
-            &:not(:last-child) {
-              margin-right: 20px;
-            }
 
             &.ui-tabs-active {
               .ui-tabs-anchor {
@@ -1860,6 +1849,7 @@
         &-panel {
           display: flex;
           flex-flow: row wrap;
+          flex-flow: column wrap;
           justify-content: flex-start;
           align-items: stretch;
           align-content: stretch;
@@ -1877,52 +1867,33 @@
 
       .catalog-category {
         width: 100%;
-        margin-top: 150px;
+        margin-top: 80px;
       }
     }
   }
 
-  &__thumbs-wrap {
-    position: relative;
-    display: inline-flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-    width: 100%;
-    max-width: 475px;
-    height: 445px;
-    margin-right: 80px;
-
-    &+ * {
-      width: calc(100% - 560px);
-    }
-
-    .main-category__card-button-favorite {
-      top: 0;
-      right: 0;
-      opacity: 1;
-      visibility: visible;
-      z-index: 5;
-    }
-  }
-
   &__thumb {
+    order: 0;
+    width: 100%;
     max-width: 340px;
-    height: 445px;
+    height: 375px;
 
     .swiper {
       &-slide {
+        max-width: 100%;
+
         img {
           width: 100%;
+          max-width: 100%;
           height: 100%;
+          object-fit: contain;
+          object-position: center;
         }
       }
 
       &-button {
         &-prev {
-          top: 50%;
-          left: 0;
+          inset: 50% auto auto 0;
           width: 30px;
           height: 30px;
           border: none;
@@ -1938,8 +1909,7 @@
         }
 
         &-next {
-          top: 50%;
-          right: 0;
+          inset: 50% 0 auto auto;
           width: 30px;
           height: 30px;
           border: none;
@@ -1958,9 +1928,37 @@
   }
 
   &__thumbs {
+    order: 1;
+    width: 100%;
+    max-width: 340px;
+
+    &-wrap {
+      position: relative;
+      display: inline-flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+      width: 100%;
+      max-width: 475px;
+      margin: 0 auto 40px;
+
+      .main-category__card-button-favorite {
+        top: 10px;
+        right: 10px;
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+      }
+    }
+
     .swiper {
       &-slide {
-        height: 50%;
+        display: inline-flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
 
         img {
           max-width: 135px;
@@ -1980,7 +1978,7 @@
 
   &__spec {
     display: inline-flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-items: stretch;
     align-content: stretch;
@@ -1988,8 +1986,8 @@
 
   &__spec-options {
     width: 100%;
-    max-width: 285px;
-    margin-right: 70px;
+    padding: 0 20px;
+    margin: 0 auto 40px;
 
     & + * {
       width: calc(100% - 355px);
@@ -2002,6 +2000,7 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    max-width: 300px;
     margin: 0 0 20px;
 
     &-input {
@@ -2155,7 +2154,10 @@
   }
 
   &__spec-description {
+    width: 100%;
     max-width: 815px;
+    padding: 0 20px;
+    margin: 0 auto;
   }
 
   &__price {
@@ -2167,6 +2169,7 @@
       justify-content: flex-start;
       align-items: center;
       align-content: center;
+      margin: 0;
       font-size: 42px;
       font-weight: 500;
       line-height: 50px;
@@ -2195,8 +2198,16 @@
     }
   }
 
+  &__service {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+  }
+
   &__counter {
-    margin: 0 0 40px;
+    margin: 0 40px 40px 0;
 
     .product-cart__item-counter {
       width: 58px;
@@ -2226,6 +2237,8 @@
   }
 
   &__questions {
+    padding: 0 20px;
+
     &-content {
 
     }
@@ -2279,7 +2292,7 @@
 
   &__reviews {
     &-content {
-
+      padding: 0 20px;
     }
 
     &-box {
@@ -2294,8 +2307,6 @@
       }*/
 
       &_answer {
-        margin-left: 50px;
-
         &:not(:nth-of-type(2)) {
           display: none;
         }
@@ -2357,8 +2368,13 @@
     }
 
     &-pic {
-      float: right;
-      img {}
+      display: block;
+      max-width: 300px;
+      margin: 0 auto 20px;
+
+      img {
+        width: 100%;
+      }
     }
 
     &-text {
@@ -2398,25 +2414,26 @@
 
   &__offers {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
+    flex-flow: column wrap;
+    justify-content: center;
     align-items: stretch;
     align-content: stretch;
+    width: 100%;
 
     &-box {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
       justify-content: space-between;
-      align-items: center;
-      align-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
+      width: 100%;
       padding: 30px;
 
       &-wrap {
         display: inline-flex;
         width: 100%;
         max-width: 696px;
-        height: 216px;
-        margin-right: 20px;
+        margin: 0 auto 20px;
         border-radius: 24px;
         overflow: hidden;
         transition: $transition-base;
@@ -2441,19 +2458,17 @@
         align-items: center;
         align-content: center;
         width: 100%;
-        margin-top: -50px;
-        opacity: 0;
-        visibility: hidden;
+        margin-top: 20px;
         transition: $transition-base;
       }
     }
 
     &-product {
       display: inline-flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: space-between;
-      align-items: stretch;
-      align-content: stretch;
+      align-items: center;
+      align-content: center;
 
       &-pic {
         margin-right: 20px;
@@ -2474,14 +2489,35 @@
       }
 
       &-name {
-        margin: 0 0 10px;
+        margin: 0 0 20px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
       }
 
       &-price {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
         margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
 
         &_old {
-
+          display: inline-block;
+          margin-left: 15px;
+          color: #878787;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 15px;
+          text-decoration: line-through;
         }
       }
     }
@@ -2814,7 +2850,7 @@
 
     &-code {
       padding: 10px 0;
-      border: 1px solid #F5EDE6;
+      border: solid #F5EDE6;
       border-width: 1px 0;
       font-size: 13px;
       line-height: 15px;
@@ -3104,8 +3140,8 @@
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
-      align-items: center;
-      align-content: center;
+      align-items: flex-start;
+      align-content: flex-start;
       width: 100%;
       margin: 0 0 20px;
     }
@@ -3318,7 +3354,7 @@
 
 /* SECTION ADDRESS */
 .section-address {
-  margin: 0 0 245px;
+  margin: 0 0 120px;
 
   &__decor {
     display: none;
@@ -3562,7 +3598,7 @@
 #to_top {
   position: fixed;
   right: 15px;
-  bottom: 90px;
+  bottom: 70px;
   width: 40px;
   height: 40px;
   padding: 0;
@@ -3580,9 +3616,12 @@
   }
 
   svg {
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
     fill: white;
-    transform: rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 }

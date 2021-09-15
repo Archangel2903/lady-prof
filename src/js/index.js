@@ -349,6 +349,7 @@ $(function () {
                 showClear: false,
                 showCaption: false,
                 stars: 5,
+                step: 1,
                 emptyStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path d="M512 0l158.215 337.080 353.785 54.054-256 262.38 60.436 370.487-316.436-174.92-316.433 174.92 60.433-370.487-256-262.38 353.783-54.054 158.217-337.080z"></path></svg>`,
                 filledStar: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path d="M512 0l158.215 337.080 353.785 54.054-256 262.38 60.436 370.487-316.436-174.92-316.433 174.92 60.433-370.487-256-262.38 353.783-54.054 158.217-337.080z"></path></svg>`,
             });
@@ -595,6 +596,12 @@ $(function () {
                     spaceBetween: 10,
                     slidesPerView: 'auto',
                     watchSlidesProgress: true,
+                    breakpoints: {
+                        1365: {
+                            direction: 'horizontal',
+                            slidesPerView: 2,
+                        }
+                    }
                 });
 
                 let slider2 = new Swiper(thumb, {

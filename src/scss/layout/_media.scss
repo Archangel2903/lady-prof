@@ -123,6 +123,49 @@
     }
   }
 
+  .product-card {
+    &__tabs {
+      &.ui-tabs {
+        .ui-tabs-nav {
+          flex-direction: row;
+
+          li {
+            margin: 0 20px 10px 0;
+          }
+        }
+      }
+    }
+
+    &__spec {
+      &-options {
+        padding: 0;
+      }
+
+      &-description {
+        padding: 0;
+      }
+    }
+
+    &__questions {
+      padding: 0;
+    }
+
+    &__reviews {
+      &-content {
+        padding: 0;
+      }
+
+      &-box_answer {
+        margin-left: 50px;
+      }
+
+      &-pic {
+        margin: 0;
+        float: right;
+      }
+    }
+  }
+
   .product-cart {
     &__items {
       flex-direction: row;
@@ -226,6 +269,8 @@
 
       &-head {
         flex-direction: row;
+        align-items: center;
+        align-content: center;
       }
 
       &-ico {
@@ -276,6 +321,20 @@
   .title-section {
     font-size: 56px;
     line-height: 67px;
+  }
+
+  .breadcrumb {
+    &-item {
+      display: block;
+
+      &+ .breadcrumb-item {
+        padding-left: 15px;
+
+        &::before {
+          padding-right: 15px;
+        }
+      }
+    }
   }
   /* COMPONENTS END */
 
@@ -493,6 +552,70 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .section-product-card {
+    margin: 0 0 200px;
+
+    .breadcrumb {
+      padding: 66px 0 10px;
+    }
+  }
+
+  .product-card {
+    &__head {
+      margin: 0 0 60px;
+
+      &-title {
+        font-size: 56px;
+        line-height: 66px;
+      }
+    }
+
+    &__tabs {
+      &.ui-tabs {
+        .ui-tabs-nav {
+          li {
+            margin: 0;
+
+            &:not(:last-child) {
+              margin: 0 20px 0 0;
+            }
+          }
+        }
+      }
+
+      &-content {
+        .catalog-category {
+          margin-top: 150px;
+        }
+      }
+    }
+
+    &__spec {
+      flex-direction: row;
+
+      &-options {
+        max-width: 285px;
+        margin: 0 40px 40px 0;
+      }
+
+      &-description {
+        width: 50%;
+      }
+    }
+
+    &__offers {
+      &-box {
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+      }
+
+      &-product {
+        max-width: 40%;
       }
     }
   }
@@ -806,6 +929,56 @@
     }
   }
 
+  .product-card {
+    &__tabs {
+      &.ui-tabs {
+        .ui-tabs {
+          &-nav {
+            margin: 0 0 70px;
+          }
+
+          &-panel {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    &__thumbs {
+      &-wrap {
+        width: 40%;
+        margin: 0 auto;
+
+        &+ * {
+          width: calc(100% - 425px);
+        }
+      }
+    }
+
+    &__thumb {
+      height: 445px;
+    }
+
+    &__spec {
+      &-options {
+        max-width: none;
+        margin: 0 0 40px 0;
+      }
+
+      &-description {
+        width: 100%;
+      }
+    }
+
+    &__offers {
+      &-box {
+        &-wrap {
+          margin: 0 20px 20px 0;
+        }
+      }
+    }
+  }
+
   .section-home-loyalty {
     padding: 145px 0 285px;
   }
@@ -1070,6 +1243,16 @@
     }
   }
 
+  .product-card {
+    &__thumbs-wrap {
+      margin: 0 40px 0 0;
+
+      &+ * {
+        width: calc(100% - 520px);
+      }
+    }
+  }
+
   .section-stock {
     margin: 0 0 210px;
   }
@@ -1190,6 +1373,8 @@
   }
 
   .section-address {
+    margin: 0 0 245px;
+
     &__decor {
       position: absolute;
       top: 75%;
@@ -1358,6 +1543,59 @@
           &-wrap {
             max-width: 295px;
           }
+        }
+      }
+    }
+  }
+
+  .product-card {
+    &__thumb {
+      order: 1;
+    }
+
+    &__thumbs {
+      order: 0;
+      width: auto;
+      max-width: none;
+
+      &-wrap {
+        flex-direction: row;
+        height: 445px;
+        margin: 0 80px 0 0;
+
+        &+ * {
+          width: calc(100% - 560px);
+        }
+      }
+
+      .swiper {
+        &-slide {
+          height: 50%;
+        }
+      }
+    }
+
+    &__spec {
+      flex-direction: row;
+
+      &-options {
+        max-width: 285px;
+        margin: 0 70px 0 0;
+      }
+
+      &-description {
+        width: calc(100% - 355px);
+      }
+    }
+
+    &__offers {
+      justify-content: flex-start;
+
+      &-box {
+        &-footer {
+          margin-top: -50px;
+          opacity: 0;
+          visibility: hidden;
         }
       }
     }
@@ -1585,6 +1823,28 @@
           &-wrap {
             max-width: 333px;
           }
+        }
+      }
+    }
+  }
+
+  .product-card {
+    &__service {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+    }
+
+    &__counter {
+      margin: 0 0 40px;
+    }
+
+    &__offers {
+      flex-direction: row;
+
+      &-box {
+        &-wrap {
+          height: 260px;
         }
       }
     }
