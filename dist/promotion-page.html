@@ -5,8 +5,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Главная</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.5e8a01be9a9e7cb681a4.min.css" rel="stylesheet"></head>
+    <title>Страница акции</title>
+<link rel="shortcut icon" href="favicon.ico"><link href="style.0b9b9fa3250929c35807.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -888,7 +888,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="sign-in_label">Вход</h5>
-                <button type="button" class="close"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></button>
+                <button type="button" class="close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
             </div>
 
             <div class="modal-body">
@@ -902,23 +906,35 @@
                         <span class="input-name important">Пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg" data-src="img/eye-closed.svg" alt="image" title="image"></picture></button>
+                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
+                                                                                     data-src="img/eye-closed.svg" alt="image"
+                                                                                     title="image"></picture></button>
                         </span>
                     </label>
 
                     <div class="form-group d-flex justify-content-between">
-                        <label class="m-0">
-                            <input type="checkbox">
-                            <span class="checkbox">
-                                <span class="checkbox-style"></span>
-                                <span class="checkbox-text">Запомнить меня</span>
-                            </span>
-                        </label>
+                        <div class="row w-100">
+                            <div class="col-sm-7 mb-3 mb-sm-0">
+                                <label class="m-0">
+                                    <input type="checkbox">
+                                    <span class="checkbox">
+                                        <span class="checkbox-style"></span>
+                                        <span class="checkbox-text">Запомнить меня</span>
+                                    </span>
+                                </label>
+                            </div>
 
-                        <a href="#refresh_pass" class="text-primary">Напомнить пароль</a>
+                            <div class="col-sm-5">
+                                <a href="#refresh_pass" class="text-primary">Напомнить пароль</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">Войти<svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg></button>
+                    <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">Войти
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
 
@@ -933,8 +949,16 @@
                     </p>
 
                     <div class="authorization__buttons">
-                        <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use></svg> Facebook</a>
-                        <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-google-btn"></use></svg> Google</a>
+                        <a href="#" class="authorization__link btn btn-light">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                            </svg>
+                            Facebook</a>
+                        <a href="#" class="authorization__link btn btn-light">
+                            <svg>
+                                <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                            </svg>
+                            Google</a>
                     </div>
                 </div>
             </div>
@@ -947,13 +971,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="registration_label">Регистрация</h5>
-                <button type="button" class="close"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></button>
+                <button type="button" class="close">
+                    <svg>
+                        <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                    </svg>
+                </button>
             </div>
 
             <div class="modal-body">
                 <form action="" method="" id="registration_form" class="modal-form">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <label class="form-group">
                                 <input type="radio" name="user" class="user-class" value="client" checked>
                                 <span class="radio">
@@ -963,7 +991,7 @@
                             </label>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <label class="form-group">
                                 <input type="radio" name="user" class="user-class" value="master">
                                 <span class="radio">
@@ -980,15 +1008,15 @@
                     </label>
 
                     <div class="form-row">
-                        <div class="col-md-6">
-                            <label class="form-group">
+                        <div class="col-sm-6">
+                            <label class="form-group w-100">
                                 <span class="input-name important">Номер телефона</span>
                                 <input type="text" class="form-control mask-phone" placeholder="+380(000) 00 00 000">
                             </label>
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="form-group">
+                        <div class="col-sm-6">
+                            <label class="form-group w-100">
                                 <span class="input-name important">E-mail</span>
                                 <input type="text" class="form-control">
                             </label>
@@ -999,9 +1027,11 @@
                         <span class="input-name important">Придумайте пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg" data-src="img/eye-closed.svg" alt="image" title="image"></picture></button>
+                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
+                                                                                     data-src="img/eye-closed.svg" alt="image"
+                                                                                     title="image"></picture></button>
                         </span>
-                        <span class="d-block mt-2 text-mutted">Пароль должен быть не менее 6 символов</span>
+                        <span class="d-block mt-2 text-mutted text-center text-sm-left">Пароль должен быть не менее 6 символов</span>
                     </label>
 
                     <label class="form-group client for-master">
@@ -1013,7 +1043,10 @@
                     </label>
 
                     <button type="submit" class="modal-form__submit d-flex justify-content-between btn btn-lg btn-primary btn-block">
-                        Регистрация<svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg>
+                        Регистрация
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                        </svg>
                     </button>
 
                     <p class="modal-form__agreement">Нажимая на кнопку «Регистрация», я принимаю условия <a href="agreement.html">Пользовательского соглашения</a></p>
@@ -1032,8 +1065,16 @@
                         </p>
 
                         <div class="authorization__buttons">
-                            <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use></svg> Facebook</a>
-                            <a href="#" class="authorization__link btn btn-light"><svg><use xlink:href="img/spritemap.svg#sprite-google-btn"></use></svg> Google</a>
+                            <a href="#" class="authorization__link btn btn-light">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                                </svg>
+                                Facebook</a>
+                            <a href="#" class="authorization__link btn btn-light">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                                </svg>
+                                Google</a>
                         </div>
                     </div>
                 </div>
@@ -1260,9 +1301,12 @@
     </div>
 </div>
 
+<button id="to_top">
+    <svg><use xlink:href="img/spritemap.svg#sprite-chevrone"></use></svg>
+</button>
 <div class="icon-load">
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.5e8a01be9a9e7cb681a4.min.js"></script></body>
+<script type="text/javascript" src="bundle.0b9b9fa3250929c35807.min.js"></script></body>
 </html>
