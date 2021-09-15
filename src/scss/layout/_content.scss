@@ -2860,6 +2860,51 @@
   }
 }
 
+/* SECTION REGISTRATION PAYMENT */
+.section-registration-payment {
+  padding: 70px 0 0;
+}
+
+.registration-payment {
+  max-width: 920px;
+
+  &-steps {
+    padding: 0 0 70px;
+    margin: 0 0 50px;
+    border-bottom: 1px solid #F5EDE6;
+
+    &__item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+
+      &-wrap {
+
+      }
+
+      &-number {
+        width: 52px;
+        height: 52px;
+        padding: 11px 0;
+        margin-right: 20px;
+        border: 1px solid #333;
+        border-radius: 100%;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26px;
+        text-align: center;
+      }
+
+      &-text {
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
 /* PAGINATION SECTION */
 .section-pagination {
   width: 100%;

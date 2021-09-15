@@ -96,14 +96,14 @@
                         <div class="registration-payment">
                             <div class="registration-payment-steps">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="registration-payment-steps__item-wrap col-md-6">
                                         <div class="registration-payment-steps__item">
                                             <span class="registration-payment-steps__item-number">1</span>
                                             <span class="registration-payment-steps__item-text">Личные данные</span>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="registration-payment-steps__item-wrap col-md-6">
                                         <div class="registration-payment-steps__item">
                                             <span class="registration-payment-steps__item-number">2</span>
                                             <span class="registration-payment-steps__item-text">Информация о доставке и оплате</span>
@@ -116,7 +116,7 @@
                                 <div class="form-row">
                                     <div class="col-6">
                                         <label class="m-0">
-                                            <input type="radio" name="user">
+                                            <input type="radio" name="user" checked>
                                             <span class="radio">
                                                 <span class="radio-style"></span>
                                                 <span class="radio-text">Новый покупатель</span>
@@ -188,20 +188,26 @@
                                         </div>
                                     </fieldset>
 
-                                    <div class="registration-payment__auth">
-                                        <p class="registration-payment__auth-text">Войти с помощью</p>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="authorization">
+                                                <p class="authorization__title">
+                                                    <span class="authorization__title-text">Войти с помощью</span>
+                                                </p>
 
-                                        <div class="registration-payment__auth-buttons">
-                                            <a href="#" class="registration-payment__auth-btn">
-                                                <svg>
-                                                    <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
-                                                </svg>
-                                                facebook</a>
-                                            <a href="#" class="registration-payment__auth-btn">
-                                                <svg>
-                                                    <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
-                                                </svg>
-                                                google</a>
+                                                <div class="authorization__buttons">
+                                                    <a href="#" class="authorization__link btn btn-light">
+                                                        <svg>
+                                                            <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
+                                                        </svg>
+                                                        Facebook</a>
+                                                    <a href="#" class="authorization__link btn btn-light">
+                                                        <svg>
+                                                            <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
+                                                        </svg>
+                                                        Google</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
