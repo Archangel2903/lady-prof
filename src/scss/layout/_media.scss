@@ -1224,6 +1224,14 @@
   .section-pay-delivery {
     padding: 0 0 295px;
   }
+
+  .section-text {
+    padding: 180px 0 320px;
+  }
+
+  #to_top {
+    bottom: 15px;
+  }
 }
 
 @include media-breakpoint-up(xxl) {

@@ -76,6 +76,25 @@ $(window).on('load', function () {
 });
 
 $(function () {
+    let buttonToTop = $('#to_top');
+    buttonToTop.on('click', function () {
+        $('html, body').stop().animate({
+            scrollTop: 0,
+        }, 750);
+
+        return false;
+    });
+
+    $(window).on('scroll', function () {
+        let offsetTop = window.pageYOffset;
+        if (offsetTop > 300) {
+            buttonToTop.addClass('show');
+        }
+        else {
+            buttonToTop.removeClass('show');
+        }
+    });
+
     // nav links
     (function() {
         let hiddenMenu = document.querySelector('.header-menu__nav-hidden');
