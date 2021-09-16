@@ -1714,12 +1714,6 @@
 
     &__nav {
       display: block;
-
-      &-hidden {
-        &::before {
-          display: none;
-        }
-      }
     }
   }
   /* HEADER END */

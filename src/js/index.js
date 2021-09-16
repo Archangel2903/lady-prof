@@ -741,18 +741,52 @@ $(function () {
         });
     })();
 
+    // input mask
     (function() {
         let phoneInputs = document.querySelectorAll('.mask-phone');
 
         if (phoneInputs.length) {
             phoneInputs.forEach(function(e, i) {
                 const phone = IMask(e, {
-                    mask: '+{38}(000)000-00-00',
+                    mask: '+{38}(\\000)000-00-00',
                     lazy: false,
                     placeholderChar: '_',
                 });
             });
         }
+    })();
+
+    (function() {
+        const payment = $('.registration-payment');
+        let steps = $('.registration-payment-steps__item'),
+            clientType = $('.registration-payment-user-types input'),
+            nextStep = $('#payment_btn');
+
+        if (payment) {
+            clientType.on('change', function(e) {
+                let v = e.target.value;
+
+                switch(v) {
+                    case 'new_client':
+                        $('.registration-payment__user_old').addClass('d-none');
+                        $('.registration-payment__user_new').removeClass('d-none');
+                        break;
+
+                    case 'old_client':
+                        $('.registration-payment__user_new').addClass('d-none');
+                        $('.registration-payment__user_old').removeClass('d-none');
+                        break;
+
+                    default:
+                        return false;
+                }
+            });
+
+            nextStep.on('click', function() {
+
+            })
+        }
+
     })();
 
     // Lazy load observer

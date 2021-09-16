@@ -2862,7 +2862,7 @@
 
 /* SECTION REGISTRATION PAYMENT */
 .section-registration-payment {
-  padding: 70px 0 0;
+  padding: 70px 0 200px;
 }
 
 .registration-payment {
@@ -2902,6 +2902,10 @@
         text-transform: uppercase;
       }
     }
+  }
+
+  &-user-types {
+    margin-bottom: 40px;
   }
 }
 
