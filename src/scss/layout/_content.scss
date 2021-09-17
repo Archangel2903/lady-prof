@@ -3082,6 +3082,50 @@
   }
 }
 
+.section-order-processed {
+  padding: 130px 0 210px;
+}
+
+.order-processed {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  max-width: 590px;
+  padding: 30px 30px 40px;
+  margin: 0 auto;
+  border: 2px solid #D7CABF;
+  border-radius: 28px;
+
+  &__pic {
+    display: block;
+    max-width: 255px;
+    max-height: 222px;
+    margin: 0 0 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    margin: 0 0 50px;
+    color: #000000;
+    font-family: $font-family-custom;
+    font-size: 56px;
+    line-height: 67px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .btn {
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+}
+
 /* PAGINATION SECTION */
 .section-pagination {
   width: 100%;
