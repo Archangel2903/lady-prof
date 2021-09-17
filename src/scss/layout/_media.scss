@@ -766,6 +766,17 @@
     }
   }
 
+  .registration-payment {
+    &-steps {
+      padding: 0 0 70px;
+      margin: 0 0 50px;
+
+      &__item {
+        margin: 0;
+      }
+    }
+  }
+
   /* FOOTER */
   .footer-content-wrap {
     padding: 50px 0 75px;

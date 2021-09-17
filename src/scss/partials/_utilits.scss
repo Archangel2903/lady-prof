@@ -277,9 +277,15 @@ body.fixed {
       font-weight: 500;
 
       &:focus, &:hover {
+        background: $primary;
+        box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
         color: white;
       }
     }
+  }
+
+  &:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 16px 24px rgba(255, 108, 197, 0.32);
   }
 }
 
@@ -339,7 +345,237 @@ body.fixed {
   }
 }
 
-.select2 {
+.form-select-wrap {
+  .select2 {
+    &-container {
+      width: 100% !important;
+
+      .select2 {
+        &-selection--single {
+          width: 100%;
+          //max-width: 134px;
+          height: 50px;
+
+          .select2-selection {
+            &__rendered {
+              padding: 17px 30px 17px 20px;
+            }
+
+            &__arrow {
+              b {
+
+              }
+            }
+          }
+        }
+      }
+
+      &--default {
+        .select2 {
+          &-selection--single {
+            border: none;
+            border-radius: 14px;
+            background: #fafafa;
+
+            .select2-selection {
+              &__rendered {
+                font-family: $font-family-base;
+                font-weight: 500;
+                line-height: 1;
+                text-transform: uppercase;
+              }
+
+              &__arrow {
+                right: 10px;
+                height: 100%;
+
+                b {
+
+                }
+              }
+            }
+          }
+
+          &-container--open {
+            &.select2-container {
+              &--below {
+                .select2-selection {
+                  &--single {
+                    border-radius: 14px 14px 0 0;
+                  }
+                }
+              }
+
+              &--above {
+                .select2-selection {
+                  &--single {
+                    border-radius: 0 0 14px 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          &-results {
+            &__options {
+
+            }
+
+            &__option {
+              padding: 5px 20px;
+              text-transform: lowercase;
+
+              &--selected {
+                background: $main-second-color;
+              }
+
+              &--highlighted {
+                &.select2-results__option--selectable {
+                  background: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &--open {
+        .select2-dropdown {
+          border-color: #fafafa;
+
+          &--below {
+            border-radius: 0 0 14px 14px;
+          }
+
+          &--above {
+            border-radius: 14px 14px 0 0;
+          }
+        }
+      }
+    }
+
+    &-dropdown {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+  }
+}
+
+.card-select-wrap {
+  .select2 {
+    &-container {
+      width: 100% !important;
+
+      .select2 {
+        &-selection--single {
+          width: 100%;
+          max-width: 134px;
+          height: 41px;
+
+          .select2-selection {
+            &__rendered {
+              padding: 0 40px 0 20px;
+            }
+
+            &__arrow {
+              b {
+
+              }
+            }
+          }
+        }
+      }
+
+      &--default {
+        .select2 {
+          &-selection--single {
+            border: 1px solid $primary;
+            border-radius: 34px;
+
+            .select2-selection {
+              &__rendered {
+                font-family: $font-family-base;
+                font-weight: 500;
+                line-height: 2.5;
+                text-transform: uppercase;
+              }
+
+              &__arrow {
+                right: 10px;
+                height: 100%;
+
+                b {
+
+                }
+              }
+            }
+          }
+
+          &-container--open {
+            &.select2-container {
+              &--below {
+                .select2-selection {
+                  &--single {
+                    border-radius: 14px 14px 0 0;
+                  }
+                }
+              }
+
+              &--above {
+                .select2-selection {
+                  &--single {
+                    border-radius: 0 0 14px 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          &-results {
+            &__options {
+
+            }
+
+            &__option {
+              text-align: center;
+
+              &--selected {
+                background: $main-second-color;
+              }
+
+              &--highlighted {
+                &.select2-results__option--selectable {
+                  background: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &--open {
+        .select2-dropdown {
+          border-color: $primary;
+
+          &--below {
+            border-radius: 0 0 14px 14px;
+          }
+
+          &--above {
+            border-radius: 14px 14px 0 0;
+          }
+        }
+      }
+    }
+
+    &-dropdown {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+  }
+}
+
+/*.select2 {
   &-container {
     width: 100% !important;
 
@@ -441,7 +677,7 @@ body.fixed {
     border-radius: 14px;
     overflow: hidden;
   }
-}
+}*/
 
 .section-breadcrumbs {
   padding: 63px 0 40px;
@@ -539,13 +775,14 @@ input {
   &[type="checkbox"] {
     &+ .checkbox {
       display: inline-flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: flex-start;
       align-items: center;
       align-content: center;
 
       .checkbox {
         &-style {
+          flex: 0 0 auto;
           position: relative;
           display: inline-flex;
           width: 18px;
@@ -573,6 +810,7 @@ input {
 
         &-text {
           font-size: 14px;
+          user-select: none;
         }
       }
     }
@@ -591,13 +829,14 @@ input {
   &[type="radio"] {
     &+ .radio {
       display: inline-flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: flex-start;
       align-items: center;
       align-content: center;
 
       .radio {
         &-style {
+          flex: 0 0 auto;
           position: relative;
           display: inline-flex;
           width: 25px;
@@ -621,7 +860,9 @@ input {
           }
         }
 
-        &-text {}
+        &-text {
+          user-select: none;
+        }
       }
     }
 

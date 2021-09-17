@@ -359,9 +359,11 @@ $(function () {
     // select2
     (function() {
         let productSelect = $('.card-select');
+        let formSelect = $('.form-select');
+
         if (productSelect) {
             productSelect.each(function(i, e) {
-                $(this).select2({
+                $(e).select2({
                     minimumResultsForSearch: -1,
                     dropdownParent: $(this).nextAll('.dropdown-select'),
                 });
@@ -370,6 +372,15 @@ $(function () {
             $('.main-category__card').on('mouseleave', function() {
                 $(this).find('.card-select').select2('close');
             });
+        }
+
+        if (formSelect) {
+            formSelect.each(function(i, e) {
+                $(e).select2({
+                    minimumResultsForSearch: -1,
+                    dropdownParent: $(this).nextAll('.dropdown-select'),
+                });
+            })
         }
     })();
 
@@ -744,23 +755,52 @@ $(function () {
     // input mask
     (function() {
         let phoneInputs = document.querySelectorAll('.mask-phone');
+        let cardNumber = document.querySelectorAll('.mask-card');
+        let cardDate = document.querySelectorAll('.mask-card-date');
 
         if (phoneInputs.length) {
             phoneInputs.forEach(function(e, i) {
                 const phone = IMask(e, {
                     mask: '+{38}(\\000)000-00-00',
-                    lazy: false,
+                    lazy: true,
                     placeholderChar: '_',
+                });
+            });
+        }
+
+        if (cardNumber) {
+            cardNumber.forEach(function(e, i) {
+                const card = IMask(e, {
+                    mask: '0000 0000 0000 0000',
+                    lazy: true,
+                    placeholderChar: 'X',
+                });
+            });
+        }
+
+        if (cardDate) {
+            cardDate.forEach(function(e, i) {
+                const card = IMask(e, {
+                    mask: '00\\/00',
+                    lazy: true,
+                    placeholderChar: '0',
                 });
             });
         }
     })();
 
+    // payment
     (function() {
         const payment = $('.registration-payment');
-        let steps = $('.registration-payment-steps__item'),
+        let firstStep = $('.registration-payment-steps__item'),
             clientType = $('.registration-payment-user-types input'),
-            nextStep = $('#payment_btn');
+            stepForm = $('.registration-payment__step'),
+            nextStep = $('#payment_btn'),
+            cardSelect = $('#card_selection'),
+            deliveryMethod = $('#delivery_method'),
+            deliveryMethodBlock = $('.delivery-method'),
+            cardAdded = $('.registration-payment__new-card'),
+            cityInput = $('#city_input');
 
         if (payment) {
             clientType.on('change', function(e) {
@@ -783,8 +823,65 @@ $(function () {
             });
 
             nextStep.on('click', function() {
+                firstStep.removeClass('active').next().addClass('active');
+                if ($(this).data('check') === false) {
+                    $(this).text('Оплатить').data('check', true);
 
-            })
+                    $('.registration-payment__step_first').addClass('d-none');
+                    $('.registration-payment__step_second').removeClass('d-none');
+                }
+                else {
+                    $(this).attr('type', 'submit');
+                }
+            });
+
+            cardSelect.on('change', function() {
+                if (cardSelect.val() !== '') {
+                    cardAdded.addClass('d-none');
+                }
+            });
+
+            deliveryMethod.on('change', function() {
+                switch($(this).val()) {
+                    case 'new_post':
+                        deliveryMethodBlock.addClass('d-none');
+                        $('.registration-payment__post-info').removeClass('d-none');
+                        break;
+
+                    case 'ukr_post':
+                        deliveryMethodBlock.addClass('d-none');
+                        $('.registration-payment__post-info').removeClass('d-none');
+                        break;
+
+                    case 'courier':
+                        deliveryMethodBlock.addClass('d-none');
+                        $('.registration-payment__courier-info').removeClass('d-none');
+                        break;
+
+                    case 'pickup':
+                        deliveryMethodBlock.addClass('d-none');
+                        $('.registration-payment__pickup-info').removeClass('d-none');
+                        break;
+                }
+            });
+
+            cityInput.on('change', function(e) {
+                let options = deliveryMethod.children();
+
+                if (e.target.value.trim().toLowerCase() !== 'херсон') {
+                    options.each(function(i, el) {
+                        $(el).attr('disabled', false);
+                        if (el.value === 'courier' || el.value === 'pickup') {
+                            $(el).attr('disabled', true);
+                        }
+                    });
+                }
+                else {
+                    options.each(function(i, el) {
+                        $(el).attr('disabled', false);
+                    });
+                }
+            });
         }
 
     })();
