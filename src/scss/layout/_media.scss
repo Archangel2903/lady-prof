@@ -1421,6 +1421,25 @@
     padding: 180px 0 320px;
   }
 
+  .section-order-processed {
+    padding: 130px 0 210px;
+
+    &__decor {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &_first {
+        left: 9%;
+      }
+
+      &_second {
+        right: 13%;
+      }
+    }
+  }
+
   #to_top {
     bottom: 15px;
   }

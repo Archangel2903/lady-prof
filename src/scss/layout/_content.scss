@@ -3083,10 +3083,15 @@
 }
 
 .section-order-processed {
-  padding: 130px 0 210px;
+  padding: 60px 0 100px;
+
+  &__decor {
+    display: none;
+  }
 }
 
 .order-processed {
+  position: relative;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
@@ -3095,8 +3100,10 @@
   max-width: 590px;
   padding: 30px 30px 40px;
   margin: 0 auto;
+  background: white;
   border: 2px solid #D7CABF;
   border-radius: 28px;
+  z-index: 1;
 
   &__pic {
     display: block;
