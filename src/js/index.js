@@ -63,9 +63,9 @@ $(window).on('load', function () {
         });*/
         const map = L.map('map');
         const mapCenter = [50.46251377176145, 30.525405151883337];
-        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+        const baseMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
             maxZoom: 20,
-            subdomains:['mt0','mt1','mt2','mt3']
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
         // const markerMap = L.marker(mapCenter).addTo(map).bindPopup('АБУ - Вул. Набережно-хрещатицька 11, м. Київ, 03800');
         baseMap.addTo(map);
@@ -89,14 +89,13 @@ $(function () {
         let offsetTop = window.pageYOffset;
         if (offsetTop > 300) {
             buttonToTop.addClass('show');
-        }
-        else {
+        } else {
             buttonToTop.removeClass('show');
         }
     });
 
     // nav links
-    (function() {
+    (function () {
         let hiddenMenu = document.querySelector('.header-menu__nav-hidden');
         let links = document.querySelectorAll('.header-menu__nav-link');
 
@@ -132,15 +131,15 @@ $(function () {
     });
 
     // Header search field toggle
-    (function() {
-        $('.header-search__trigger').on('click', function() {
+    (function () {
+        $('.header-search__trigger').on('click', function () {
             $(this).parent().toggleClass('show');
             $(this).toggleClass('active');
         });
     })();
 
     // Swiper slider
-    (function() {
+    (function () {
         if ($('.slider-banner').length) {
             let slider;
             let slide = document.querySelectorAll('.swiper-container .swiper-slide').length;
@@ -219,8 +218,7 @@ $(function () {
                             }
                         }
                     });
-                }
-                else {
+                } else {
                     slider.forEach(function (e, i) {
                         e.destroy();
                     });
@@ -317,7 +315,7 @@ $(function () {
     })();
 
     // Button wishlist
-    (function() {
+    (function () {
         let wishBtn = $('.main-category__card-button-favorite');
         if (wishBtn.length) {
             wishBtn.on('click', function () {
@@ -327,7 +325,7 @@ $(function () {
     })();
 
     // Star rating
-    (function() {
+    (function () {
         let ratingOutput = $('.star-rating-output'),
             ratingInput = $('.star-rating');
 
@@ -357,25 +355,25 @@ $(function () {
     })();
 
     // select2
-    (function() {
+    (function () {
         let productSelect = $('.card-select');
         let formSelect = $('.form-select');
 
         if (productSelect) {
-            productSelect.each(function(i, e) {
+            productSelect.each(function (i, e) {
                 $(e).select2({
                     minimumResultsForSearch: -1,
                     dropdownParent: $(this).nextAll('.dropdown-select'),
                 });
             })
 
-            $('.main-category__card').on('mouseleave', function() {
+            $('.main-category__card').on('mouseleave', function () {
                 $(this).find('.card-select').select2('close');
             });
         }
 
         if (formSelect) {
-            formSelect.each(function(i, e) {
+            formSelect.each(function (i, e) {
                 $(e).select2({
                     minimumResultsForSearch: -1,
                     dropdownParent: $(this).nextAll('.dropdown-select'),
@@ -388,7 +386,7 @@ $(function () {
     (function () {
         let faq = $('.faq');
         if (faq.length) {
-            $('.faq__item-head').on('click', function() {
+            $('.faq__item-head').on('click', function () {
                 $(this).parent().toggleClass('active');
                 $(this).next().stop().slideToggle(400);
             });
@@ -396,7 +394,7 @@ $(function () {
     })();
 
     // reset sidebar filter
-    (function() {
+    (function () {
         let filter = document.querySelector('.catalog-sidebar'),
             filterReset = document.getElementById('sidebar_filter_reset'),
             filterSwitch = document.getElementById('sidebar_switch'),
@@ -405,10 +403,10 @@ $(function () {
 
         if (filter) {
             if (filterReset) {
-                filter.addEventListener('input', function() {
+                filter.addEventListener('input', function () {
                     arr = [];
 
-                    inputs.forEach(function(input) {
+                    inputs.forEach(function (input) {
                         if (input.checked) {
                             arr.push(input);
                         }
@@ -417,13 +415,12 @@ $(function () {
                     if (arr.length > 0) {
                         filterReset.classList.remove('d-none');
                         filterReset.classList.add('d-block');
-                    }
-                    else {
+                    } else {
                         filterReset.classList.remove('d-block');
                         filterReset.classList.add('d-none');
                     }
                 });
-                filterReset.addEventListener('click', function() {
+                filterReset.addEventListener('click', function () {
                     this.classList.remove('d-block');
                     this.classList.add('d-none');
 
@@ -436,14 +433,14 @@ $(function () {
                 });
             }
 
-            filterSwitch.addEventListener('click', function() {
+            filterSwitch.addEventListener('click', function () {
                 filter.classList.toggle('open');
             });
         }
     })();
 
     // sidebar box
-    (function() {
+    (function () {
         let sidebarBox = $('.catalog-sidebar__box'),
             triggerBox = $('.catalog-sidebar__box-trigger');
 
@@ -452,8 +449,7 @@ $(function () {
 
             if ($(e).hasClass('active')) {
                 boxBody.slideDown(0);
-            }
-            else {
+            } else {
                 boxBody.slideUp(0);
             }
         });
@@ -466,7 +462,7 @@ $(function () {
     })();
 
     // Range slide
-    (function() {
+    (function () {
         if ($('input[type="range"]')) {
             let sliderHandles = document.querySelectorAll('.slider-handles');
 
@@ -518,7 +514,7 @@ $(function () {
     })();
 
     // sorting buttons
-    (function() {
+    (function () {
         let sortingVariant = document.querySelectorAll('.catalog-content__sorting-variant a'),
             sortingPrice = document.querySelectorAll('.catalog-content__sorting-price a');
 
@@ -556,8 +552,7 @@ $(function () {
 
             if (counterVal <= 1) {
                 return false;
-            }
-            else {
+            } else {
                 counter.val(counterVal - 1);
             }
         });
@@ -567,8 +562,7 @@ $(function () {
             if (counterVal >= 999) {
                 alert('Свяжитесь с менеджером');
                 return false;
-            }
-            else {
+            } else {
                 counter.val(counterVal + 1);
             }
         });
@@ -581,7 +575,7 @@ $(function () {
     })();
 
     // tabs
-    (function() {
+    (function () {
         let prodTabs = $('#product_card_tabs');
         if (prodTabs.length) {
             prodTabs.tabs({
@@ -592,7 +586,7 @@ $(function () {
     })();
 
     // product card thumbs gallery
-    (function() {
+    (function () {
         const thumbSliderWrap = $('.product-card__thumbs-wrap');
 
         if (thumbSliderWrap.length) {
@@ -632,33 +626,32 @@ $(function () {
     })();
 
     // product card open reply reviews
-    (function() {
+    (function () {
         const openReply = $('.product-card__reviews-reply-open');
 
-        openReply.on('click', function() {
+        openReply.on('click', function () {
             let answers = $(this).closest('.product-card__reviews-box').next().nextAll();
 
             $(this).toggleClass('active');
-            answers.each(function(i, e) {
+            answers.each(function (i, e) {
                 $(e).slideToggle(300);
             });
         });
     })();
 
     // pass visibility
-    (function() {
+    (function () {
         let passVisible = $('.pass-visible');
 
         if (passVisible) {
-            passVisible.on('click', function() {
+            passVisible.on('click', function () {
                 let ico = $(this).find('img');
                 let passInput = $(this).prev();
 
                 if (passInput.attr('type') === 'password') {
                     ico.attr('src', './img/eye-open.svg');
                     passInput.attr('type', 'text');
-                }
-                else {
+                } else {
                     ico.attr('src', './img/eye-closed.svg');
                     passInput.attr('type', 'password');
                 }
@@ -667,7 +660,7 @@ $(function () {
     })();
 
     // modal switcher
-    (function() {
+    (function () {
         let modalSwitch = $('.modal-switcher__btn');
         let closeModal = $('.modal .close');
 
@@ -677,23 +670,23 @@ $(function () {
             let targetUrl = $(this).attr('href');
 
             current.modal('hide');
-            current.on('hidden.bs.modal', function() {
+            current.on('hidden.bs.modal', function () {
                 $(targetUrl).modal('show');
                 targetUrl = undefined;
             });
         });
 
-        closeModal.on('click', function() {
+        closeModal.on('click', function () {
             let currentModal = $(this).closest('.modal');
             currentModal.modal('hide');
         });
     })();
 
     // modal switch user class
-    (function() {
+    (function () {
         let radio = $('.user-class');
 
-        radio.on('click', function() {
+        radio.on('click', function () {
             let val = $(this).val();
             let special = $('.client');
             let forMaster = $('.for-master');
@@ -701,21 +694,19 @@ $(function () {
 
             switch (val) {
                 case 'client':
-                    special.each(function(i, e) {
+                    special.each(function (i, e) {
                         if ($(e).hasClass('for-master')) {
                             $(e).css('display', 'none');
-                        }
-                        else {
+                        } else {
                             $(e).css('display', 'block');
                         }
                     });
                     break;
                 case 'master':
-                    special.each(function(i, e) {
+                    special.each(function (i, e) {
                         if ($(e).hasClass('not-for-master')) {
                             $(e).css('display', 'none');
-                        }
-                        else {
+                        } else {
                             $(e).css('display', 'block');
                         }
                     });
@@ -724,20 +715,20 @@ $(function () {
         });
     })();
 
-    (function() {
+    (function () {
         let inputFile = $('.master_certificate');
 
-        inputFile.on('change', function() {
+        inputFile.on('change', function () {
             console.log(this)
             // console.log($(this));
         });
     })();
 
     // modal file
-    (function() {
+    (function () {
         let fileInput = $('input[type="file"]');
 
-        fileInput.on('change', function() {
+        fileInput.on('change', function () {
             let files = this.files;
 
             if (this.hasAttribute('multiple')) {
@@ -753,13 +744,13 @@ $(function () {
     })();
 
     // input mask
-    (function() {
+    (function () {
         let phoneInputs = document.querySelectorAll('.mask-phone');
         let cardNumber = document.querySelectorAll('.mask-card');
         let cardDate = document.querySelectorAll('.mask-card-date');
 
         if (phoneInputs.length) {
-            phoneInputs.forEach(function(e, i) {
+            phoneInputs.forEach(function (e, i) {
                 const phone = IMask(e, {
                     mask: '+{38}(\\000)000-00-00',
                     lazy: true,
@@ -769,7 +760,7 @@ $(function () {
         }
 
         if (cardNumber) {
-            cardNumber.forEach(function(e, i) {
+            cardNumber.forEach(function (e, i) {
                 const card = IMask(e, {
                     mask: '0000 0000 0000 0000',
                     lazy: true,
@@ -779,7 +770,7 @@ $(function () {
         }
 
         if (cardDate) {
-            cardDate.forEach(function(e, i) {
+            cardDate.forEach(function (e, i) {
                 const card = IMask(e, {
                     mask: '00\\/00',
                     lazy: true,
@@ -790,7 +781,7 @@ $(function () {
     })();
 
     // payment
-    (function() {
+    (function () {
         const payment = $('.registration-payment');
         let firstStep = $('.registration-payment-steps__item'),
             clientType = $('.registration-payment-user-types input'),
@@ -803,10 +794,10 @@ $(function () {
             cityInput = $('#city_input');
 
         if (payment) {
-            clientType.on('change', function(e) {
+            clientType.on('change', function (e) {
                 let v = e.target.value;
 
-                switch(v) {
+                switch (v) {
                     case 'new_client':
                         $('.registration-payment__user_old').addClass('d-none');
                         $('.registration-payment__user_new').removeClass('d-none');
@@ -822,27 +813,26 @@ $(function () {
                 }
             });
 
-            nextStep.on('click', function() {
+            nextStep.on('click', function () {
                 firstStep.removeClass('active').next().addClass('active');
                 if ($(this).data('check') === false) {
                     $(this).text('Оплатить').data('check', true);
 
                     $('.registration-payment__step_first').addClass('d-none');
                     $('.registration-payment__step_second').removeClass('d-none');
-                }
-                else {
+                } else {
                     $(this).attr('type', 'submit');
                 }
             });
 
-            cardSelect.on('change', function() {
+            cardSelect.on('change', function () {
                 if (cardSelect.val() !== '') {
                     cardAdded.addClass('d-none');
                 }
             });
 
-            deliveryMethod.on('change', function() {
-                switch($(this).val()) {
+            deliveryMethod.on('change', function () {
+                switch ($(this).val()) {
                     case 'new_post':
                         deliveryMethodBlock.addClass('d-none');
                         $('.registration-payment__post-info').removeClass('d-none');
@@ -865,25 +855,125 @@ $(function () {
                 }
             });
 
-            cityInput.on('change', function(e) {
+            cityInput.on('change', function (e) {
                 let options = deliveryMethod.children();
 
                 if (e.target.value.trim().toLowerCase() !== 'херсон') {
-                    options.each(function(i, el) {
+                    options.each(function (i, el) {
                         $(el).attr('disabled', false);
                         if (el.value === 'courier' || el.value === 'pickup') {
                             $(el).attr('disabled', true);
                         }
                     });
-                }
-                else {
-                    options.each(function(i, el) {
+                } else {
+                    options.each(function (i, el) {
                         $(el).attr('disabled', false);
                     });
                 }
             });
         }
+    })();
 
+    // personal account
+    (function () {
+        let acc = $('#account-content');
+
+        if (acc) {
+            let editBtn = $('.personal-data-box__edit'),
+                editStateBtn = $('.personal-data-box__edit-control-btn'),
+                addCardBtn = $('.add-card-confirm');
+
+            editBtn.on('click', function () {
+                let inputs = $(this).parent().next().find('input');
+
+                $(this)
+                    .addClass('d-none');
+
+                $(this)
+                    .next()
+                    .removeClass('d-none');
+
+                switchInputs(inputs, false);
+            });
+
+            editStateBtn.on('click', function () {
+                let inputs = $(this).closest('.personal-data-box').find('.personal-data-box__body input');
+
+                $(this)
+                    .parent()
+                    .addClass('d-none');
+
+                $(this)
+                    .parent()
+                    .prev()
+                    .removeClass('d-none');
+
+                switchInputs(inputs, true);
+            });
+
+            addCardBtn.on('click', function () {
+                let confirm = $(this).data('confirm');
+                let form = $('#add_card_form');
+
+                if (confirm) {
+                    let cardsWrap = $('#credit_card_list');
+                    let cardInputs = form.find('input');
+                    const v = [];
+
+                    cardInputs.each(function (i, el) {
+                        if (el.value !== '') {
+                            v.push(el.value);
+                        } else {
+                            return false;
+                        }
+                    });
+                    if (v.length === 3) {
+                        let numberTrim = v[0].replace(/(\d+\s){3}/g, '');
+
+                        cardsWrap.prepend(`<div class="col-md-3">
+                                    <div class="added-credit-card">
+                                        <p class="added-credit-card__number card-data" data-card="${v[0]}">**** **** **** ${numberTrim}</p>
+
+                                        <div class="added-credit-card__info">
+                                            <div class="added-credit-card__info-item">
+                                                <span class="added-credit-card__info-name">Срок действия</span>
+                                                <span class="added-credit-card__info-text card-data" data-card="${v[1]}">****</span>
+                                            </div>
+
+                                            <div class="added-credit-card__info-item">
+                                                <span class="added-credit-card__info-name">CVV</span>
+                                                <span class="added-credit-card__info-text card-data" data-card="${v[2]}">***</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`);
+                        form[0].reset();
+                    }
+                    else {
+                        alert(`Все поля должны быть заполнены`);
+                    }
+                }
+                else {
+                    form[0].reset();
+                }
+            });
+        }
+
+        function switchInputs(inputs, readonly) {
+            console.log(inputs);
+
+            if (readonly) {
+                console.log(`readonly status: ${readonly}`);
+                inputs.each(function (i, el) {
+                    $(el).attr('readonly', 'readonly');
+                });
+            } else {
+                console.log(`readonly status: ${readonly}`);
+                inputs.each(function (i, el) {
+                    $(el).removeAttr('readonly');
+                });
+            }
+        }
     })();
 
     // Lazy load observer

@@ -300,6 +300,18 @@
     }
   }
 
+  .section-order-processed {
+    padding: 60px 0 100px;
+  }
+
+  .order-processed {
+    &__text {
+      margin: 0 0 50px;
+      font-size: 56px;
+      line-height: 67px;
+    }
+  }
+
   /* FOOTER */
 }
 
@@ -1262,6 +1274,10 @@
         width: calc(100% - 520px);
       }
     }
+  }
+
+  .section-personal-account {
+    margin: 0 0 230px;
   }
 
   .section-stock {

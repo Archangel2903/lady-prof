@@ -1109,4 +1109,12 @@ ul.style-list, ol.style-list {
       }
     }
   }
+
+  &#add_card {
+    .modal {
+      &-footer {
+        justify-content: space-evenly;
+      }
+    }
+  }
 }

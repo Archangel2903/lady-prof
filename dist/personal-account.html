@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Акции</title>
+    <title>Личный кабинет</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="style.acebbe0ceeebddde1360.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
@@ -94,254 +94,362 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Акции</li>
+                        <li class="breadcrumb-item active" aria-current="page">Кабинет</li>
                     </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="section section-stock">
+        <section class="section section-personal-account">
             <div class="container">
                 <div class="catalog">
-                    <div class="catalog__header flex-wrap flex-xl-nowrap">
-                        <h1 class="catalog__title">Акции</h1>
-
-                        <div class="stock__sorting">
-                            <span class="stock__sorting">Сортировать по:</span>
-                            <div class="stock__sorting-buttons">
-                                <button class="stock__sorting-btn btn btn-outline-primary">Новые</button>
-                                <button class="stock__sorting-btn btn btn-outline-primary">Заканчиваются</button>
-                                <button class="stock__sorting-btn btn btn-outline-primary">Популярные</button>
-                            </div>
-                        </div>
+                    <div class="catalog__header">
+                        <h1 class="catalog__title">Личный кабинет</h1>
                     </div>
 
                     <button type="button" id="sidebar_switch" class="catalog-sidebar__switch">
-                        <svg><use xlink:href="img/spritemap.svg#sprite-filter"></use></svg>
+                        <svg>
+                            <use xlink:href="img/spritemap.svg#sprite-filter"></use>
+                        </svg>
                     </button>
 
-                    <div class="catalog-sidebar">
-                        <ul class="catalog-sidebar__list">
-                            <li><a href="#1">Все</a></li>
-                            <li><a href="#2">Ногти</a></li>
-                            <li><a href="#3">Волосы</a></li>
-                            <li><a href="#4">Макияж</a></li>
-                            <li><a href="#4">Мужчинам</a></li>
-                            <li><a href="#5">Лицо и тело</a></li>
-                        </ul>
+                    <div id="sidebar_filter" class="catalog-sidebar">
+                        <nav class="sidebar-account-list">
+                            <a href="#account-link1" class="sidebar-account-link active">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-user"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Анастасия Длиннофамильная</span>
+                            </a>
+
+                            <a href="#account-link2" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-orders"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Мои заказы</span>
+                            </a>
+
+                            <a href="#account-link3" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-label"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Программа лояльности</span>
+                            </a>
+
+                            <a href="#account-link4" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-bonus"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Бонусы</span>
+                            </a>
+
+                            <a href="#account-link5" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-heart"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Список желаний</span>
+                            </a>
+
+                            <a href="#account-link6" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-eye"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Просмотренные товары</span>
+                            </a>
+
+                            <a href="#account-link7" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-reviews"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Мои отзывы</span>
+                            </a>
+
+                            <a href="#account-link8" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-contacts"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Связаться с магазином</span>
+                            </a>
+
+                            <a href="#account-link9" class="sidebar-account-link">
+                                <span class="sidebar-account-link__ico">
+                                <svg>
+                                    <use xlink:href="img/spritemap.svg#sprite-pa-exit"></use>
+                                </svg>
+                            </span>
+                                <span class="sidebar-account-link__text">Выход</span>
+                            </a>
+                        </nav>
                     </div>
 
                     <div class="catalog-content">
-                        <div class="row justify-content-center justify-content-xl-start w-100">
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
+                        <div class="account-order-list">
+                            <div class="account-order-list__item">
+                                <div class="account-order-list__item-header">
+                                    <p class="account-order-list__item-info">№ 613 588 073 <span class="account-order-list__item-info-date">24.07.21</span></p>
+                                    <span class="account-order-list__item-status account-order-list__item-status_complete">Выполнен</span>
+                                </div>
+
+                                <div class="account-order-list__item-body">
+                                    <div class="account-order-list__item-product">
+                                        <picture class="account-order-list__item-product-pic">
+                                            <img src="img/default.svg" data-src="img/product-img03.png" alt="image" title="image">
                                         </picture>
 
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
+                                        <span class="account-order-list__item-product-info">
+                                            <a href="product-page.html" class="account-order-list__item-product-name">Гель-база Komilfo Gel Base Coat — основа-коректор для гель-лаку</a>
+                                            <span class="account-order-list__item-product-text text-uppercase">15 мл</span>
+                                            <span class="account-order-list__item-product-text">Код товара: 148370</span>
+                                        </span>
 
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
+                                        <span class="account-order-list__item-product-quantity">1 шт</span>
 
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
+                                        <span class="account-order-list__item-product-price">135 ₴</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
+                            <div class="account-order-list__item">
+                                <div class="account-order-list__item-header">
+                                    <p class="account-order-list__item-info">№ 945 165 801 <span class="account-order-list__item-info-date">12.07.21</span></p>
+                                    <span class="account-order-list__item-status account-order-list__item-status_canceled">Отменен</span>
+                                </div>
+
+                                <div class="account-order-list__item-body">
+                                    <div class="account-order-list__item-product">
+                                        <picture class="account-order-list__item-product-pic">
+                                            <img src="img/default.svg" data-src="img/product-img03.png" alt="image" title="image">
                                         </picture>
 
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
+                                        <span class="account-order-list__item-product-info">
+                                            <a href="product-page.html" class="account-order-list__item-product-name">UV/LED Builder Gel Cover Pink</a>
+                                            <span class="account-order-list__item-product-text text-uppercase">50 мл</span>
+                                            <span class="account-order-list__item-product-text">Код товара: 148370</span>
+                                        </span>
 
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
+                                        <span class="account-order-list__item-product-quantity">1 шт</span>
 
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
+                                        <span class="account-order-list__item-product-price">135 ₴</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
+                            <div class="account-order-list__item">
+                                <div class="account-order-list__item-header">
+                                    <p class="account-order-list__item-info">№ 613 588 073 <span class="account-order-list__item-info-date">24.07.21</span></p>
+                                    <span class="account-order-list__item-status account-order-list__item-status_complete">Выполнен</span>
+                                </div>
+
+                                <div class="account-order-list__item-body">
+                                    <div class="account-order-list__item-product">
+                                        <picture class="account-order-list__item-product-pic">
+                                            <img src="img/default.svg" data-src="img/product-img03.png" alt="image" title="image">
                                         </picture>
 
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
+                                        <span class="account-order-list__item-product-info">
+                                            <a href="product-page.html" class="account-order-list__item-product-name">Гель-база Komilfo Gel Base Coat — основа-коректор для гель-лаку</a>
+                                            <span class="account-order-list__item-product-text text-uppercase">15 мл</span>
+                                            <span class="account-order-list__item-product-text">Код товара: 148370</span>
+                                        </span>
+
+                                        <span class="account-order-list__item-product-quantity">1 шт</span>
+
+                                        <span class="account-order-list__item-product-price">135 ₴</span>
                                     </div>
 
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
-
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
+                                    <div class="account-order-list__item-product">
+                                        <picture class="account-order-list__item-product-pic">
+                                            <img src="img/default.svg" data-src="img/product-img03.png" alt="image" title="image">
                                         </picture>
 
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
+                                        <span class="account-order-list__item-product-info">
+                                            <a href="product-page.html" class="account-order-list__item-product-name">Гель-база Komilfo Gel Base Coat — основа-коректор для гель-лаку</a>
+                                            <span class="account-order-list__item-product-text text-uppercase">15 мл</span>
+                                            <span class="account-order-list__item-product-text">Код товара: 148370</span>
+                                        </span>
 
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
+                                        <span class="account-order-list__item-product-quantity">1 шт</span>
 
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
+                                        <span class="account-order-list__item-product-price">135 ₴</span>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
-                                        </picture>
-
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
-
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
-
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
-                                        </picture>
-
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
-
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
-
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
-                                        </picture>
-
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
-
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
-
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 stock__box-wrap">
-                                <div class="stock__box">
-                                    <div class="stock__box-view">
-                                        <picture class="stock__box-pic">
-                                            <img src="img/default.svg" data-src="img/stock01.png" alt="image" title="image">
-                                        </picture>
-
-                                        <p class="stock__box-countdown">До конца акции осталось: <span>29 дней</span></p>
-                                    </div>
-
-                                    <div class="stock__box-info">
-                                        <div class="stock__box-info-description">
-                                            <p class="stock__box-title">KIRA NAILS -20% НА КОЛЛЕКЦИИ VITRAGE, ЧИА ПУДИНГ, RED HOT KIRA PEPPERS</p>
-                                            <p class="stock__box-text">На коллекцию Vitrage, Чиа пудинг, Red Hot Kira Peppers</p>
-                                        </div>
-
-                                        <p class="m-0 text-right">
-                                            <a href="promotion-page.html" class="btn-link">Перейти</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="section-pagination">
-                            <div class="container">
-                                <nav aria-label="Page navigation example">
-                                    <ul class="pagination justify-content-center align-items-center align-content-center m-0">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Previous">
-                                                <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg>
-                                            </a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#" aria-label="Next">
-                                                <svg><use xlink:href="img/spritemap.svg#sprite-arrow"></use></svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
                     </div>
+
+                    <!--<div id="account-content" class="catalog-content">
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Персональные данные</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Имя</span>
+                                        <input type="text" class="form-control" readonly value="Александра">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Фамилия</span>
+                                        <input type="text" class="form-control" readonly value="Длиннофамильная">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Отчество</span>
+                                        <input type="text" class="form-control" readonly value="Олеговна">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Логин</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Логин (телефон)</span>
+                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Логин (e-mail)</span>
+                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Пароль</span>
+                                        <input type="password" class="form-control" readonly value="****************">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Контакты</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Телефон</span>
+                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">E-mail</span>
+                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group m-0">
+                                        <span class="input-name">Город</span>
+                                        <input type="text" class="form-control" readonly value="Львов">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Банковские карты</p>
+                            </div>
+
+                            <div id="credit_card_list" class="personal-data-box__body row">
+                                <div class="col-md-3">
+                                    <div class="add-credit-card">
+                                        <button class="add-credit-card__button" data-toggle="modal" data-target="#add_card">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -467,6 +575,42 @@
         </div>
     </footer>
     <!-- FOOTER END -->
+</div>
+<!-- add credit card -->
+<div class="modal fade" id="add_card" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form action="" method="" id="add_card_form" class="modal-form">
+                    <label class="form-group w-100">
+                        <span class="input-name important">Номер карты</span>
+                        <input type="text" class="form-control mask-card" placeholder="XXXX XXXX XXXX XXXX">
+                    </label>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="form-group w-100 m-0">
+                                <span class="input-name important">Действительна до</span>
+                                <input type="text" class="form-control mask-card-date" placeholder="ММ/РР">
+                            </label>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="form-group w-100 m-0">
+                                <span class="input-name important">CVV2</span>
+                                <input type="text" class="form-control" placeholder="* * *" maxlength="3">
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer text-center">
+                <button class="add-card-confirm btn btn-primary" data-confirm="1" data-dismiss="modal">Добавить</button>
+                <button class="add-card-confirm btn btn-outline-primary" data-confirm="0" data-dismiss="modal">Отменить</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- sign-in -->
@@ -889,7 +1033,9 @@
 </div>
 
 <button id="to_top">
-    <svg><use xlink:href="img/spritemap.svg#sprite-chevrone"></use></svg>
+    <svg>
+        <use xlink:href="img/spritemap.svg#sprite-chevrone"></use>
+    </svg>
 </button>
 <div class="icon-load">
     <picture><img src="img/loader.svg" alt="pre-loader"></picture>

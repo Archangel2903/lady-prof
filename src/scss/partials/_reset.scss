@@ -133,7 +133,9 @@ input {
     -moz-appearance: textfield;
 
     &:focus {
-      background: $main-second-color;
+      &:not([readonly]) {
+        background: $main-second-color;
+      }
 
       &::-webkit-input-placeholder {
         color: transparent;

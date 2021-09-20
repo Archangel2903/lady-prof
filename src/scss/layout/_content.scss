@@ -9,7 +9,7 @@
   min-width: 320px;
 }
 
-/* SECTION HOME */
+// SECTION HOME
 .section-home {
   padding: 20px 0;
   background: $main-second-color;
@@ -87,7 +87,7 @@
   }
 }
 
-/* SECTION BANNER */
+// SECTION BANNER
 .section-banner {
 }
 
@@ -120,7 +120,7 @@
   }
 }
 
-/* SECTION MAIN CATEGORY */
+// SECTION MAIN CATEGORY
 .section-main-category {
   padding: 50px 0 0;
 }
@@ -316,7 +316,7 @@
   }
 }
 
-/* SECTION STOCK */
+// SECTION STOCK
 .section-main-stock {
   padding: 60px 0;
   background: $main-second-color;
@@ -445,7 +445,7 @@
   }
 }
 
-/* SECTION PROMOTION */
+// SECTION PROMOTION
 .section-promotion {
   margin: 0 0 40px;
 }
@@ -516,7 +516,7 @@
   }
 }
 
-/* SECTION BLOG */
+// SECTION BLOG
 .section-main-blog {
   padding: 60px 0;
 
@@ -770,7 +770,7 @@
   }
 }
 
-/* SECTION COURSES */
+// SECTION COURSES
 .section-main-courses {
   padding: 60px 0;
   background: $main-second-color;
@@ -1060,7 +1060,7 @@
   }
 }
 
-/* SECTION FAQ */
+// SECTION FAQ
 .section-main-faq {
   padding: 80px 0;
 
@@ -1161,7 +1161,7 @@
   }
 }
 
-/* SECTION REVIEWS */
+// SECTION REVIEWS
 .section-reviews {
   padding: 100px 0;
   background: $main-second-color;
@@ -1222,7 +1222,7 @@
   }
 }
 
-/* SECTION SEO */
+// SECTION SEO
 .section-seo {
   padding: 80px 0 140px;
 }
@@ -1326,7 +1326,7 @@
   }
 }
 
-/* SECTION SEMINAR */
+// SECTION SEMINAR
 .section-seminars {
   padding: 60px 0 100px;
   background: $main-second-color;
@@ -1336,13 +1336,13 @@
   }
 }
 
-/* SECTION INSTAGRAM */
+// SECTION INSTAGRAM
 .section-instagram {
   padding: 80px 0;
   background: $main-second-color;
 }
 
-/* SECTION CATEGORY NAVIGATION */
+// SECTION CATEGORY NAVIGATION
 .section-category-nav {
 
 }
@@ -1384,7 +1384,7 @@
   }
 }
 
-/* SECTION CATALOG CATEGORY */
+// SECTION CATALOG CATEGORY
 .section-catalog-category {
   padding: 70px 0 0;
 }
@@ -1410,7 +1410,7 @@
   }
 }
 
-/* SECTION CATALOG */
+// SECTION CATALOG
 .section-catalog {
   &-promotion {
     margin: 0 0 210px;
@@ -1771,7 +1771,7 @@
   }
 }
 
-/* SECTION PRODUCT CARD */
+// SECTION PRODUCT CARD
 .section-product-card {
   margin: 0 0 100px;
 
@@ -2860,7 +2860,7 @@
   }
 }
 
-/* SECTION REGISTRATION PAYMENT */
+// SECTION REGISTRATION PAYMENT
 .section-registration-payment {
   padding: 70px 0 200px;
 }
@@ -3083,7 +3083,7 @@
 }
 
 .section-order-processed {
-  padding: 60px 0 100px;
+  padding: 20px 0 40px;
 
   &__decor {
     display: none;
@@ -3118,11 +3118,11 @@
   }
 
   &__text {
-    margin: 0 0 50px;
+    margin: 0 0 20px;
     color: #000000;
     font-family: $font-family-custom;
-    font-size: 56px;
-    line-height: 67px;
+    font-size: 24px;
+    line-height: 1.25;
     text-align: center;
     letter-spacing: 1px;
   }
@@ -3133,7 +3133,354 @@
   }
 }
 
-/* PAGINATION SECTION */
+// SECTION PERSONAL ACCOUNT
+.section-personal-account {
+  .catalog {
+    &__header {
+      margin: 0 0 70px;
+    }
+
+    &__title {
+      max-width: none;
+    }
+  }
+}
+
+.sidebar-account-list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.sidebar-account-link {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 20px;
+
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  &:hover, &.active {
+    padding: 20px;
+    border-color: $main-third-color;
+
+    .sidebar-account-link {
+      &__ico {
+        box-shadow: 0 8px 30px rgba(239, 93, 168, 0.2);
+
+        svg {
+          fill: $primary;
+        }
+      }
+
+      &__text {
+        color: $text-color;
+      }
+    }
+  }
+
+  &__ico {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    transition: $transition-base;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      transform: translate(-50%, -50%);
+      transition: $transition-base;
+    }
+  }
+
+  &__text {
+    margin: 0 0 0 20px;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    transition: $transition-base;
+  }
+}
+
+// Personal data
+.personal-data-box {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 30px;
+  border: 1px solid #d7cabf;
+  border-radius: 28px;
+
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0 0 30px;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__edit {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    background: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__edit-control {
+    &-btn {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background: white;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__body {}
+}
+
+.added-credit-card {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  height: 160px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #FEF6FA;
+
+  &__number {
+    width: 100%;
+    margin: 0 0 30px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+
+    &-item {
+      display: inline-flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-content: stretch;
+    }
+
+    &-name {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.add-credit-card {
+  position: relative;
+  height: 160px;
+  border: 1px dashed #fcddec;
+  border-radius: 20px;
+  background: #fffdfe;
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    transform: translate(-50%, -50%);
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
+
+// Order list
+.account-order-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  width: 100%;
+
+  &__item {
+    padding: 25px 30px 30px;
+    border: 1px solid #d7cabf;
+    border-radius: 20px;
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+
+    &-header {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      padding: 0 0 20px;
+      border-bottom: 1px solid #f5ede6;
+      margin: 0 0 15px;
+    }
+
+    &-info {
+      margin: 0;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+
+      &-date {
+        margin-left: 10px;
+        color: #878787;
+      }
+    }
+
+    &-status {
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &_complete {
+        color: #41a25a;
+      }
+      &_canceled {
+        color: #f7555e;
+      }
+    }
+
+    &-body {
+
+    }
+
+    &-product {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+
+      &-pic {
+        flex: 0 0 auto;
+        width: 125px;
+        height: 170px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-info {
+        flex: 1 1 auto;
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+      }
+
+      &-name {
+        margin: 0 0 10px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      &-text {
+        color: #878787;
+
+        &:not(:last-child) {
+          margin: 0 0 10px;
+        }
+      }
+
+      &-quantity {
+        flex: 1 1 auto;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      &-price {
+        flex: 0 0 auto;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// PAGINATION SECTION
 .section-pagination {
   width: 100%;
 }
@@ -3198,7 +3545,7 @@
   }
 }
 
-/* SECTION ABOUT US */
+// SECTION ABOUT US
 .section-home-about-us {
   padding: 80px 0;
 
@@ -3265,7 +3612,7 @@
   }
 }
 
-/* SECTION LOYALTY */
+// SECTION LOYALTY
 .section-home-loyalty {
   padding: 80px 0;
 }
@@ -3371,7 +3718,7 @@
   }
 }
 
-/* SECTION PAYMENT DELIVERY */
+// SECTION PAYMENT DELIVERY
 .section-pay-delivery {
   padding: 0 0 120px;
 }
@@ -3461,7 +3808,7 @@
   }
 }
 
-/* SECTION CONTACTS */
+// SECTION CONTACTS
 .section-contacts {
   margin: 0 0 80px;
 }
@@ -3625,7 +3972,7 @@
   }
 }
 
-/* SECTION ADDRESS */
+// SECTION ADDRESS
 .section-address {
   margin: 0 0 120px;
 
@@ -3679,14 +4026,14 @@
   }
 }
 
-/* SECTION MAP */
+// SECTION MAP
 #map {
   width: 100%;
   height: 667px;
   overflow: hidden;
 }
 
-/* SECTION TEXT */
+// SECTION TEXT
 .section-text {
   padding: 80px 0;
 }
@@ -3728,7 +4075,7 @@
   }
 }
 
-/* MODALS */
+// MODALS
 .modal-form {
   display: flex;
   flex-flow: column nowrap;
