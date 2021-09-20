@@ -5,8 +5,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Программа лояльности</title>
-<link rel="shortcut icon" href="favicon.ico"><link href="style.c159e4d0abbf3063805e.min.css" rel="stylesheet"></head>
+    <title>Обзоры | Гель-лак Protec Top PNB</title>
+</head>
 <body class="loaded">
 <!-- BODY -->
 <div class="main-wrapper">
@@ -40,7 +40,7 @@
 
                 <a href="index.html" class="logo">
                     <picture>
-                        <img src="img/logo.png" alt="lady prof logo" title="lady prof">
+                        <img src="<%= require('./img/logo.png') %>" alt="lady prof logo" title="lady prof">
                     </picture>
                 </a>
 
@@ -89,85 +89,211 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-home section-home-loyalty">
-            <div class="section-bg">
-                <picture>
-                    <img src="img/default.svg" data-src="img/girl-home05.png" class="section-bg__img" alt="image" title="image">
-                </picture>
-            </div>
-
+        <section class="section section-breadcrumbs">
             <div class="container">
-                <div class="home-content">
-                    <span class="styling-title">Полезненько</span>
-                    <p class="main-title m-0">Программа</p>
-                    <p class="title">лояльности</p>
-                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="#">Обзоры</a></li>
+                        <li class="breadcrumb-item"><a href="#">Ногти</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Гель-лак Protec Top PNB</li>
+                    </ol>
+                </nav>
             </div>
         </section>
-        <section class="section section-loyalty">
-            <picture class="section-loyalty__decor section-loyalty__decor_first d-none d-xxl-block">
-                <img src="img/default.svg" data-src="img/decor03.png" alt="image" title="image">
-            </picture>
-            <picture class="section-loyalty__decor section-loyalty__decor_second d-none d-xxl-block">
-                <img src="img/default.svg" data-src="img/decor02.png" alt="image" title="image">
-            </picture>
-
+        <section class="section section-customer-reviews">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-10 px-xxl-5">
-                        <div class="loyalty-block">
-                            <p class="loyalty-block__title title-section">Накопи сумму покупок и получи постоянную скидку в нашем интернет-магазине и всех магазинах
-                                сети.</p>
+                <h1 class="title">Обзор</h1>
 
-                            <p class="loyalty-block__sub-title subtitle-text">Накопление происходит по Основному номеру телефона клиента</p>
+                <div class="customer-review">
+                    <div class="customer-review__content">
+                        <div class="product-review">
+                            <picture class="product-review__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>" alt="image" title="image">
+                            </picture>
+                            <div class="product-review__info">
+                                <div class="product-review__info-head">
+                                    <p class="product-review__title">Гель-лак Protec Top PNB</p>
 
-                            <ul class="style-list">
-                                <li>на сайте <a href="amoreshop.com.ua" rel="nofollow">amoreshop.com.ua</a></li>
-                                <li>в любом магазине AmoreShop</li>
-                                <li>при оформлении заказа по телефону или через социальные сети</li>
-                            </ul>
-
-                            <p class="loyalty-block__text">После регистрации, клиент не может самостоятельно изменить Основной номер телефона. Изменить основной номер
-                                можно только через администратора сайта или колл-центр.
-                                Каждый пользователь может иметь несколько адресов и дополнительные номера телефона, которые можно изменять.
-                                Накопление не ограничивается каким-то периодом времени, вы можете накапливать любое количество времени.
-                                Ваша скидка становится постоянной и также не ограничивается по времени.</p>
-
-                            <div class="loyalty-block__discount">
-                                <div class="loyalty-block__discount-table">
-                                    <p class="loyalty-block__discount-table-title">Сумма покупок и скидка</p>
-
-                                    <ul class="loyalty-block__discount-table-list">
-                                        <li>от 4000 грн<span>3%</span></li>
-                                        <li>от 8000 грн<span>5%</span></li>
-                                        <li>от 12000 грн<span>10%</span></li>
-                                    </ul>
+                                    <div class="product-review__rating">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+                                    </div>
                                 </div>
 
-                                <div class="loyalty-block__discount-info">
-                                    <p class="loyalty-block__discount-info-title">скидка не распространяется на продукцию:</p>
+                                <ul class="product-review__list">
+                                    <li>Категория: <span class="ml-2 text-primary">Декоративная косметика</span></li>
+                                    <li>Тип косметики: <span class="ml-2 text-primary">Лак для ногтей</span></li>
+                                    <li>Бренд: <span class="ml-2 text-primary">PNB</span></li>
+                                </ul>
 
-                                    <ul class="style-list">
-                                        <li>в описании которой есть фраза: "На данный товар СКИДКА НЕ ДЕЙСТВУЕТ, но покупка суммируется к накоплению по программе лояльности!"</li>
-                                        <li>уцененную продукцию и продукцию, которая участвует в акции</li>
-                                        <li>не распространяется на услуги компании, подарочные сертификаты, доставку, упаковку</li>
-                                    </ul>
+                                <div class="product-review__info-footer">
+                                    <button class="btn btn-primary mr-4">Создать обзор</button>
+
+                                    <span class="product-review__counter text-muted text-uppercase">25 отзывов</span>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="product-review-post">
+                            <picture class="product-card__reviews-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                            <p class="product-card__reviews-date">26.07.2021</p>
+
+                            <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                            <div class="product-card__rating">
+                                <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                            </div>
+
+                            <div class="product-review-post__block">
+                                <p class="product-review-post__title">Top Prismatic с легкостью превратит любой, даже самый скучный и невзрачный лак в сияющую радугу! (подробный отзыв + 5 вариантов маникюра)</p>
+
+                                <p class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку. До Top Prismatic в моей довольно обширной коллекции лаков не было ни одного голографика – как-то не вызывали особого интереса. Но недавно я всё же заинтересовалась подобными лаками и решила купить универсальный топ, который бы дал «вторую жизнь» любому моему лаку – именно так у меня появился Top Prismatic.</p>
+
+                                <div class="product-review-post__photos">
+                                    <picture class="product-review-post__pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/post01.png') %>" alt="image" title="image">
+                                    </picture>
+
+                                    <picture class="product-review-post__pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/post02.png') %>" alt="image" title="image">
+                                    </picture>
+                                </div>
+
+                                <p class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку. До Top Prismatic в моей довольно обширной коллекции лаков не было ни одного голографика – как-то не вызывали особого интереса. Но недавно я всё же заинтересовалась подобными лаками и решила купить универсальный топ, который бы дал «вторую жизнь» любому моему лаку – именно так у меня появился Top Prismatic.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="customer-review__comments">
+                        <p class="customer-review__comments-title">Комментарии</p>
+
+                        <button class="customer-review__comments-add btn btn-primary">Оставить комментарий</button>
+
+                        <div class="customer-review__comments-box">
+                            <div class="customer-review__comments-head">
+                                <span class="customer-review__comments-author">Екатерина</span>
+                                <span class="customer-review__comments-date">26.07.2021</span>
+                            </div>
+
+                            <p class="customer-review__comments-text">Маникюр безупречный! Оттенки - просто красота</p>
+
+                            <button class="customer-review__comments-reply">Ответить</button>
+                        </div>
+
+                        <div class="customer-review__comments-box">
+                            <div class="customer-review__comments-head">
+                                <span class="customer-review__comments-author">ЕЛЕНА</span>
+                                <span class="customer-review__comments-date">26.07.2021</span>
+                            </div>
+
+                            <p class="customer-review__comments-text"><b>Екатерина</b>, cпасибо большое👍</p>
+
+                            <button class="customer-review__comments-reply">Ответить</button>
+                        </div>
+
+                        <div class="customer-review__comments-box">
+                            <div class="customer-review__comments-head">
+                                <span class="customer-review__comments-author">Марина</span>
+                                <span class="customer-review__comments-date">26.07.2021</span>
+                            </div>
+
+                            <p class="customer-review__comments-text">Маникюр просто вау!😍</p>
+
+                            <button class="customer-review__comments-reply">Ответить</button>
+                        </div>
+
+                        <div class="customer-review__comments-box">
+                            <div class="customer-review__comments-head">
+                                <span class="customer-review__comments-author">ЕЛЕНА</span>
+                                <span class="customer-review__comments-date">26.07.2021</span>
+                            </div>
+
+                            <p class="customer-review__comments-text"><b>Марина</b>, cпасибо огромное</p>
+
+                            <button class="customer-review__comments-reply">Ответить</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-xxl-10 px-xxl-5">
-                        <div class="loyalty-block">
-                            <p class="loyalty-block__title title-section">Скидки для мастеров</p>
+                <div class="other-reviews">
+                    <p class="title">Другие обзоры</p>
 
-                            <p class="loyalty-block__text">После регистрации, клиент не может самостоятельно изменить Основной номер телефона. Изменить основной номер
-                                можно только через администратора сайта или колл-центр.
-                                Каждый пользователь может иметь несколько адресов и дополнительные номера телефона, которые можно изменять.
-                                Накопление не ограничивается каким-то периодом времени, вы можете накапливать любое количество времени.
-                                Ваша скидка становится постоянной и также не ограничивается по времени. </p>
+                    <div class="product-review-customers">
+                        <div class="product-card__reviews-box">
+                            <picture class="product-card__reviews-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                            <p class="product-card__reviews-date">26.07.2021</p>
+
+                            <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                            <div class="product-card__rating">
+                                <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                            </div>
+
+                            <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                            <div>
+                                <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__reviews-box">
+                            <picture class="product-card__reviews-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                            <p class="product-card__reviews-date">26.07.2021</p>
+
+                            <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                            <div class="product-card__rating">
+                                <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                            </div>
+
+                            <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                            <div>
+                                <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="product-card__reviews-box">
+                            <picture class="product-card__reviews-pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                            </picture>
+
+                            <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                            <p class="product-card__reviews-date">26.07.2021</p>
+
+                            <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                            <div class="product-card__rating">
+                                <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                            </div>
+
+                            <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                            <div>
+                                <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-auto">
+                                <button class="btn btn-outline-primary">Показать еще</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -209,7 +335,7 @@
                         <div class="footer-content text-center">
                             <a href="/" class="logo">
                                 <picture>
-                                    <img src="img/logo.png" alt="lady prof logo" title="lady prof">
+                                    <img src="<%= require('./img/logo.png') %>" alt="lady prof logo" title="lady prof">
                                 </picture>
                             </a>
                         </div>
@@ -257,11 +383,11 @@
 
                             <div class="pay-system">
                                 <picture>
-                                    <img src="img/default.svg" data-src="img/visa.svg" alt="image" title="image">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/visa.svg') %>" alt="image" title="image">
                                 </picture>
 
                                 <picture>
-                                    <img src="img/default.svg" data-src="img/mastercard.svg" alt="image" title="image">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/mastercard.svg') %>" alt="image" title="image">
                                 </picture>
                             </div>
                         </div>
@@ -321,8 +447,8 @@
                         <span class="input-name important">Пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
-                                                                                     data-src="img/eye-closed.svg" alt="image"
+                            <button type="button" class="pass-visible"><picture><img src="<%= require('./img/default.svg') %>"
+                                                                                     data-src="<%= require('./img/eye-closed.svg') %>" alt="image"
                                                                                      title="image"></picture></button>
                         </span>
                     </label>
@@ -442,8 +568,8 @@
                         <span class="input-name important">Придумайте пароль</span>
                         <span class="d-block position-relative">
                             <input type="password" class="form-control">
-                            <button type="button" class="pass-visible"><picture><img src="img/default.svg"
-                                                                                     data-src="img/eye-closed.svg" alt="image"
+                            <button type="button" class="pass-visible"><picture><img src="<%= require('./img/default.svg') %>"
+                                                                                     data-src="<%= require('./img/eye-closed.svg') %>" alt="image"
                                                                                      title="image"></picture></button>
                         </span>
                         <span class="d-block mt-2 text-mutted text-center text-sm-left">Пароль должен быть не менее 6 символов</span>
@@ -515,7 +641,7 @@
                     <div class="product-cart__item">
                         <div class="product-cart__item-view">
                             <picture class="product-cart__item-pic">
-                                <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                             </picture>
 
                             <a href="#product" class="product-cart__item-name">Protec Top</a>
@@ -542,7 +668,7 @@
                     <div class="product-cart__item">
                         <div class="product-cart__item-view">
                             <picture class="product-cart__item-pic">
-                                <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                             </picture>
 
                             <a href="#product" class="product-cart__item-name">Protec Top</a>
@@ -572,7 +698,7 @@
                         <div class="product-cart__items-view">
                             <div class="product-cart__item-view">
                                 <picture class="product-cart__item-pic">
-                                    <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                                 </picture>
 
                                 <a href="#product" class="product-cart__item-name">Protec Top</a>
@@ -580,7 +706,7 @@
 
                             <div class="product-cart__item-view">
                                 <picture class="product-cart__item-pic">
-                                    <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                                 </picture>
 
                                 <a href="#product" class="product-cart__item-name">Protec Top</a>
@@ -628,7 +754,7 @@
                                 <div class="product-cart__set-box">
                                     <div class="product-cart__set-item">
                                         <picture class="product-cart__set-item-pic">
-                                            <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                                         </picture>
 
                                         <div class="product-cart__set-item-info">
@@ -642,7 +768,7 @@
 
                                     <div class="product-cart__set-item">
                                         <picture class="product-cart__set-item-pic">
-                                            <img src="img/default.svg" data-src="img/product-img02.png" alt="image" title="image">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>" alt="image" title="image">
                                         </picture>
 
                                         <div class="product-cart__set-item-info">
@@ -664,7 +790,7 @@
                                 <div class="product-cart__set-box">
                                     <div class="product-cart__set-item">
                                         <picture class="product-cart__set-item-pic">
-                                            <img src="img/default.svg" data-src="img/product-img01.png" alt="image" title="image">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>" alt="image" title="image">
                                         </picture>
 
                                         <div class="product-cart__set-item-info">
@@ -678,7 +804,7 @@
 
                                     <div class="product-cart__set-item">
                                         <picture class="product-cart__set-item-pic">
-                                            <img src="img/default.svg" data-src="img/product-img02.png" alt="image" title="image">
+                                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img02.png') %>" alt="image" title="image">
                                         </picture>
 
                                         <div class="product-cart__set-item-info">
@@ -720,8 +846,8 @@
     <svg><use xlink:href="img/spritemap.svg#sprite-chevrone"></use></svg>
 </button>
 <div class="icon-load">
-    <picture><img src="img/loader.svg" alt="pre-loader"></picture>
+    <picture><img src="<%= require('./img/loader.svg') %>" alt="pre-loader"></picture>
 </div>
 <!-- BODY END   -->
-<script type="text/javascript" src="bundle.c159e4d0abbf3063805e.min.js"></script></body>
+</body>
 </html>

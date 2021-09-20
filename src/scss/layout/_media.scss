@@ -831,6 +831,16 @@
     }
   }
 
+  .product-review-post {
+    &__photos {
+      flex-flow: row wrap;
+    }
+
+    &__pic {
+      width: calc(50% - 40px);
+    }
+  }
+
   /* FOOTER */
   .footer-content-wrap {
     padding: 50px 0 75px;
@@ -1507,6 +1517,20 @@
   .added-credit-card {
     &__number {
       letter-spacing: 4px;
+    }
+  }
+
+  .customer-review {
+    &__content {
+      width: 65%;
+      max-width: 1140px;
+    }
+
+    &__comments {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33%;
     }
   }
 
