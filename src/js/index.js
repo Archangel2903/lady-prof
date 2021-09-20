@@ -715,15 +715,6 @@ $(function () {
         });
     })();
 
-    (function () {
-        let inputFile = $('.master_certificate');
-
-        inputFile.on('change', function () {
-            console.log(this)
-            // console.log($(this));
-        });
-    })();
-
     // modal file
     (function () {
         let fileInput = $('input[type="file"]');
@@ -930,7 +921,7 @@ $(function () {
                     if (v.length === 3) {
                         let numberTrim = v[0].replace(/(\d+\s){3}/g, '');
 
-                        cardsWrap.prepend(`<div class="col-md-3">
+                        cardsWrap.prepend(`<div class="col-xxxl-3 col-xl-6 col-lg-4 col-sm-6 mb-3">
                                     <div class="added-credit-card">
                                         <p class="added-credit-card__number card-data" data-card="${v[0]}">**** **** **** ${numberTrim}</p>
 

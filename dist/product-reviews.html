@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
-    <title>Пользовательское соглашение</title>
+    <title>Обзоры | Продукт</title>
 <link rel="shortcut icon" href="favicon.ico"><link href="style.f8d53fc0d2377d999211.min.css" rel="stylesheet"></head>
 <body class="loaded">
 <!-- BODY -->
@@ -89,33 +89,142 @@
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section section-text">
+        <section class="section section-breadcrumbs">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-10 px-xxl-5">
-                        <div class="simple-block">
-                            <h1 class="simple-block__main-title title-section">Гарантия, обмен и возврат</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Обзоры</li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="section section-customer-reviews">
+            <div class="container">
+                <div class="catalog">
+                    <div class="catalog__header">
+                        <h1 class="catalog__title">Обзоры</h1>
+                    </div>
 
-                            <p class="simple-block__subtitle subtitle-text">Случайно добавилась или перепуталась позиция в заказе? При проверке посылки во время получения Вы увидели повреждения товара? Понимаем, что недоразумения иногда случаются. Просто расскажите нам о проблеме, а мы поможем быстро решить.
-                            </p>
+                    <button type="button" id="sidebar_switch" class="catalog-sidebar__switch">
+                        <svg><use xlink:href="img/spritemap.svg#sprite-filter"></use></svg>
+                    </button>
 
-                            <ul>
-                                <li>Если при получении посылки доставленный товар не соответствует заказу, курьер или менеджер на пункте выдачи по вашей просьбе заберет его и вернет оплату. На пункте выдачи посылок почтовых служб-партнеров и при получении посылки из ЕС также возможен возврат, но не отдельных позиций, а всей посылки.
-                                </li>
+                    <div class="catalog-sidebar">
+                        <ul class="catalog-sidebar__list">
+                            <li><a href="#reviews-product">Популярные темы</a></li>
+                            <li><a href="#reviews-product">Макияж</a></li>
+                            <li><a href="#reviews-product">Волосы</a></li>
+                            <li><a href="#reviews-product">Ногти</a></li>
+                            <li><a href="#reviews-product">Лицо</a></li>
+                            <li><a href="#reviews-product">Ноги</a></li>
+                        </ul>
 
-                                <li>Если проблема обнаружена позднее, кратко опишите ситуацию, приложите фото или видео товара, который вы приобрели у нас и  хотели бы вернуть, прислав письмо с использованного для оформления заказа адреса на электронный адрес cs@makeup.com.ua. </li>
-                            </ul>
+                        <a href="#create-review" class="customer-reviews-add" data-toggle="modal" data-target="#create_review">Написать обзор
+                            <span class="customer-reviews-add__ico"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></span>
+                        </a>
+                    </div>
 
-                            <p class="simple-block__text">Если товар не открыт, а целостность упаковки не нарушена, в течение 14 дней с момента покупки вы можете вернуть продукт.</p>
+                    <div class="catalog-content">
+                        <div class="product-review">
+                            <picture class="product-review__pic">
+                                <img src="img/default.svg" data-src="img/product-img02.png" alt="image" title="image">
+                            </picture>
+                            <div class="product-review__info">
+                                <div class="product-review__info-head">
+                                    <p class="product-review__title">Гель-лак Protec Top PNB</p>
 
-                            <p class="simple-block__text">К сожалению, даже самые известные бренды не застрахованы от сбоя на производстве. Если вы обнаружите брак, скажите нам. Наш менеджер предложит возможные решения, а в случае обмена или возврата товара организует визит курьера или расскажет, как отправить посылку нам.
-                                Пожалуйста, обязательно сохраняйте упаковку со штрих-кодом товара, при обращении мы попросим предоставить и сам товар или товары, входившие в набор (без повреждений во время распаковки и использования),  все комплектующие и упаковку товара со штрих-кодом производителя а также документ, подтверждающий приобретение товара у нас.</p>
+                                    <div class="product-review__rating">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+                                    </div>
+                                </div>
 
-                            <p class="simple-block__text">Ориентировочно в течение 14 дней (но не больше 30 дней) после получения посылки мы изучаем возвращенные позиции, принимаем решение о возврате денежных средств на указанный счет. Если вы не использовали карту для оплаты, для возврата средств, нам нужно будет уточнить номер карты для осуществления возврата, ИНН и ФИО владельца карты. Дополнительно вам отправят извещение на электронный адрес о статусе возврата.</p>
+                                <ul class="product-review__list">
+                                    <li>Категория: <span class="ml-2 text-primary">Декоративная косметика</span></li>
+                                    <li>Тип косметики: <span class="ml-2 text-primary">Лак для ногтей</span></li>
+                                    <li>Бренд: <span class="ml-2 text-primary">PNB</span></li>
+                                </ul>
 
-                            <p class="simple-block__text">Единственная просьба: не возвращайте нам товары, приобретенные в другом магазине, продукцию, которой вы пользовались, а также изделия, по которым нет аргументированных причин для обмена или возврата. Во всех остальных ситуациях мы постараемся помочь быстро и легко оформить обмен или возврат.</p>
+                                <div class="product-review__info-footer">
+                                    <button class="btn btn-primary mr-4">Создать обзор</button>
 
-                            <p class="simple-block__text">По всем вопросам Вы можете связаться с нами по телефонам: (044) 374 03 83 или 0 (800) 50 77 40.</p>
+                                    <span class="product-review__counter text-muted text-uppercase">25 отзывов</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-review-customers">
+                            <div class="product-card__reviews-box">
+                                <picture class="product-card__reviews-pic">
+                                    <img src="img/default.svg" data-src="img/product-review01.png" alt="image" title="image">
+                                </picture>
+
+                                <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                                <p class="product-card__reviews-date">26.07.2021</p>
+
+                                <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                                <div class="product-card__rating">
+                                    <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                                </div>
+
+                                <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                                <div>
+                                    <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                                </div>
+                            </div>
+
+                            <div class="product-card__reviews-box">
+                                <picture class="product-card__reviews-pic">
+                                    <img src="img/default.svg" data-src="img/product-review01.png" alt="image" title="image">
+                                </picture>
+
+                                <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                                <p class="product-card__reviews-date">26.07.2021</p>
+
+                                <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                                <div class="product-card__rating">
+                                    <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                                </div>
+
+                                <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                                <div>
+                                    <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                                </div>
+                            </div>
+
+                            <div class="product-card__reviews-box">
+                                <picture class="product-card__reviews-pic">
+                                    <img src="img/default.svg" data-src="img/product-review01.png" alt="image" title="image">
+                                </picture>
+
+                                <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                                <p class="product-card__reviews-date">26.07.2021</p>
+
+                                <div class="product-card__reviews-status"><svg><use xlink:href="img/spritemap.svg#sprite-check"></use></svg>Покупка подтверждена</div>
+
+                                <div class="product-card__rating">
+                                    <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                                </div>
+
+                                <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые. Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку</div>
+
+                                <div>
+                                    <button class="product-card__reviews-reply mr-4 text-uppercase" data-toggle="modal" data-target="#reply">Читать обзор<svg><use xlink:href="img/spritemap.svg#sprite-dialog"></use></svg></button>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-auto">
+                                    <button class="btn btn-outline-primary">Показать еще</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

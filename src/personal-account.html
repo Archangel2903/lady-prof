@@ -142,13 +142,13 @@
                                 <span class="sidebar-account-link__text">Программа лояльности</span>
                             </a>
 
-                            <a href="#account-link4" class="sidebar-account-link">
+                            <a href="#account-link4" class="sidebar-account-link" hidden>
                                 <span class="sidebar-account-link__ico">
                                 <svg>
                                     <use xlink:href="img/spritemap.svg#sprite-pa-bonus"></use>
                                 </svg>
                             </span>
-                                <span class="sidebar-account-link__text">Бонусы</span>
+                                <span class="sidebar-account-link__text">Бонус</span>
                             </a>
 
                             <a href="#account-link5" class="sidebar-account-link">
@@ -198,7 +198,167 @@
                         </nav>
                     </div>
 
-                    <div class="catalog-content">
+                    <!-- Personal data -->
+                    <div id="account-content" class="catalog-content">
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Персональные данные</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Имя</span>
+                                        <input type="text" class="form-control" readonly value="Александра">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Фамилия</span>
+                                        <input type="text" class="form-control" readonly value="Длиннофамильная">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Отчество</span>
+                                        <input type="text" class="form-control" readonly value="Олеговна">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Логин</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Логин (телефон)</span>
+                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Логин (e-mail)</span>
+                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Пароль</span>
+                                        <input type="password" class="form-control" readonly value="****************">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Контакты</p>
+                                <button class="personal-data-box__edit">
+                                    <svg>
+                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
+                                    </svg>
+                                </button>
+                                <div class="personal-data-box__edit-control d-none">
+                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="personal-data-box__body row">
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Телефон</span>
+                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">E-mail</span>
+                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
+                                    </label>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="d-block form-group">
+                                        <span class="input-name">Город</span>
+                                        <input type="text" class="form-control" readonly value="Львов">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-data-box w-100">
+                            <div class="personal-data-box__header">
+                                <p class="personal-data-box__title">Банковские карты</p>
+                            </div>
+
+                            <div id="credit_card_list" class="personal-data-box__body row">
+                                <!-- Вызов модального окна для добавления карты -->
+                                <div class="col-xxxl-3 col-xl-6 col-lg-4 col-sm-6 mb-3">
+                                    <div class="add-credit-card">
+                                        <button class="add-credit-card__button" data-toggle="modal" data-target="#add_card">
+                                            <svg>
+                                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Order list -->
+                    <div class="catalog-content" hidden>
                         <div class="account-order-list">
                             <div class="account-order-list__item">
                                 <div class="account-order-list__item-header">
@@ -292,164 +452,973 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Loyalty program -->
+                    <div class="catalog-content" hidden>
+                        <div class="personal-loyalty">
+                            <p class="personal-loyalty__text">ваша скидка составляет <b>3%</b></p>
+                            <p class="personal-loyalty__text text-center text-uppercase">Вами было совершено покупок на сумму</p>
+                            <p class="personal-loyalty__sum">4083 ₴</p>
+                            <div class="loyalty-block__discount-table">
+                                <p class="loyalty-block__discount-table-title">Сумма покупок и скидка</p>
 
-                    <!--<div id="account-content" class="catalog-content">
-                        <div class="personal-data-box w-100">
-                            <div class="personal-data-box__header">
-                                <p class="personal-data-box__title">Персональные данные</p>
-                                <button class="personal-data-box__edit">
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
-                                    </svg>
-                                </button>
-                                <div class="personal-data-box__edit-control d-none">
-                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
-                                        <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
-                                        </svg>
-                                    </button>
-                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
-                                        <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
-                                        </svg>
-                                    </button>
-                                </div>
+                                <ul class="loyalty-block__discount-table-list">
+                                    <li>от 4000 грн<span>3%</span></li>
+                                    <li>от 8000 грн<span>5%</span></li>
+                                    <li>от 12000 грн<span>10%</span></li>
+                                </ul>
                             </div>
-
-                            <div class="personal-data-box__body row">
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Имя</span>
-                                        <input type="text" class="form-control" readonly value="Александра">
-                                    </label>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Фамилия</span>
-                                        <input type="text" class="form-control" readonly value="Длиннофамильная">
-                                    </label>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Отчество</span>
-                                        <input type="text" class="form-control" readonly value="Олеговна">
-                                    </label>
-                                </div>
-                            </div>
+                            <a href="loyalty-program.html" class="personal-loyalty__link btn-link">Узнать больше</a>
                         </div>
-
-                        <div class="personal-data-box w-100">
-                            <div class="personal-data-box__header">
-                                <p class="personal-data-box__title">Логин</p>
-                                <button class="personal-data-box__edit">
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
-                                    </svg>
-                                </button>
-                                <div class="personal-data-box__edit-control d-none">
-                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                    </div>
+                    <!-- Wish list -->
+                    <div class="catalog-content" hidden>
+                        <div class="catalog-content__section">
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
                                         <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
                                         </svg>
                                     </button>
-                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
                                         <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
                                         </svg>
                                     </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="personal-data-box__body row">
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Логин (телефон)</span>
-                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
-                                    </label>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Логин (e-mail)</span>
-                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
-                                    </label>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Пароль</span>
-                                        <input type="password" class="form-control" readonly value="****************">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="personal-data-box w-100">
-                            <div class="personal-data-box__header">
-                                <p class="personal-data-box__title">Контакты</p>
-                                <button class="personal-data-box__edit">
-                                    <svg>
-                                        <use xlink:href="img/spritemap.svg#sprite-pencil"></use>
-                                    </svg>
-                                </button>
-                                <div class="personal-data-box__edit-control d-none">
-                                    <button class="personal-data-box__edit-control-btn" data-conf="0">
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
                                         <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-no"></use>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
                                         </svg>
                                     </button>
-                                    <button class="personal-data-box__edit-control-btn" data-conf="1">
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
                                         <svg>
-                                            <use xlink:href="img/spritemap.svg#sprite-edit-yes"></use>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
                                         </svg>
                                     </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="personal-data-box__body row">
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Телефон</span>
-                                        <input type="text" class="form-control mask-phone" readonly value="+38 066 315 99 26">
-                                    </label>
-                                </div>
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
 
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">E-mail</span>
-                                        <input type="email" class="form-control" readonly value="longmail@gmail.com">
-                                    </label>
-                                </div>
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
 
-                                <div class="col-md-4">
-                                    <label class="d-block form-group m-0">
-                                        <span class="input-name">Город</span>
-                                        <input type="text" class="form-control" readonly value="Львов">
-                                    </label>
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="personal-data-box w-100">
-                            <div class="personal-data-box__header">
-                                <p class="personal-data-box__title">Банковские карты</p>
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div id="credit_card_list" class="personal-data-box__body row">
-                                <div class="col-md-3">
-                                    <div class="add-credit-card">
-                                        <button class="add-credit-card__button" data-toggle="modal" data-target="#add_card">
-                                            <svg>
-                                                <use xlink:href="img/spritemap.svg#sprite-close"></use>
-                                            </svg>
-                                        </button>
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite active">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
+                    <!-- Viewed products -->
+                    <div class="catalog-content" hidden>
+                        <div class="catalog-content__section">
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="main-category__card-wrap">
+                                <div class="main-category__card card">
+                                    <span class="main-category__card-label badge bg-danger">Скидка</span>
+                                    <button class="main-category__card-button-favorite">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-favorite"></use>
+                                        </svg>
+                                    </button>
+
+                                    <picture>
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-img01.png') %>"
+                                             class="main-category__card-img card-img" alt="image" title="image">
+                                    </picture>
+
+                                    <div class="card-body">
+                                        <input type="number" name="rating" class="main-category__card-rating star-rating-output" min="0" max="5" value="4" step="1">
+
+                                        <a href="#product-page" class="card-title">Масло для кутикулы</a>
+
+                                        <p class="main-category__card-price">115 ₴</p>
+
+                                        <div class="main-category__card-info">
+                                            <span class="main-category__card-manufacturer">PNB</span>
+
+                                            <a href="#reviews" class="main-category__card-reviews">11 отзывов</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <div class="card-select-wrap mb-sm-3 mb-md-0">
+                                            <select class="card-select">
+                                                <option value="01">8 ml</option>
+                                                <option value="02">12 ml</option>
+                                                <option value="03">999 ml</option>
+                                            </select>
+                                            <span class="dropdown-select"></span>
+                                        </div>
+                                        <a href="#in-cart" class="btn btn-primary">в корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Personal reviews -->
+                    <div class="catalog-content" hidden>
+                        <div class="product-card__reviews-content">
+                            <div class="product-card__reviews-box-wrap">
+                                <div class="product-card__reviews-box">
+                                    <picture class="product-card__reviews-pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                                    </picture>
+
+                                    <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                                    <p class="product-card__reviews-date">26.07.2021</p>
+
+                                    <div class="product-card__reviews-status">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-check"></use>
+                                        </svg>
+                                        Покупка подтверждена
+                                    </div>
+
+                                    <div class="product-card__rating">
+                                        <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                                    </div>
+
+                                    <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые.
+                                        Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-card__reviews-box-wrap">
+                                <div class="product-card__reviews-box">
+                                    <picture class="product-card__reviews-pic">
+                                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/product-review01.png') %>" alt="image" title="image">
+                                    </picture>
+
+                                    <p class="product-card__reviews-author">ЕЛЕНА</p>
+
+                                    <p class="product-card__reviews-date">26.07.2021</p>
+
+                                    <div class="product-card__reviews-status">
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-check"></use>
+                                        </svg>
+                                        Покупка подтверждена
+                                    </div>
+
+                                    <div class="product-card__rating">
+                                        <input type="number" name="rating" class="product-card__rating-input star-rating-output" min="0" max="5" value="2" step="1">
+                                    </div>
+
+                                    <div class="product-card__reviews-text">Заказывала гель лак # 043. Цвет совпадает с картинкой. Лак этой серии заказала впервые.
+                                        Наносится равномерно, не полость. Можно красить в один слой. Спасибо за доставку
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contacts -->
+                    <div class="catalog-content" hidden>
+                        <div class="contacts">
+                            <div class="contacts__info">
+                                <div class="contacts__info-box">
+                                    <p class="contacts__info-title">Контактная информация</p>
+                                    <div class="contacts__info-list">
+                                        <a href="tel:+380509648508" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-call"></use></svg></span>
+                                            +38 (050) 964 85 08
+                                        </a>
+
+                                        <a href="tel:+380505874271" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-call"></use></svg></span>
+                                            +38 (050) 587 42 71
+                                        </a>
+
+                                        <a href="mailto:ladyprof@ukr.net" class="contacts__info-link">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-mail"></use></svg></span>
+                                            ladyprof@ukr.net
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="contacts__info-box">
+                                    <p class="contacts__info-title">Социальны сети</p>
+                                    <div class="contacts__info-list">
+                                        <a href="tel:+380509648508" class="contacts__info-link" target="_blank">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-inst"></use></svg></span>
+                                            Instagram
+                                        </a>
+
+                                        <a href="tel:+380505874271" class="contacts__info-link" target="_blank">
+                                            <span class="contacts__info-link-ico"><svg><use xlink:href="img/spritemap.svg#sprite-fb"></use></svg></span>
+                                            Facebook
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <p class="contacts__schedule">График работы
+                                    <span class="contacts__schedule-item">
+                                        <span class="contacts__schedule-days">ПН - СБ</span>
+                                        <span class="contacts__schedule-time">08:00 - 21:00</span>
+                                    </span>
+                                    <span class="contacts__schedule-item">
+                                        <span class="contacts__schedule-days">ВС</span>
+                                        <span class="contacts__schedule-time">09:00 - 18:00</span>
+                                    </span>
+                                </p>
+                            </div>
+
+                            <div class="ask-question">
+                                <form action="" method="" class="ask-question__form">
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">Имя Фамилия</span>
+                                            <input type="text" class="form-control w-100">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">E-mail</span>
+                                            <input type="text" class="form-control w-100">
+                                        </label>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="w-100 m-0">
+                                            <span class="input-name important">Комментарий</span>
+                                            <textarea class="form-control w-100"></textarea>
+                                        </label>
+                                    </div>
+
+                                    <button type="submit"
+                                            class="ask-question__form-submit d-inline-flex justify-content-between btn btn-lg btn-primary btn-block text-uppercase text-left">
+                                        Задать вопрос
+                                        <svg>
+                                            <use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -576,6 +1545,7 @@
     </footer>
     <!-- FOOTER END -->
 </div>
+
 <!-- add credit card -->
 <div class="modal fade" id="add_card" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
@@ -680,12 +1650,12 @@
                     </p>
 
                     <div class="authorization__buttons">
-                        <a href="#" class="authorization__link btn btn-light">
+                        <a href="personal-account.html" class="authorization__link btn btn-light">
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-facebook-btn"></use>
                             </svg>
                             Facebook</a>
-                        <a href="#" class="authorization__link btn btn-light">
+                        <a href="personal-account.html" class="authorization__link btn btn-light">
                             <svg>
                                 <use xlink:href="img/spritemap.svg#sprite-google-btn"></use>
                             </svg>
