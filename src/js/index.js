@@ -967,6 +967,43 @@ $(function () {
         }
     })();
 
+    // upload photo
+    (function() {
+        const input = document.getElementById('upload_photo');
+        const photoWrap = document.querySelector('.add-photos');
+
+        function readUrl(field) {
+            if (field.files[0].type.match(`image.*`)) {
+                let reader = new FileReader();
+
+                reader.onload = function () {
+                    let src = this.result;
+                    photoWrap.insertAdjacentHTML("afterbegin", `<div class="add-photos__thumb"><picture class="add-photos__thumb-pic"><img src="${src}" alt="image" title="image"></picture><button type="button" class="add-photos__thumb-remove"><svg><use xlink:href="img/spritemap.svg#sprite-close"></use></svg></button></div>`);
+                }
+
+                console.log(field.files[0]);
+
+                reader.readAsDataURL(field.files[0]);
+            }
+            else {
+                return false
+            }
+        }
+
+        if (input) {
+            input.addEventListener('change', function() {
+                readUrl(this);
+            });
+
+            photoWrap.addEventListener('click', function(e) {
+                let el = e.target;
+                if (el.classList.contains('add-photos__thumb-remove')) {
+                    el.closest('.add-photos__thumb').remove();
+                }
+            });
+        }
+    })();
+
     // Lazy load observer
     const imagesAll = document.querySelectorAll('img[data-src]');
     let imgObserve = new IntersectionObserver(function (entries) {
