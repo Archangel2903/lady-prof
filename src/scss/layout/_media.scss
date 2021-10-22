@@ -366,6 +366,15 @@
     &-items {
       justify-content: flex-start;
     }
+
+    &-view {
+      &-default {
+        &__title {
+          font-size: 36px;
+          line-height: 43px;
+        }
+      }
+    }
   }
 
   .order-doll {
@@ -904,6 +913,11 @@
     &-view {
       order: 1;
       margin: 0;
+
+      &-default {
+        max-width: 385px;
+        margin: 0;
+      }
     }
 
     &-tools {

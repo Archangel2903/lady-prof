@@ -474,7 +474,7 @@
                     <div class="catalog-content">
                         <div class="bonus-container">
                             <div class="bonus-items">
-                                <div class="bonus-items__box">
+                                <div class="bonus-items__box lock">
                                     <div class="bonus-items__view">
                                         <picture class="bonus-items__pic">
                                             <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/bonus/preview/preview_doll_brown.png') %>" alt="image" title="image">
@@ -595,7 +595,17 @@
                                 </div>
                             </div>
 
-                            <div class="bonus-view">
+                            <div class="bonus-view-default">
+                                <p class="bonus-view-default__title">Получи куклу в подарок покупая в Lady Prof</p>
+
+                                <picture class="bonus-view-default__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/doll.png') %>" alt="image" title="image">
+                                </picture>
+
+                                <div class="bonus-view-default__text">Совершай покупки в Ladyprof и получи свою собственную куклу</div>
+                            </div>
+
+                            <div class="bonus-view" hidden>
                                 <picture class="bonus-view__doll">
                                     <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/bonus/view/doll_brown.png') %>" alt="image" title="image">
                                 </picture>
@@ -679,7 +689,7 @@
                         </div>
                     </div>
                     <!-- Get bonus -->
-                    <div class="catalog-content">
+                    <div class="catalog-content" hidden>
                         <div class="order-doll">
                             <div class="order-doll__info">
                                 <p class="order-doll__title">Проверьте информацию о доставке</p>
