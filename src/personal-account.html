@@ -678,6 +678,57 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Get bonus -->
+                    <div class="catalog-content">
+                        <div class="order-doll">
+                            <div class="order-doll__info">
+                                <p class="order-doll__title">Проверьте информацию о доставке</p>
+                                <picture class="order-doll__pic">
+                                    <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/order-decor.png') %>" alt="image" title="image">
+                                </picture>
+                            </div>
+
+                            <form action="" method="" class="order-doll-form">
+                                <p class="order-doll-form__title">Заказать куклу</p>
+
+                                <label class="form-group w-100">
+                                    <span class="input-name important">Город</span>
+                                    <input type="text" class="form-control w-100" placeholder="Львов">
+                                </label>
+
+                                <label class="form-group w-100">
+                                    <span class="input-name important">Доставка</span>
+                                    <span class="form-select-wrap">
+                                        <select id="delivery_method" class="form-select" data-placeholder="Способ доставки">
+                                            <option></option>
+                                            <option value="new_post">Новая почта</option>
+                                            <option value="ukr_post">Укрпочта</option>
+                                            <option value="courier">Курьером по городу</option>
+                                            <option value="pickup">Самовывоз из магазина</option>
+                                        </select>
+                                        <span class="dropdown-select"></span>
+                                    </span>
+                                </label>
+
+                                <label class="form-group w-100">
+                                    <span class="input-name important">Номер отделения</span>
+                                    <span class="form-select-wrap">
+                                        <select class="form-select" data-placeholder="Отделение №">
+                                            <option></option>
+                                            <option value="10">№10</option>
+                                            <option value="13">№13</option>
+                                            <option value="25">№25</option>
+                                        </select>
+                                        <span class="dropdown-select"></span>
+                                    </span>
+                                </label>
+
+                                <button type="submit" class="ask-question__form-submit d-inline-flex justify-content-between btn btn-lg btn-primary btn-block text-uppercase text-left">
+                                    Отправить <svg><use xlink:href="img/spritemap.svg#sprite-arrow-submit"></use></svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                     <!-- Wish list -->
                     <div class="catalog-content" hidden>
                         <div class="catalog-content__section">
