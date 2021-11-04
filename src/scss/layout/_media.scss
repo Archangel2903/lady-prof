@@ -4,7 +4,6 @@
 // min-width
 @media screen and (min-width: 320px) {
 }
-
 @include media-breakpoint-up(sm) {
   .btn {
     &-link {
@@ -393,7 +392,6 @@
 
   /* FOOTER */
 }
-
 @include media-breakpoint-up(md) {
   .main-title {
     font-size: 120px;
@@ -950,7 +948,6 @@
     justify-content: flex-start;
   }
 }
-
 @include media-breakpoint-up(lg) {
   .header-content {
     .logo {
@@ -1217,7 +1214,6 @@
     }
   }
 }
-
 @include media-breakpoint-up(xl) {
   body.fixed {
     padding-right: 17px;
@@ -1632,7 +1628,6 @@
     bottom: 15px;
   }
 }
-
 @include media-breakpoint-up(xxl) {
   .section-home {
     .section-bg {
@@ -1901,7 +1896,6 @@
     }
   }
 }
-
 @include media-breakpoint-up(xxxl) {
   .styling-title {
     margin: 0 0 0 -80px;
@@ -2171,26 +2165,19 @@
 // max-width
 @include media-breakpoint-down(xxxl) {
 }
-
 @include media-breakpoint-down(xxl) {
 }
-
 @include media-breakpoint-down(xl) {
 }
-
 @include media-breakpoint-down(lg) {
 }
-
 @include media-breakpoint-down(md) {
 }
-
 @include media-breakpoint-down(sm) {
 }
-
 @include media-breakpoint-down(xs) {
 
 }
-
 @media screen and (max-width: 395px) {
   .category-nav {
     &__item {
