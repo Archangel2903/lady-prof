@@ -4872,6 +4872,8 @@
 
 // SECTION MAP
 #map {
+  position: relative;
+  top: -46px;
   width: 100%;
   height: 667px;
   overflow: hidden;

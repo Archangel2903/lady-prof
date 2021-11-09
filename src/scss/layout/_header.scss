@@ -7,8 +7,9 @@ header.header {
   position: relative;
   min-width: 320px;
   width: 100%;
+  background: white;
   border-bottom: 1px solid #F5EDE6;
-  //z-index: 100;
+  z-index: 100;
 }
 
 .header-content {
