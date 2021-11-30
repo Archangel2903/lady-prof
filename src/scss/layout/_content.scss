@@ -1355,7 +1355,8 @@
   align-content: center;
   width: 100%;
   max-width: 1570px;
-  margin: 0 auto 50px;
+  padding: 0 0 50px;
+  margin: 0 auto;
 
   &__item {
     display: inline-flex;
@@ -1370,6 +1371,8 @@
     line-height: 27px;
     text-transform: uppercase;
   }
+
+  &__link {}
 
   &__pic {
     display: inline-block;

@@ -101,49 +101,109 @@
         </section>
 
         <section class="section section-category-nav">
-            <nav class="category-nav">
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Макияж</span>
-                </a>
+            <div class="container">
+                <nav class="category-nav" hidden>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Макияж</span>
+                    </a>
 
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/volosi.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Волосы</span>
-                </a>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/volosi.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Волосы</span>
+                    </a>
 
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/litso.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Лицо</span>
-                </a>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/litso.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Лицо</span>
+                    </a>
 
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/ruki.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Руки</span>
-                </a>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/ruki.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Руки</span>
+                    </a>
 
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/nogti.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Ногти</span>
-                </a>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/nogti.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Ногти</span>
+                    </a>
 
-                <a href="category.html" class="category-nav__item">
-                    <picture class="category-nav__pic">
-                        <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/nogi.svg') %>" alt="image" title="image">
-                    </picture>
-                    <span>Ноги</span>
-                </a>
-            </nav>
+                    <a href="category.html" class="category-nav__item">
+                        <picture class="category-nav__pic">
+                            <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/nogi.svg') %>" alt="image" title="image">
+                        </picture>
+                        <span>Ноги</span>
+                    </a>
+                </nav>
+
+                <ul class="category-nav">
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Макияж</span>
+                        </a>
+
+                        <!--.category-nav__dropdown-wrap>ul.category-nav__dropdown-->
+                    </li>
+
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Волосы</span>
+                        </a>
+                    </li>
+
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Лицо</span>
+                        </a>
+                    </li>
+
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Руки</span>
+                        </a>
+                    </li>
+
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Ногти</span>
+                        </a>
+                    </li>
+
+                    <li class="category-nav__item">
+                        <a href="#" class="category-nav__link">
+                            <picture class="category-nav__pic">
+                                <img src="<%= require('./img/default.svg') %>" data-src="<%= require('./img/makiazh.svg') %>" alt="image" title="image">
+                            </picture>
+                            <span>Ноги</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="section section-banner">
