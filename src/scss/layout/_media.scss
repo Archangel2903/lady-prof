@@ -34,16 +34,6 @@
     }
   }
 
-  .header-menu {
-    &__borgir {
-      &.active {
-        position: fixed;
-        top: 20px;
-        left: 10px;
-      }
-    }
-  }
-
   .header-search {
     margin-right: 30px;
   }
@@ -959,18 +949,17 @@
   .header-menu {
     &__borgir {
       margin-right: 30px;
-
-      &.active {
-        top: 40px;
-      }
     }
 
     &__nav {
       &-hidden {
 
         &-wrap {
-          padding: 150px 20px 40px;
           overflow-y: auto;
+
+          .mCSB_container {
+            padding: 150px 20px 40px;
+          }
         }
 
         /*&-link {
@@ -1378,6 +1367,11 @@
   }
 
   .category-nav {
+    &__dropdown {
+      &-wrap {
+        display: block;
+      }
+    }
     &__item {
       flex: 1 1 auto;
       width: auto;
@@ -1938,14 +1932,6 @@
   }
 
   .header-menu {
-    &__borgir {
-      &.active {
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-    }
-
     &__nav {
       display: block;
     }

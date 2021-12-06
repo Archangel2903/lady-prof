@@ -55,6 +55,7 @@ header.header {
     border: none;
     margin: 0;
     background: none;
+    cursor: pointer;
 
     &-line {
       position: absolute;
@@ -86,8 +87,6 @@ header.header {
     }
 
     &.active {
-      z-index: 1001;
-
       .header-menu__borgir-line {
         width: 25px;
         top: 50%;
@@ -111,98 +110,33 @@ header.header {
     }
   }
 
-  &__catalog {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: stretch;
+  &__closed {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
     padding: 0;
+    border: 0;
     margin: 0;
+    background: none;
+    cursor: pointer;
+    transition: $transition-base;
+    z-index: 1;
 
-    &> li {
-      display: inline-flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      align-content: center;
-      align-items: center;
-
-      &> a {
-
-      }
-      &>button {
-        flex: 0 0 auto;
-        position: relative;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        border: none;
-        margin: 0;
-        background: none;
-
-        svg {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 13px;
-          height: 13px;
-          transform: translate(-50%, -50%) rotate(-90deg);
-        }
-      }
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 25px;
+      height: 2px;
+      background: #333333;
+      transform: translate(-50%, -50%) rotate(45deg);
     }
 
-    &-category {
-      &-wrap {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: flex-start;
-        align-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-      }
-
-      &-close {
-        position: relative;
-        display: block;
-        padding: 0;
-        border: none;
-        margin: 0;
-        background: none;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 27px;
-
-        svg {
-          width: 20px;
-          height: 20px;
-          margin-right: 20px;
-          transform: rotate(180deg);
-        }
-      }
-
-      &> li {
-        &> a {}
-        &> button {}
-      }
-    }
-
-    &-subcategory {
-      padding: 0;
-      margin: 0;
-
-      &-wrap {
-        display: none;
-      }
-
-      li {
-        margin-top: 20px;
-
-        a {
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 27px;
-        }
-      }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 
@@ -231,13 +165,14 @@ header.header {
         width: 100%;
         max-width: 555px;
         height: 100%;
-        padding: 80px 20px 0;
         background: #fff;
+        box-shadow: 0 0 14px -4px rgba(0, 0, 0, .25);
         overflow-y: auto;
         transition: $transition-base;
         cursor: default;
+        z-index: 10;
 
-        /*&::before {
+        &::before {
           content: '';
           position: fixed;
           top: 0;
@@ -251,11 +186,11 @@ header.header {
           transition-delay: 0.3s;
           cursor: pointer;
           z-index: 1000;
-        }*/
+        }
 
         &.show {
           left: 0;
-          transition-delay: 0.3s;
+          //transition-delay: 0.3s;
 
           /*&::before {
             left: 0;
@@ -264,11 +199,26 @@ header.header {
             transition: $transition-base;
           }*/
 
+          /*.mCSB_container {
+            &::after {
+              content: '';
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              max-width: 550px;
+              height: 100px;
+              background: white;
+              z-index: 0;
+            }
+          }*/
+
           .header-menu {
             &__borgir-close {
               left: 50px;
               transition-delay: 0.3s;
             }
+
             /*&__nav-hidden {
               &::before {
                 content: '';
@@ -284,6 +234,10 @@ header.header {
             }*/
           }
         }
+
+        .mCSB_container {
+          padding: 80px 20px 0;
+        }
       }
 
       &-link {
@@ -294,6 +248,193 @@ header.header {
 
         &:not(:last-child) {
           margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__catalog {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+    padding: 0;
+    margin: 0 0 60px;
+
+    &> li {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #C9C9C9;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      &> a {
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 22px;
+        text-transform: uppercase;
+      }
+
+      &> button {
+        flex: 0 0 auto;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: none;
+        margin: 0;
+        background: none;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 13px;
+          height: 13px;
+          transform: translate(-50%, -50%) rotate(-90deg);
+        }
+      }
+    }
+
+    &-toggle {
+      cursor: pointer;
+
+      svg {
+        pointer-events: none;
+      }
+    }
+
+    &-category {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: stretch;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      &-wrap {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 555px;
+        height: 100%;
+        padding: 50px 30px;
+        background: white;
+        overflow-y: auto;
+        transition: $transition-base;
+        z-index: 5;
+
+        &.opened {
+          left: 0;
+        }
+      }
+
+      &-close {
+        position: relative;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+        border: none;
+        margin: 0;
+        background: none;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 20px;
+          transform: rotate(180deg);
+        }
+      }
+
+      &> li {
+        display: inline-flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        margin-top: 30px;
+
+        &> a {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 27px;
+          text-transform: uppercase;
+        }
+
+        &> button {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          padding: 0;
+          border: 0;
+          margin: 0 0 0 20px;
+          background: none;
+          cursor: pointer;
+
+          &::before, &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 14px;
+            height: 2px;
+            background: #333333;
+            border-radius: 50px;
+            transform: translate(-50%, -50%);
+            transition: $transition-base;
+          }
+
+          &::after {
+            transform: translate(-50%, -50%) rotate(90deg);
+          }
+
+          &.opened {
+            &::before, &::after {
+              transform: translate(-50%, -50%) rotate(0deg);
+            }
+          }
+        }
+      }
+    }
+
+    &-subcategory {
+      padding: 0;
+      margin: 0;
+
+      &-wrap {
+        display: none;
+        width: 100%;
+      }
+
+      li {
+        margin-top: 20px;
+
+        a {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 27px;
         }
       }
     }

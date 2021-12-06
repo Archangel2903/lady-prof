@@ -111,6 +111,30 @@ $(function () {
         }
     })();
 
+    // header catalog
+    (function() {
+        let catalogToggle = $('.header-menu__catalog-toggle');
+        let catalogClose = $('.header-menu__catalog-category-close');
+        let categoryToggle = $('.header-menu__catalog-category-toggle');
+
+        catalogToggle.on('click', function(e) {
+            $(this).next().addClass('opened');
+            e.stopPropagation();
+        });
+
+        catalogClose.on('click', function(e) {
+            $(this).parent().removeClass('opened');
+            categoryToggle.removeClass('opened');
+            $('.header-menu__catalog-subcategory-wrap').slideUp();
+            e.stopPropagation();
+        });
+
+        categoryToggle.on('click', function(e) {
+            $(this).toggleClass('opened').next().slideToggle();
+            e.stopPropagation();
+        });
+    })();
+
     // catalog menu
     (function() {
         let dropdownToggle = $('.category-nav__dropdown-toggle');
@@ -118,12 +142,12 @@ $(function () {
 
         dropdownToggle.on('click', function() {
             if ($(this).hasClass('opened')) {
-                $(this).toggleClass('opened').next().slideToggle();
+                $(this).toggleClass('opened').next().stop().slideToggle();
             }
             else {
                 dropdownToggle.removeClass('opened');
-                subcategoryWrap.slideUp();
-                $(this).toggleClass('opened').next().slideToggle();
+                subcategoryWrap.stop().slideUp();
+                $(this).toggleClass('opened').next().stop().slideToggle();
             }
         });
     })();
@@ -136,14 +160,24 @@ $(function () {
         $('body').toggleClass('fixed');
     });
 
+    $('.header-menu__closed').on('click', function(e) {
+        e.stopPropagation();
+        $(this).closest('.header-menu__nav-hidden-wrap').removeClass('show');
+        $('.header-menu__borgir').removeClass('active');
+        $('body').removeClass('fixed');
+    });
+
     $(document).on('click', function (e) {
         e.stopPropagation();
         $('.header-menu__borgir').removeClass('active');
         $('.header-menu__nav-hidden-wrap').removeClass('show');
+        $('.header-menu__catalog-category-wrap').removeClass('opened');
+        $('.header-menu__catalog-category-toggle').removeClass('opened');
+        $('.header-menu__catalog-subcategory-wrap').slideUp();
         $('body').removeClass('fixed');
     });
 
-    $('.header-menu__nav-hidden').on('click', function (e) {
+    $('.header-menu__nav-hidden-wrap').on('click', function (e) {
         e.stopPropagation();
     });
 
