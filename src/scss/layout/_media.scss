@@ -962,22 +962,24 @@
 
       &.active {
         top: 40px;
-        left: 60px;
       }
     }
 
     &__nav {
       &-hidden {
-        padding: 150px 0 40px 70px;
-        overflow-y: auto;
 
-        &-link {
+        &-wrap {
+          padding: 150px 20px 40px;
+          overflow-y: auto;
+        }
+
+        /*&-link {
           font-size: 35px;
 
           &:not(:last-child) {
             margin-bottom: 40px;
           }
-        }
+        }*/
       }
     }
   }
@@ -1377,6 +1379,7 @@
 
   .category-nav {
     &__item {
+      flex: 1 1 auto;
       width: auto;
       margin: 0 auto;
     }

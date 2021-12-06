@@ -111,6 +111,23 @@ $(function () {
         }
     })();
 
+    // catalog menu
+    (function() {
+        let dropdownToggle = $('.category-nav__dropdown-toggle');
+        let subcategoryWrap = $('.category-nav__subcategory-wrap');
+
+        dropdownToggle.on('click', function() {
+            if ($(this).hasClass('opened')) {
+                $(this).toggleClass('opened').next().slideToggle();
+            }
+            else {
+                dropdownToggle.removeClass('opened');
+                subcategoryWrap.slideUp();
+                $(this).toggleClass('opened').next().slideToggle();
+            }
+        });
+    })();
+
     // Borgir button
     $('.header-menu__borgir').on('click', function (e) {
         e.stopPropagation();
