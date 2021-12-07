@@ -125,12 +125,18 @@ $(function () {
         catalogClose.on('click', function(e) {
             $(this).parent().removeClass('opened');
             categoryToggle.removeClass('opened');
-            $('.header-menu__catalog-subcategory-wrap').slideUp();
+            $('.header-menu__catalog-subcategory-wrap').stop().slideUp();
             e.stopPropagation();
         });
 
         categoryToggle.on('click', function(e) {
-            $(this).toggleClass('opened').next().slideToggle();
+            if ($(this).hasClass('opened')) {
+                $(this).toggleClass('opened').next().stop().slideToggle();
+            }
+            else {
+                $('.header-menu__catalog-subcategory-wrap').stop().slideUp();
+                $(this).toggleClass('opened').next().stop().slideToggle();
+            }
             e.stopPropagation();
         });
     })();
@@ -173,7 +179,7 @@ $(function () {
         $('.header-menu__nav-hidden-wrap').removeClass('show');
         $('.header-menu__catalog-category-wrap').removeClass('opened');
         $('.header-menu__catalog-category-toggle').removeClass('opened');
-        $('.header-menu__catalog-subcategory-wrap').slideUp();
+        $('.header-menu__catalog-subcategory-wrap').stop().slideUp();
         $('body').removeClass('fixed');
     });
 
