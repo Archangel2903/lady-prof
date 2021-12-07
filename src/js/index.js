@@ -134,6 +134,7 @@ $(function () {
                 $(this).toggleClass('opened').next().stop().slideToggle();
             }
             else {
+                categoryToggle.removeClass('opened');
                 $('.header-menu__catalog-subcategory-wrap').stop().slideUp();
                 $(this).toggleClass('opened').next().stop().slideToggle();
             }
