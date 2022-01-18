@@ -1760,16 +1760,6 @@
     max-width: 172px;
   }
 
-  .category-nav {
-    &__link {
-      flex-direction: row;
-    }
-
-    &__pic {
-      margin: 0 30px 0 0;
-    }
-  }
-
   .product-card {
     &__thumb {
       order: 1;
@@ -1978,6 +1968,16 @@
 
   .main-stock-container {
     padding-left: 133px;
+  }
+
+  .category-nav {
+    &__link {
+      flex-direction: row;
+    }
+
+    &__pic {
+      margin: 0 30px 0 0;
+    }
   }
 
   .main-blog {
