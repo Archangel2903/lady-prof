@@ -1007,8 +1007,7 @@
   }
 
   .category-nav-home__item {
-    width: 15%;
-    margin: 0;
+    width: 23%;
   }
 
   .category-nav {
@@ -1367,6 +1366,12 @@
   }
 
   .category-nav {
+    &-home {
+      &__item {
+        width: 13%;
+      }
+    }
+
     &__dropdown {
       &-wrap {
         display: block;
@@ -1752,7 +1757,7 @@
   }
 
   .category-nav-home__item {
-    width: 172px;
+    max-width: 172px;
   }
 
   .category-nav {
